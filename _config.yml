@@ -1,0 +1,55 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site title and description
+title: Epic Landscape Designs
+description: Crafting Nature's Masterpieces, One Epic Landscape at a Time
+
+# Site base hostname & protocol, e.g. http://example.com
+url: ''
+
+# Site subpath, e.g. /blog
+baseurl: ""
+
+# Number of posts displayed on blog page
+paginate: 7
+
+# Blog path
+paginate_path: "/blog/:num/"
+permalink: /:title/
+
+# Tags
+tag_page_dir: tag
+tag_page_layout: tag_page
+tag_permalink_style: pretty
+
+# Disqus comments shortname, requires Disqus account https://disqus.com/
+disqus:
+    shortname: epiclandscapedesigns
+
+# Google Analytics
+google_analytics: #UA—XXXXXXXX-X
+
+# Build settings
+plugins:
+  - jekyll-liquify
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll/tagging
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+
+# Authors
+authors:
+  epiclandscape:
+    name:       Epic Landscape Designs
+    bio:        We are a Sydney based landscape design company who specialise in transforming outdoor spaces into stunning, functional environments that reflect your vision and enhance their natural beauty.
+    gravatar:   assets/images/blog/author-avatar.jpg
+    email:      info@epiclandscapedesigns.com.au
