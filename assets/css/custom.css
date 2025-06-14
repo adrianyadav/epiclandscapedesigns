@@ -1,0 +1,37 @@
+:root {
+
+    --primary-color: #F2B266;
+    --secondary-color: #6B6967;
+    --text-color: #333333;
+    --tt-theme-3: var(--primary-color);
+    --tt-text-2: var(--primary-color);
+    --primary-font: Fraunces
+    --tt-ff-lora: var(--primary-font);
+  }
+
+/* Custom styles for Epic Landscape Designs */
+
+.hero-title {
+    font-weight: 300 !important;
+    color: var(--secondary-color);
+}
+
+.hero-title-highlight {
+color: var(--primary-color); 
+   font-style: italic;
+}
+
+.hero-btn {
+    text-transform: none;
+}
+
+.l-btn {
+    color: var(--text-color);
+    text-transform: none !important;
+
+}
+
+.header-btn {
+    color: var(--text-color);
+
+}

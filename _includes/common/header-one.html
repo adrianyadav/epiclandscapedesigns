@@ -3,7 +3,7 @@
 {% assign navigation = site.data.header['navigation'] %}
 {% assign button = site.data.header['button'] %}
 <header>
-    <div class="header-top pt-15 pb-15 theme-bg-1">
+    <!-- <div class="header-top pt-15 pb-15 theme-bg-1">
         <div class="container custom-container-1">
             <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12">
@@ -28,20 +28,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div id="sticky-header" class="header-bottom">
         <div class="container custom-container-1">
             <div class="row d-flex align-items-center">
                 <div class="col-xl-2 col-lg-2 col-md-4">
                     <div class="logo">
-                        <a href="{{ logo.url | relative_url}}">
-                            <img src="{{ logo.image | relative_url}}" alt="{{ logo.alt | relative_url}}">
-                        </a>
+                        {% include common/logo.html %}
                     </div>
                 </div>
                 <div class="col-xl-10 col-lg-10 col-md-8">
                     <div class="header-btn f-right">
-                        <a href="{{ button.button_one.url }}" class="l-btn cmk-button cmk-rotate-right">{{ button.button_one.label }}</a>
+                        <a href="{{ button.button_one.url }}" class="l-btn cmk-button cmk-rotate-right">{{
+                            button.button_one.label }}</a>
                     </div>
                     <div class="main-menu text-center">
                         <nav id="mobile-menu">

@@ -1,87 +1,98 @@
-title: "Crafting Natures Masterpieces"
-subtitle: "One Epic Landscape at a Time"
-description: "We are a Sydney based landscape design company who specialise in transforming outdoor spaces into stunning, functional environments."
-button_text: "Get Free Consultation"
-button_link: "/contact"
-background_image: "assets/images/hero-bg.jpg"
-show_contact_form: true
-contact_form:
-  name_placeholder: "Your Name"
-  email_placeholder: "Your Email"
-  phone_placeholder: "Your Phone"
-  message_placeholder: "Your Message"
-  submit_text: "Send Message"
-image2: "assets/images/hero-2.jpg"
-videolink: "#"
-
 hero_one:
-  image1: "assets/images/hero.jpg"
-  overlay_color: "black"
-  opacity: 7
-  heading: "Welcome to Our Perfect Solution Landscape."
-  description: "We are certified company. We provide best Landscaping services for you & your company ."
-  button:
-    label: "Our Solution"
-    link: "/content"
-  image2: assets/images/hero/1.png
+  heading: Welcome to Our Perfect Solution Landscape.
   alt: hero
+  opacity: 7
+  button:
+    label: Our Solution
+    link: /content
+  overlay_color: black
   videolink: http://www.youtube.com/watch?v=0O2aH4XLbto
-  
+  image1: assets/images/hero.jpg
+  image2: assets/images/hero/1.png
+  description: We are certified company. We provide best Landscaping services for
+    you & your company .
+contact_form:
+  name_placeholder: Your Name
+  email_placeholder: Your Email
+  phone_placeholder: Your Phone
+  message_placeholder: Your Message
+  submit_text: Send Message
+show_contact_form: true
 hero_two:
   slider1:
-    image: "assets/images/hero/1.jpg"
-    heading: "Welcome to Our <br>Perfect Solution <br> Landscape."
-    description: "We are certified company. We provide best Landscaping services <br> for you & your company ."
+    image: assets/images/hero/1.jpg
+    heading: Welcome to Our <br>Perfect Solution <br> Landscape.
+    description: We are certified company. We provide best Landscaping services <br>
+      for you & your company .
     button:
-      label: "Our Solution"
-      url: "/contact"
+      label: Our Solution
+      url: /contact
   slider2:
     image: assets/images/hero/2.jpg
-    heading: "Expert Gardening <br> Service You Can <br> Trust."
-    description: "We are certified company. We provide best Landscaping services <br> for you & your company ."
+    heading: Expert Gardening <br> Service You Can <br> Trust.
+    description: We are certified company. We provide best Landscaping services <br>
+      for you & your company .
     button:
-      label: "Our Solution"
-      url: "/contact"
-
+      label: Our Solution
+      url: /contact
+subtitle: Crafting Nature's Masterpieces, One Epic Landscape at a Time
+button_text: Get a free consultation
+button_link: /contact
+video_link: https://www.youtube.com/watch?v=LoI4HflwDOo
+background_image: /assets/uploads/image02.jpg
+thumbnail_image: /assets/uploads/image01.jpg
+videolink: "#"
+image2: assets/images/hero-2.jpg
+title: Epic Landscape Designs
 hero_three:
   slider1:
-    image: "assets/images/hero/3.jpg"
-    heading: "Wellcome To Our <br> Landscap & Gardening <br> Solutions."
-    description: "Landscape and Garden has been a presence on the international market since 2000 and is part of our strong values for a forward thinking subject company"
+    image: assets/images/hero/3.jpg
+    heading: Wellcome To Our <br> Landscap & Gardening <br> Solutions.
+    description: Landscape and Garden has been a presence on the international
+      market since 2000 and is part of our strong values for a forward thinking
+      subject company
     button:
-      label: "Our Solution"
-      url: "/contact"
+      label: Our Solution
+      url: /contact
   slider2:
-    image: "assets/images/hero/2.jpg"
-    heading: "Wellcome To Our <br> Landscap & Gardening <br> Solutions."
-    description: "Landscape and Garden has been a presence on the international market since 2000 and is part of our strong values for a forward thinking subject company"
+    image: assets/images/hero/2.jpg
+    heading: Wellcome To Our <br> Landscap & Gardening <br> Solutions.
+    description: Landscape and Garden has been a presence on the international
+      market since 2000 and is part of our strong values for a forward thinking
+      subject company
     button:
-      label: "Our Solution"
-      url: "/contact"
+      label: Our Solution
+      url: /contact
   slider3:
-    image: "assets/images/hero/1.jpg"
-    heading: "Wellcome To Our <br> Landscap & Gardening <br> Solutions."
-    description: "Landscape and Garden has been a presence on the international market since 2000 and is part of our strong values for a forward thinking subject company"
+    image: assets/images/hero/1.jpg
+    heading: Wellcome To Our <br> Landscap & Gardening <br> Solutions.
+    description: Landscape and Garden has been a presence on the international
+      market since 2000 and is part of our strong values for a forward thinking
+      subject company
     button:
-      label: "Our Solution"
-      url: "/contact"
+      label: Our Solution
+      url: /contact
   slider4:
-    image: "assets/images/hero/3.jpg"
-    heading: "Wellcome To Our <br> Landscap & Gardening <br> Solutions."
-    description: "Landscape and Garden has been a presence on the international market since 2000 and is part of our strong values for a forward thinking subject company"
+    image: assets/images/hero/3.jpg
+    heading: Wellcome To Our <br> Landscap & Gardening <br> Solutions.
+    description: Landscape and Garden has been a presence on the international
+      market since 2000 and is part of our strong values for a forward thinking
+      subject company
     button:
-      label: "Our Solution"
-      url: "/contact"
+      label: Our Solution
+      url: /contact
   slider_box:
-    slider1: 
-      subheading: "Step 1"
-      heading: "There are many variations of passages of Lorem Ipsum available."
-    slider2: 
-      subheading: "Step 2"
-      heading: "There are many variations of passages of Lorem Ipsum available."
-    slider3: 
-      subheading: "Step 3"
-      heading: "There are many variations of passages of Lorem Ipsum available."
-    slider4: 
-      subheading: "Step 4"
-      heading: "There are many variations of passages of Lorem Ipsum available."
+    slider1:
+      subheading: Step 1
+      heading: There are many variations of passages of Lorem Ipsum available.
+    slider2:
+      subheading: Step 2
+      heading: There are many variations of passages of Lorem Ipsum available.
+    slider3:
+      subheading: Step 3
+      heading: There are many variations of passages of Lorem Ipsum available.
+    slider4:
+      subheading: Step 4
+      heading: There are many variations of passages of Lorem Ipsum available.
+description: We are a Sydney based landscape design company who specialise in
+  transforming outdoor spaces into stunning, functional environments.
