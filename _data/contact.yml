@@ -26,3 +26,13 @@ contact_one:
 
     - label: "Pinterest"
       url: "https://pinterest.com"
+
+email: info@epiclandscapedesigns.com.au
+location: Sydney, Australia
+hours: "Monday - Friday: 9:00 AM - 5:00 PM"
+phone: "+61 (0) XXX XXX XXX"
+social:
+  email: mailto:info@epiclandscapedesigns.com.au
+  facebook: ""
+  instagram: ""
+  linkedin: ""
