@@ -35,3 +35,12 @@ color: var(--primary-color);
     color: var(--text-color);
 
 }
+
+.inline-logo-text {
+    display: inline !important;
+    font-size: inherit !important;
+}
+
+.section-title span {
+    font-size: inherit;
+}

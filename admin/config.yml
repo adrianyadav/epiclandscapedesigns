@@ -36,3 +36,37 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: 'Name', name: 'name', widget: 'string', default: 'Epic Landscape Designs' }
           - { label: 'Email', name: 'email', widget: 'string', default: 'info@epiclandscapedesigns.com.au' }
+
+  - name: 'about'
+    label: 'About Section'
+    label_singular: 'About'
+    description: 'Manage the about section content'
+    files:
+      - file: '_data/about.yml'
+        label: 'About Content'
+        name: 'about'
+        fields:
+          - { label: 'Heading', name: 'heading', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text'  }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Image Alt', name: 'image_alt', widget: 'string' }
+  - name: 'projects'
+    label: 'Projects'
+    label_singular: 'Project'
+    description: 'Manage the projects section content'
+    files:
+      - file: '_data/projects.yml'
+        label: 'Projects'
+        name: 'projects'
+        fields:
+          - { label: 'Heading', name: 'heading', widget: 'string' }
+          - label: 'Projects'
+            name: 'projects'
+            widget: 'list'
+            summary: '{{fields.project_name}}'
+            fields:
+              - { label: 'Project Name', name: 'project_name', widget: 'string' }
+              - { label: 'Project Summary', name: 'project_summary', widget: 'text' }
+              - { label: 'Project Image', name: 'project_image', widget: 'image' }
+              - { label: 'Project Image Alt Text', name: 'project_image_alt', widget: 'string' }
+          

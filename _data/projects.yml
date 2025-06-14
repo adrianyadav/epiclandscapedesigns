@@ -1,0 +1,13 @@
+heading: Completed
+projects:
+  - project_name: Patio
+    project_summary: An elegant minimalist patio which serves as a extension to the
+      house gifting a lovely place for that late night glass of wine.
+    project_image: /assets/uploads/image02.jpg
+    project_image_alt: alt text
+  - project_name: Pergola & Pool
+    project_summary: >
+      This sleek design features clean lines, a serene tiled pool a pergolas BBQ
+      area creating a contemporary outdoor sanctuary.
+    project_image: /assets/uploads/image01.jpg
+    project_image_alt: pool
