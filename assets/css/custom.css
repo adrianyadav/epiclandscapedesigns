@@ -239,4 +239,18 @@ color: var(--primary-color);
     width: 300px;
     height: auto;
     display: block;
+
+  
 }
+@media (max-width: 768px) {
+    .site-logo {
+        padding: 1rem;
+    }
+
+    .mean-container a.meanmenu-reveal {
+        right: -11px !important;
+        left: auto !important;
+        top: 14px !important;
+    }
+}
+
