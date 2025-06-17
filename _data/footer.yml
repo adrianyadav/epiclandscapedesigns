@@ -13,23 +13,20 @@ footer_one:
   column2:
     heading: "Quick Links"
     menu: 
-      - label: "Contact Us"
-        url: "/contact"
+      - label: "Home"
+        url: "#"
 
-      - label: "Team"
-        url: "/team"
+      - label: "About"
+        url: "#about"
 
-      - label: "Our Services"
-        url: "/service-one"
+      - label: "Services"
+        url: "#services"
 
-      - label: "Our Project"
-        url: "/project-one"
+      - label: "Projects"
+        url: "#projects"
 
-      - label: "About Company"
-        url: "/about"
-
-      - label: "News Update"
-        url: "/blog"
+      - label: "Contact"
+        url: "#contact"
   column3:
     heading: "Our Services"
     menu: 
@@ -93,22 +90,22 @@ footer_two:
   column2:
     heading: "Quick Links"
     menu: 
-      - label: "Contact Us"
-        url: "/contact"
+      - label: "Home"
+        url: "/"
 
-      - label: "Team"
-        url: "/team"
-
-      - label: "Our Services"
-        url: "/service-one"
-
-      - label: "Our Project"
-        url: "/project-one"
-
-      - label: "About Company"
+      - label: "About"
         url: "/about"
 
-      - label: "News Update"
+      - label: "Services"
+        url: "/service-one"
+
+      - label: "Projects"
+        url: "/project-one"
+
+      - label: "Contact"
+        url: "/contact"
+
+      - label: "Blog"
         url: "/blog"
   column3:
     heading: "Our Services"

@@ -1,6 +1,6 @@
 {% assign testimonial_one = site.data.testimonial['testimonial_one'] %}
 {% assign reviews = site.data.reviews.reviews %}
-<div class="testimonial-area theme-bg-4 pt-280 pb-110">
+<div class="testimonial-area theme-bg-4 pt-110 pb-110">
     <div class="container custom-container-1">
         <div class="row">
             <div class="col-xl-12">
@@ -15,7 +15,9 @@
                 {% for review in reviews %}
                 <div class="single-testimonial wow fadeInUp" data-wow-delay=".{{ forloop.index | times: 2 }}s">
                     <div class="reviewer-info">
-                        <h3><a target="_blank" href="{{ review.profile_url }}">{{ review.name }}</a></h3>
+                        <h3>
+                            <a href="{{ review.profile_url }}" target="_blank">{{ review.name }}</a>
+                        </h3>
                     </div>
                     <p>{{ review.comment }}</p>
                     <div class="star-rating">
