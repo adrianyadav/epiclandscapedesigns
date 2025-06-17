@@ -12,26 +12,26 @@
                         <span>We'd love to help you create the epic landscape of your dreams. </span>
                         <h2>Email For A Free Consultation & Quote Today </h2>
                     </div>
-                    <form netlify action="{{ form.query_form }}" method="POST">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <input id="name" name="name" type="text" placeholder="Name">
-                            </div>
-                            <div class="col-xl-6">
-                                <input id="email" name="email" type="email" placeholder="Email">
-                            </div>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <div class=" row">
+                        <div class="col-xl-6">
+                            <input id="name" name="name" type="text" placeholder="Name">
                         </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <input id="phone" name="phone" type="text" placeholder="Phone">
-                                <textarea id="message" name="message" placeholder="Write Message Here"></textarea>
-                            </div>
+                        <div class="col-xl-6">
+                            <input id="email" name="email" type="email" placeholder="Email">
                         </div>
-                        <button class="l-btn quote-btn" type="submit">Send<i class="fas fa-arrow-right"></i></button>
-                    </form>
-                    <p class="form-message"></p>
                 </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <input id="phone" name="phone" type="text" placeholder="Phone">
+                        <textarea id="message" name="message" placeholder="Write Message Here"></textarea>
+                    </div>
+                </div>
+                <button class="l-btn quote-btn" type="submit">Send<i class="fas fa-arrow-right"></i></button>
+                </form>
+                <p class="form-message"></p>
             </div>
         </div>
     </div>
+</div>
 </div>
