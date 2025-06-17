@@ -9,6 +9,21 @@ publish_mode: editorial_workflow
 media_folder: assets/uploads
 
 collections: # A list of collections the CMS should be able to edit
+  - name: 'company'
+    label: 'Company Information'
+    label_singular: 'Contact'
+    description: 'Manage contact information and settings'
+    files:
+      - file: '_data/company.yml'
+        label: 'Company Details'
+        name: 'Company'
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string', default: 'Epic Landscape Designs' }
+          - { label: 'Email', name: 'email', widget: 'string', default: 'info@epiclandscapedesigns.com.au' }
+          - { label: 'Youtube Link', name: 'youtube_link', widget: 'string', default: 'https://www.youtube.com/@EpicLandscapeDesignsAustralia' }
+          - { label: 'Facebook Link', name: 'facebook_link', widget: 'string', default: 'https://www.facebook.com/epiclandscapedesigns' }
+          - { label: 'Instagram Link', name: 'instagram_link', widget: 'string', default: 'https://www.instagram.com/epiclandscapedesigns/' }
+          - { label: 'Google Link', name: 'google_link', widget: 'string', default: 'https://www.google.com/maps/place/Epic+Landscape+Designs/@-33.8652321,151.2029452,17z/data=!3m1!5s0x6b12ae40e42da1f5:0x1e54ca823660f2f8!4m8!3m7!1s0x6b12af39847c6203:0x12ec1af4a657e19!8m2!3d-33.8652366!4d151.2055201!9m1!1b1!16s%2Fg%2F11lznkzgjn?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D' }
   - name: 'hero'
     label: 'Hero Section'
     label_singular: 'Hero'
@@ -24,18 +39,6 @@ collections: # A list of collections the CMS should be able to edit
           - { label: 'Video Link', name: 'video_link', widget: 'string', default: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' }
           - { label: 'Background Image', name: 'background_image', widget: 'image', default: 'assets/images/hero-bg.jpg' }
           - { label: 'Thumbnail Image', name: 'thumbnail_image', widget: 'image', default: 'assets/images/hero-bg.jpg' }
-
-  - name: 'Company'
-    label: 'Company Information'
-    label_singular: 'Contact'
-    description: 'Manage contact information and settings'
-    files:
-      - file: '_data/company.yml'
-        label: 'Company Details'
-        name: 'Company'
-        fields:
-          - { label: 'Name', name: 'name', widget: 'string', default: 'Epic Landscape Designs' }
-          - { label: 'Email', name: 'email', widget: 'string', default: 'info@epiclandscapedesigns.com.au' }
 
   - name: 'about'
     label: 'About Section'

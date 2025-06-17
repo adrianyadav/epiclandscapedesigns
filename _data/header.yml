@@ -20,31 +20,21 @@ logo:
 
 navigation:
   - label: "Home"
-    url: "/"
+    url: "#"
   
   - label: "About"
-    url: "/about"
+    url: "#about"
 
   - label: "Services"
-    url: "#"
-    submenu:
-      - label: "Service 1"
-        url: "/service-one"
-
-      - label: "Service 2"
-        url: "/service-two"
-
-      - label: "Service Details"
-        url: "/service-details"
+    url: "#services"
  
+  - label: "Projects"
+    url: "#projects"
 
   - label: "Contact"
-    url: "/contact"
+    url: "#contact"
 
 button:
   button_one:
     label: "Get a Quote"
-    url: "/contact"
-  button_two:
-    label: "+88 015848651"
-    url: "+88015848651"
+    url: "#contact"

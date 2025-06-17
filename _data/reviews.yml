@@ -1,0 +1,34 @@
+reviews:
+  - name: "Nick Grana"
+    rating: 5
+    date: "4 months ago"
+    comment: "I recently had the pleasure of working with Matthew, and I am beyond thrilled with the results! From start to finish, Matthew was professional, knowledgeable, and truly passionate about his work. He took the time to understand my vision and brought it to life with a beautiful, functional design that exceeded my expectations.\n\nI highly recommend Epic Landscape Design to anyone looking for top-notch landscape design services. Their creativity, expertise, and dedication to customer satisfaction are unmatched!"
+    profile_url: "https://www.google.com/maps/contrib/110388911948575746174/reviews?hl=en-GB"
+    review_count: 4
+    is_local_guide: false
+
+  - name: "Josh Park"
+    rating: 5
+    date: "4 months ago"
+    comment: "I had a great experience working with Matt on a design for my small patio and garden area. I wasn't really sure what I wanted, but Matt took my many vague ideas and turned them into something that actually makes sense for the space. He suggested materials and plants that will work well and be easy to maintain, which I couldn't have thought of myself. The whole process was really straightforward, and he was easy to work with and incredibly professional. Now I just need to get it built! Would definitely recommend if you need help with landscape design."
+    profile_url: "https://www.google.com/maps/contrib/107572337727251195542/reviews?hl=en-GB"
+    review_count: 65
+    is_local_guide: true
+    photos: 27
+
+  - name: "Nicholas Fong"
+    rating: 5
+    date: "4 months ago"
+    comment: "If you are looking for a team that combines creativity, professionalism, and genuine care for clients, Epic Landscape Designs is the one. I worked with the team to design my outdoor space, and it was an absolute pleasure to work with. I couldn't be happier with the result!\n\nThe visualized 3D design and lifelike demo make the experience 100 times better, you get to see how everything will look before committing—not just a drawing on paper.\n\nWe had our own landscaper, they handed over the designs and everything seamlessly. The work is still in progress, but everything is looking amazing already.\n\nI highly recommend them for anyone looking to transform their outdoor space!"
+    profile_url: "https://www.google.com/maps/contrib/118411863297704718249/reviews?hl=en-GB"
+    review_count: 3
+    is_local_guide: false
+
+  - name: "Alex Wong"
+    rating: 5
+    date: "a month ago"
+    comment: "Matt was able to, very quickly and efficiently, help me visualise my landscaping dreams on paper. This saved me THOUSANDS in construction rework costs. His is the perfect bridge for turning the high level grand plan into a practical, fit for purpose solution. He does this by using his technical skills, industry knowledge and communicating using easy to understand everyday language. WOULD USE AGAIN!"
+    profile_url: "https://www.google.com/maps/contrib/111020090239960599858/reviews?hl=en"
+    review_count: 18
+    is_local_guide: true
+    photos: 1

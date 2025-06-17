@@ -5,9 +5,7 @@
             <div class="col-xl-12">
                 <div class="section-title text-center mb-70 wow fadeInUp" data-wow-delay=".3s">
                     <span>Our Projects</span>
-                    <h2>{{ site.data.projects.heading }}
-                    </h2>
-
+                    <h2>{{ site.data.projects.heading }}</h2>
                     <h1 class="hero-title">
                         Epic <span class="hero-title-highlight inline-logo-text">Landscape Designs</span>
                     </h1>
@@ -15,36 +13,29 @@
             </div>
         </div>
         <div class="row mb-60">
-            <div class="col-xl-6 col-lg-6 col-md-6">
-                <div class="single-project wow fadeInUp" data-wow-delay=".3s">
+            {% for project in site.data.projects.projects %}
+            {% assign column_size = site.data.projects.projects.size | modulo: 3 %}
+            {% if column_size == 0 %}
+            {% assign col_class = "col-xl-4 col-lg-4 col-md-6" %}
+            {% else %}
+            {% assign col_class = "col-xl-6 col-lg-6 col-md-6" %}
+            {% endif %}
+            <div class="{{ col_class }}">
+                <div class="single-project wow fadeInUp" data-wow-delay=".{{ forloop.index | times: 2 }}s">
                     <div class="single-project-img bg-property bg-hover-style-1"
-                        data-background="{{ site.data.projects.projects[0].project_image | relative_url }}">
+                        data-background="{{ project.project_image | relative_url }}">
                         <div class="single-project-img-icon">
                             <a href="{{ project_one.project1.link | relative_url }}"><i
                                     class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
                     <div class="single-project-content">
-                        <h3>{{ site.data.projects.projects[0].project_name }}</h3>
-                        <p>{{ site.data.projects.projects[0].project_summary }}</p>
+                        <h3>{{ project.project_name }}</h3>
+                        <p>{{ project.project_summary }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6">
-                <div class="single-project wow fadeInUp" data-wow-delay=".5s">
-                    <div class="single-project-img bg-property bg-hover-style-1"
-                        data-background="{{ site.data.projects.projects[1].project_image | relative_url }}">
-                        <div class="single-project-img-icon">
-                            <a href="{{ project_one.project2.link | relative_url }}"><i
-                                    class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="single-project-content">
-                        <h3>{{ site.data.projects.projects[1].project_name }}</h3>
-                        <p>{{ site.data.projects.projects[1].project_summary }}</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
