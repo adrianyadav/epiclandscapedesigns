@@ -3,39 +3,13 @@
 {% assign navigation = site.data.header['navigation'] %}
 {% assign button = site.data.header['button'] %}
 <header>
-    <!-- <div class="header-top pt-15 pb-15 theme-bg-1">
-        <div class="container custom-container-1">
-            <div class="row">
-                <div class="col-xl-8 col-lg-8 col-md-12">
-                    <div class="header-info">
-                        <ul>
-                            <li>
-                                <i class="fas fa-phone-alt"></i> Call on :
-                                <a href="tel:{{ header_top.number.url }}">{{ header_top.number.label }}</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-clock"></i> Open Hours : {{ header_top.open_hour }}
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="header-social text-xl-end text-lg-end text-md-center">
-                        {% for social in header_top.social %}
-                        <a href="{{ social.url }}">{{ social.label }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div id="sticky-header" class="header-bottom">
         <div class="container custom-container-1">
             <div class="row d-flex align-items-center">
                 <div class="col-xl-2 col-lg-2 col-md-4">
-                    <div class="logo">
+                    <a href="#" class="logo">
                         {% include common/logo.html %}
-                    </div>
+                    </a>
                 </div>
                 <div class="col-xl-10 col-lg-10 col-md-8">
                     <div class="header-btn f-right">

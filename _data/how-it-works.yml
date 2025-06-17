@@ -1,0 +1,43 @@
+section_title: How Does It Work?
+section_subtitle: Our Design Process
+steps:
+  - step_title: Free Consultation
+    step_description: During the consultation, we discuss your vision, preferences,
+      and budget while assessing the site to develop an initial concept.
+    step_image: /assets/uploads/1.jpg
+    step_image_alt: Free Consultation
+    step_order: 1
+  - step_title: Initial Design
+    step_description: After you decide to move forward with us, we develop a draft
+      plan to visualise the discussed concept and make any necessary adjustments
+      to the core design.
+    step_image: assets/images/how-it-works/2.jpg
+    step_image_alt: Initial Design
+    step_order: 2
+  - step_title: 3D Design Created With Materials
+    step_description: We bring your design to life by incorporating colour, texture,
+      shading, and materials, creating a realistic representation of the unique
+      space you're envisioning.
+    step_image: /assets/uploads/3.jpg
+    step_image_alt: 3D Design
+    step_order: 3
+  - step_title: Final Ultra High Definition Rendering
+    step_description: In this stage we take the design to the next level by
+      rendering realistic images through state-of-the-art software showcasing
+      lifelike lighting, realistic materials including dynamic elements like
+      water movement and shadows, providing an immersive preview of your
+      finished space. This ensures you experience your future landscape in vivid
+      detail before it's built, ensuring every element is perfectly aligned with
+      your vision.
+    step_image: /assets/uploads/4.jpg
+    step_image_alt: Final Rendering
+    step_order: 4
+  - step_title: Construction
+    step_description: We ensure a seamless transition by offering a detailed
+      handover to one of our trusted partner builders or your builder of choice.
+      We provide on-site consultations during the construction phase to ensure
+      the build aligns with your approved design. This ensures a smooth process
+      and a final outcome that meets your vision.
+    step_image: /assets/uploads/5.jpg
+    step_icon_alt: Construction Icon
+    step_order: 5

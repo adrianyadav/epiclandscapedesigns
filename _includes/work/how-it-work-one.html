@@ -1,216 +1,69 @@
+{% assign how_it_works = site.data.how-it-works %}
 <div class="how-it-works theme-bg-4 pt-110 pb-110" id='services'>
     <div class="container custom-container-1">
         <div class="row">
-            <div class="section-title text-center mb-70 wow fadeInUp" data-wow-delay=".3s">
-                <span>See How it Works!</span>
-                <h2>How we works <br> Landscape & Gardening</h2>
+            <div class="section-title text-center mb-70">
+                <span>{{ how_it_works.section_title }}</span>
+                <h2>{{ how_it_works.section_subtitle }}</h2>
             </div>
         </div>
         <div class="row">
-
             <!-- Tabs Navigation Start -->
-            <ul class="works-menu text-center mb-50 wow fadeInUp" role="tablist" data-wow-delay=".3s">
+            <ul class="works-menu text-center mb-50" role="tablist">
+                {% for step in how_it_works.steps %}
                 <li class="nav-item">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                        type="button" role="tab" aria-controls="home" aria-selected="true">
+                    <button class="nav-link {% if forloop.first %}active{% endif %}" id="step-{{ step.step_order }}-tab"
+                        data-bs-toggle="tab" data-bs-target="#step-{{ step.step_order }}" type="button" role="tab"
+                        aria-controls="step-{{ step.step_order }}"
+                        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
                         <span class="works-icon">
-                            <img src="{{ " assets/images/how-it-works/preparation-phase.png" | relative_url }}" alt="">
+                            {% case step.step_order %}
+                            {% when 1 %}
+                            <i class="fas fa-comments"></i>
+                            {% when 2 %}
+                            <i class="fas fa-pencil-ruler"></i>
+                            {% when 3 %}
+                            <i class="fas fa-cube"></i>
+                            {% when 4 %}
+                            <i class="fas fa-camera"></i>
+                            {% when 5 %}
+                            <i class="fas fa-hard-hat"></i>
+                            {% endcase %}
                         </span>
+                        <span class="step-title">{{ step.step_title }}</span>
                     </button>
                 </li>
-                <li class="nav-item">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                        type="button" role="tab" aria-controls="profile" aria-selected="false">
-                        <span class="works-icon">
-                            <img src="{{ " assets/images/how-it-works/design-proposal.png" | relative_url }}" alt="">
-                        </span>
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
-                        type="button" role="tab" aria-controls="messages" aria-selected="false">
-                        <span class="works-icon">
-                            <img src="{{ " assets/images/how-it-works/start-planting.png" | relative_url }}" alt="">
-                        </span>
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
-                        type="button" role="tab" aria-controls="settings" aria-selected="false">
-                        <span class="works-icon">
-                            <img src="{{ " assets/images/how-it-works/enjoy-the-landscape.png" | relative_url }}"
-                                alt="">
-                        </span>
-                    </button>
-                </li>
+                {% endfor %}
             </ul>
             <!-- Tabs Navigation End -->
 
             <!-- Tabs Panes Start -->
             <div class="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".3s">
-                                <h3>Preparation Phase</h3>
-                                <div class="works-img bg-hover-style-1 bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/1.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
+                {% for step in how_it_works.steps %}
+                <div class="tab-pane {% if forloop.first %}active{% endif %}" id="step-{{ step.step_order }}"
+                    role="tabpanel" aria-labelledby="step-{{ step.step_order }}-tab">
+                    <div class="row align-items-center">
+                        <div class="col-xl-7 col-lg-7 col-md-7">
+                            <div class="works-content-wrapper">
+                                <div class="step-indicator">
+                                    <span class="current-step">Step {{ step.step_order }}</span>
+                                    <span class="total-steps">of {{ how_it_works.steps.size }}</span>
                                 </div>
+                                <h3>{{ step.step_title }}</h3>
+                                <p>{{ step.step_description }}</p>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".5s">
-                                <h3>Design Proposal</h3>
-                                <div class="works-img bg-hover-style-1 bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/2.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".7s">
-                                <h3>Start Planting</h3>
-                                <div class="works-img bg-hover-style-1 bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/3.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".9s">
-                                <h3>Enjoy the Landscape</h3>
-                                <div class="works-img bg-hover-style-1 bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/4.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5">
+                            <div class="works-img">
+                                <img src="{{ step.step_image | relative_url }}" alt="{{ step.step_image_alt }}"
+                                    loading="lazy" width="500" height="300">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".3s">
-                                <h3>Design Proposal</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/2.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".5s">
-                                <h3>Preparation Phase</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/1.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".7s">
-                                <h3>Enjoy the Landscape</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/4.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".9s">
-                                <h3>Start Planting</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/3.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".3s">
-                                <h3>Enjoy the Landscape</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/4.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".5s">
-                                <h3>Design Proposal</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/2.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".7s">
-                                <h3>Preparation Phase</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/1.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".9s">
-                                <h3>Start Planting</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/3.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".3s">
-                                <h3>Enjoy the Landscape</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/4.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".5s">
-                                <h3>Start Planting</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/3.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".7s">
-                                <h3>Design Proposal</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/2.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-3">
-                            <div class="works-content-wrapper text-center wow fadeInUp" data-wow-delay=".9s">
-                                <h3>Preparation Phase</h3>
-                                <div class="works-img bg-hover-style-1">
-                                    <img src="{{ " assets/images/how-it-works/1.jpg" | relative_url }}" alt="">
-                                    <a href="#" class="works-link"><i class="fas fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <!-- Tabs Panes End -->
-
         </div>
     </div>
 </div>

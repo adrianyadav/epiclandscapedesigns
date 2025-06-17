@@ -72,4 +72,26 @@ collections: # A list of collections the CMS should be able to edit
               - { label: 'Project Summary', name: 'project_summary', widget: 'text' }
               - { label: 'Project Image', name: 'project_image', widget: 'image' }
               - { label: 'Project Image Alt Text', name: 'project_image_alt', widget: 'string' }
+
+  - name: 'how_it_works'
+    label: 'How It Works'
+    label_singular: 'Step'
+    description: 'Manage the How It Works section content'
+    files:
+      - file: '_data/how-it-works.yml'
+        label: 'How It Works Content'
+        name: 'how_it_works'
+        fields:
+          - { label: 'Section Title', name: 'section_title', widget: 'string', default: 'How Does It Work?' }
+          - { label: 'Section Subtitle', name: 'section_subtitle', widget: 'string', default: 'Our Design Process' }
+          - label: 'Steps'
+            name: 'steps'
+            widget: 'list'
+            summary: '{{fields.step_title}}'
+            fields:
+              - { label: 'Step Title', name: 'step_title', widget: 'string' }
+              - { label: 'Step Description', name: 'step_description', widget: 'text' }
+              - { label: 'Step Image', name: 'step_image', widget: 'image' }
+              - { label: 'Step Image Alt', name: 'step_image_alt', widget: 'string' }
+              - { label: 'Step Order', name: 'step_order', widget: 'number', value_type: 'int', min: 1, max: 5 }
           

@@ -37,7 +37,7 @@ hero_two:
       url: /contact
 subtitle: Crafting Nature's Masterpieces, One Epic Landscape at a Time
 button_text: Get a free consultation
-button_link: /contact
+button_link: "#contact"
 video_link: https://www.youtube.com/watch?v=LoI4HflwDOo
 background_image: /assets/uploads/image02.jpg
 thumbnail_image: /assets/uploads/image01.jpg

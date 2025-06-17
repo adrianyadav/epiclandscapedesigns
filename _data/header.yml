@@ -19,9 +19,6 @@ logo:
     url: "/"
 
 navigation:
-  - label: "Home"
-    url: "#"
-  
   - label: "About"
     url: "#about"
 
