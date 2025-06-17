@@ -2,6 +2,7 @@ local_backend: true
 
 backend:
   name: git-gateway
+  branch: main
 
 site_url: https://epiclandscapedesigns.netlify.app
 
