@@ -1,0 +1,48 @@
+//MEDIA QUERY MANAGER
+
+/*
+0-600px: phone
+600-900px: tablet portrait
+900-1200: tablet landscape
+1200-1800px:  is where our normal styles apply
+1800px: big screen
+*/
+
+/*
+- xs
+- sm
+- md
+- lg
+*/
+
+// MEDIA QUERY MANAGER
+$xs: 37.5em; // 600px
+$sm: 56.25em; // 900px
+$md: 75em; // 1200px
+$lg: 112.5em; // 1800px
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == xs {
+        @media (max-width: $xs) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == sm {
+        @media (max-width: $sm) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == md {
+        @media (min-width: #{$sm}) and (max-width: #{$lg}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == lg {
+        @media (min-width: $lg) {
+            @content;
+        }
+    }
+}

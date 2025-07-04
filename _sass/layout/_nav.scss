@@ -1,0 +1,29 @@
+@use './abstract/variables' as *;
+@use './abstract/typography' as *;
+
+.nav {
+    background-color: $color-bg-cream;
+    height: 100px;
+
+    &-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+    }
+
+    &-item:not(:first-child) {
+        margin-left: 2rem;
+    }
+
+    &-link {
+        font-family: $primary-font;
+        text-decoration: none;
+        color: $color-dark-grey;
+        text-transform: uppercase;
+        font-size: $font-size-sm;
+        color: $color-dark-grey;
+
+    }
+}
