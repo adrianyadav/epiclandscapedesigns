@@ -319,7 +319,7 @@ p, a {
 }
 @media (max-width: 37.5em) {
   .hamburger-menu-grid {
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
   }
   .hamburger-menu-content {
     padding: 1.5rem 1rem;
