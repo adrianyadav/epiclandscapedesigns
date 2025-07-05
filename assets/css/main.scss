@@ -1,16 +1,16 @@
 ---
 ---
 
-
 // Abstract (utilities, variables, mixins)
-@use 'abstract/variables';
-@use 'abstract/reset';
-@use 'abstract/typography';
-@use 'abstract/respond';
+@use "abstract/variables";
+@use "abstract/reset";
+@use "abstract/typography";
+@use "abstract/respond";
 
 // Components
-@use 'components/hero';
+@use "components/hero";
 
 // Layout
-@use 'layout/nav';
-@use 'layout/footer';
+@use "layout/nav";
+@use "layout/footer";
+

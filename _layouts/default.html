@@ -7,15 +7,18 @@
   <title>{{ page.title }} - {{ site.title }}</title>
   {% include fonts.html %}
 
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 
 <body>
+
+
   {% include nav.html %}
   {{ content }}
   {% include footer.html %}
+
+  <script src="/assets/js/hamburger-menu.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,32 @@
+<!-- Hamburger Button -->
+<button class="hamburger-btn" aria-label="Open menu" aria-controls="hamburger-menu-overlay" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Hamburger Menu Overlay -->
+<div class="hamburger-menu-overlay" id="hamburger-menu-overlay" aria-hidden="true">
+    <div class="hamburger-menu-grid">
+        <div class="hamburger-menu-bg">
+            <div class="hamburger-logo">
+                {% include svg/logo.html %}
+            </div>
+        </div>
+        <div class="hamburger-menu-content">
+            <button class="hamburger-close" aria-label="Close menu">&times;</button>
+            <nav class="hamburger-nav">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
 <nav class="nav">
     <ul class="nav-list">
         <li class="nav-item"><a class="nav-link" href="#">About</a></li>

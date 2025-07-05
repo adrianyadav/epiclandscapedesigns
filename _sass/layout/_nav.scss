@@ -1,5 +1,6 @@
-@use './abstract/variables' as *;
-@use './abstract/typography' as *;
+@use "./abstract/variables" as *;
+@use "./abstract/typography" as *;
+@use "./abstract/respond" as *;
 
 .nav {
     background-color: $color-bg-cream;
@@ -11,10 +12,7 @@
         justify-content: center;
         align-items: center;
         padding-top: 2rem;
-    }
-
-    &-item:not(:first-child) {
-        margin-left: 2rem;
+        grid-gap: 1rem;
     }
 
     &-link {
@@ -24,6 +22,216 @@
         text-transform: uppercase;
         font-size: $font-size;
         color: $color-dark-grey;
+        transition: all 0.3s ease;
+        &:hover {
+            border-bottom: 1px solid $color-dark-grey;
+        }
+    }
 
+    @include respond(sm) {
+        display: none;
+    }
+}
+
+// Hamburger Menu Overlay Styles
+.hamburger-btn {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1100;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: $color-dark-grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    span {
+        display: block;
+        width: 32px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+
+    @include respond(sm) {
+        display: flex;
+    }
+}
+
+.hamburger-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: none;
+    background: $color-bg-cream;
+    transition: opacity 0.4s;
+    width: 100vw;
+    height: 100vh;
+
+    &.open {
+        display: block;
+        animation: fadeIn 0.4s;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hamburger-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.hamburger-menu-bg {
+    background-image: linear-gradient(to right bottom, rgba($color-bg-cream, 0.85), rgba($color-bg-cream, 0.95)),
+        url("/assets/img/sunset.png");
+    background-size: cover;
+    background-position: center;
+    min-width: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hamburger-logo {
+    width: 95%;
+    height: auto;
+    filter: brightness(1.1) contrast(1.1);
+    transition: transform 0.3s ease;
+
+    svg {
+        width: 95%;
+        height: auto;
+        margin-top: 5rem;
+    }
+}
+.hamburger-menu-content {
+    background: none;
+    color: $color-dark-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 3rem;
+    position: relative;
+    min-width: 0;
+}
+
+.hamburger-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: $color-dark-grey;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hamburger-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+.hamburger-nav li {
+    margin-bottom: 1.5rem;
+}
+.hamburger-nav a {
+    color: $color-dark-grey;
+    font-size: 2.2rem;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+.hamburger-nav a:hover {
+    color: #ffae4e;
+}
+
+.hamburger-contact {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #eee;
+}
+.hamburger-contact a {
+    color: #ffae4e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.hamburger-contact a:hover {
+    color: #fff;
+}
+.hamburger-social {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.hamburger-social a {
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.hamburger-social a:hover {
+    color: #ffae4e;
+}
+
+// Responsive - Keep two columns but adjust sizing
+@media (max-width: 900px) {
+    .hamburger-menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .hamburger-menu-content {
+        padding: 2rem 1.5rem;
+    }
+    .hamburger-nav a {
+        font-size: 1.8rem;
+    }
+}
+
+@include respond(xs) {
+    .hamburger-menu-grid {
+        grid-template-columns: 1fr 1.2fr;
+    }
+    .hamburger-menu-content {
+        padding: 1.5rem 1rem;
+    }
+    .hamburger-nav a {
+        font-size: 1.5rem;
+    }
+
+    .hamburger-close {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+// Show overlay when open
+.hamburger-menu-overlay.open {
+    display: block;
+
+    .footer {
+        display: none;
     }
 }
