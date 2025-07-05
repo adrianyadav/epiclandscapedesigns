@@ -13,9 +13,13 @@ html {
 
 body {
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 img {
     width: 100%;
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands" !important;
 }

@@ -1,0 +1,9 @@
+{
+    "scss.format.enable": false,
+    "css.format.enable": false,
+    "files.associations": {
+        "*.scss": "scss"
+    },
+    "scss.validate": true,
+    "css.validate": true
+}

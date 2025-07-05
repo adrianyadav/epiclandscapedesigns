@@ -1,0 +1,224 @@
+@use "../abstract/variables" as *;
+@use "../abstract/typography" as *;
+
+.footer {
+    background-color: $color-bg-predominant;
+    padding: 4rem 0 2rem;
+    position: relative;
+
+    .icon {
+        svg {
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s ease;
+            fill: $color-dark-grey;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+    }
+
+    * {
+        color: $color-dark-grey;
+        font-family: $primary-font;
+    }
+
+    &-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+        align-items: center;
+    }
+
+    &-section {
+        place-items: center;
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+
+            a {
+                text-decoration: none;
+                transition: all 0.3s ease;
+                padding: 0.3rem 0;
+                display: inline-block;
+            }
+        }
+
+        // Logo styling
+        svg {
+            max-width: 200px;
+            height: auto;
+            transition: filter 0.3s ease;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            padding: 4px;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba($color-orange, 0.1), transparent);
+                transition: left 0.5s ease;
+            }
+
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &-social-links {
+        display: flex;
+        gap: 1rem;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+    }
+
+    &-bottom {
+        text-align: center;
+        padding-top: 2.5rem;
+        margin-top: 3rem;
+        border-top: 1px solid rgba($color-dark-grey, 0.1);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: $color-orange;
+            border-radius: 1px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+
+            a {
+                color: $color-orange;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Responsive improvements
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 0 1.5rem;
+
+        &-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 1.5rem;
+        }
+
+        &-section {
+            text-align: center;
+
+            h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            svg {
+                max-width: 150px;
+            }
+        }
+
+        .social-links {
+            justify-content: center;
+        }
+
+        .contact-info {
+            align-items: center;
+
+            a {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+}

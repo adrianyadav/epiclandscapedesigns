@@ -1,2 +1,37 @@
+@use './variables' as *;
+
 $primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Fraunces', serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary-font;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: $font-size-xlg;
+}
+
+h2 {
+    font-size: $font-size-lg;
+}
+
+h3 {
+    font-size: $font-size-md;
+}
+
+h4 {
+    font-size: $font-size-sm;
+}
+
+h5 {
+    font-size: $font-size;
+}
+
+p, a {
+    font-size: $font-size;
+}
