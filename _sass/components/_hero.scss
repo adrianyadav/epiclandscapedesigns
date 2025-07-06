@@ -1,4 +1,5 @@
-@use './abstract/variables' as *;
+@use "./abstract/variables" as *;
+@use "./abstract/respond" as *;
 
 .hero {
     background-color: $color-bg-cream;
@@ -14,25 +15,53 @@
         z-index: 1;
 
         &--bottom-left {
-            bottom: 30px;
+            bottom: 50px;
             left: -80px;
 
-
+            @include respond(sm) {
+                bottom: -45px;
+            }
         }
 
         &--top-right {
             top: -120px;
             right: -30px;
+
+            @include respond(sm) {
+                top: -90px;
+                right: -120px;
+            }
+
+            @include respond(xs) {
+                width: 100%;
+
         }
     }
 
     &-logo {
         position: absolute;
         z-index: 2;
-        width: 400px;
+        width: 100%;
         top: 20%;
         left: 50%;
         transform: translate(-50%, 50%);
+    }
+
+    &-logo-desktop {
+        max-width: 400px;
+        margin: 0 auto;
+        @include respond(sm) {
+            display: none;
+        }
+    }
+
+    &-logo-mobile {
+        display: none;
+        @include respond(sm) {
+            display: block;
+            place-self: center;
+            width: 250px;
+        }
     }
 }
 
