@@ -103,6 +103,12 @@ p, a {
     right: -120px;
   }
 }
+@media (max-width: 37.5em) {
+  .hero-fern--top-right {
+    right: -225px;
+    width: 100%;
+  }
+}
 .hero-logo {
   position: absolute;
   z-index: 2;
