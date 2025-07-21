@@ -1,6 +1,11 @@
-@use './variables' as *;
+@use "./variables" as *;
 
-$primary-font: 'Montserrat', sans-serif;
+$primary-font: "Montserrat", sans-serif;
+
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+}
 
 h1,
 h2,
@@ -32,6 +37,7 @@ h5 {
     font-size: $font-size;
 }
 
-p, a {
+p,
+a {
     font-size: $font-size;
 }

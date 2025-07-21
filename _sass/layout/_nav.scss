@@ -11,7 +11,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 2rem;
+        padding-top: 5rem;
         grid-gap: 1.5rem;
     }
 
@@ -57,7 +57,7 @@
         display: block;
         width: 32px;
         height: 3px;
-        background: white;
+        background: $color-black;
         border-radius: 2px;
         transition: all 0.3s;
     }
@@ -72,7 +72,7 @@
     inset: 0;
     z-index: 1200;
     display: none;
-    background: $color-bg-cream;
+    background: $color-bg-predominant;
     transition: opacity 0.4s;
     width: 100vw;
     height: 100vh;
@@ -93,20 +93,15 @@
 }
 
 .hamburger-menu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .hamburger-menu-bg {
-    background-image: linear-gradient(to right bottom, rgba($color-bg-cream, 0.85), rgba($color-bg-cream, 0.95)),
-        url("/assets/img/sunset.png");
-    background-size: cover;
-    background-position: center;
-    min-width: 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
+    display: none; // Remove the background section
 }
 
 .hamburger-logo {
@@ -120,24 +115,27 @@
         margin-top: 2rem;
     }
 }
+
 .hamburger-menu-content {
     background: none;
     color: $color-dark-grey;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 4rem 3rem;
     position: relative;
     min-width: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .hamburger-close {
     position: absolute;
-    top: 0;
-    right: 0.5rem;
+    top: 1rem;
+    right: 1rem;
     background: none;
     border: none;
-    color: $color-dark-grey;
+    color: $color-black;
     font-size: 3rem;
     cursor: pointer;
     z-index: 2;
@@ -147,22 +145,25 @@
     list-style: none;
     padding: 0;
     margin: 0 0 2.5rem 0;
-    margin-left: 1rem;
 }
+
 .hamburger-nav li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
+
 .hamburger-nav a {
     color: $color-dark-grey;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.04em;
     text-decoration: none;
     font-weight: 400;
     transition: color 0.2s;
+    text-transform: uppercase;
 }
+
 .hamburger-nav a:hover {
-    color: #ffae4e;
+    color: $color-orange;
 }
 
 .hamburger-contact {
@@ -170,20 +171,24 @@
     font-size: 1.2rem;
     color: #eee;
 }
+
 .hamburger-contact a {
-    color: #ffae4e;
+    color: $color-orange;
     text-decoration: none;
     transition: color 0.2s;
 }
+
 .hamburger-contact a:hover {
     color: #fff;
 }
+
 .hamburger-social {
     margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
 }
+
 .hamburger-social a {
     color: #fff;
     font-size: 1.2rem;
@@ -193,32 +198,29 @@
     text-decoration: none;
     transition: color 0.2s;
 }
+
 .hamburger-social a:hover {
-    color: #ffae4e;
+    color: $color-orange;
 }
 
-// Responsive - Keep two columns but adjust sizing
+// Responsive adjustments
 @media (max-width: 900px) {
-    .hamburger-menu-grid {
-        grid-template-columns: 1fr 1fr;
-    }
     .hamburger-menu-content {
         padding: 2rem 1.5rem;
     }
+
     .hamburger-nav a {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 }
 
 @include respond(xs) {
-    .hamburger-menu-grid {
-        grid-template-columns: 1fr 1fr;
-    }
     .hamburger-menu-content {
         padding: 1.5rem 1rem;
     }
+
     .hamburger-nav a {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }
 

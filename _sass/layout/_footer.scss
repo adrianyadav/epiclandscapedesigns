@@ -1,10 +1,22 @@
 @use "../abstract/variables" as *;
 @use "../abstract/typography" as *;
+@use "../abstract/respond" as *;
 
 .footer {
     background-color: $color-bg-predominant;
     padding: 4rem 0 2rem;
     position: relative;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        grid-gap: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     .icon {
         svg {
@@ -81,7 +93,6 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 0.8rem 0;
             text-decoration: none;
             transition: all 0.3s ease;
             border-radius: 6px;

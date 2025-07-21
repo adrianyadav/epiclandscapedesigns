@@ -24,6 +24,11 @@ img {
   font-family: "Font Awesome 5 Brands" !important;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 h1,
 h2,
 h3,
@@ -54,7 +59,8 @@ h5 {
   font-size: 1.6rem;
 }
 
-p, a {
+p,
+a {
   font-size: 1.6rem;
 }
 
@@ -79,11 +85,18 @@ p, a {
   align-items: center;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+}
+@media (max-width: 56.25em) {
+  .hero {
+    overflow: hidden;
+  }
 }
 .hero-fern {
   position: absolute;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+  will-change: opacity, transform;
 }
 .hero-fern--bottom-left {
   bottom: 30px;
@@ -100,18 +113,13 @@ p, a {
   }
 }
 .hero-fern--top-right {
-  top: -120px;
-  right: -30px;
+  top: -125px;
+  right: 0px;
 }
 @media (max-width: 56.25em) {
   .hero-fern--top-right {
     top: -90px;
     transform: translate(100px);
-  }
-}
-@media (max-width: 37.5em) {
-  .hero-fern--top-right {
-    width: 100%;
   }
 }
 .hero-logo {
@@ -123,7 +131,7 @@ p, a {
   transform: translate(-50%, 50%);
 }
 .hero-logo-desktop {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
 }
 @media (max-width: 56.25em) {
@@ -141,6 +149,12 @@ p, a {
     width: 250px;
   }
 }
+.hero-logo-text p {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #545454;
+  margin-top: 2rem;
+}
 
 .fern-image {
   width: 300px;
@@ -157,7 +171,7 @@ p, a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 5rem;
   grid-gap: 1.5rem;
 }
 .nav-link {
@@ -202,7 +216,7 @@ p, a {
   display: block;
   width: 32px;
   height: 3px;
-  background: white;
+  background: #000000;
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -217,7 +231,7 @@ p, a {
   inset: 0;
   z-index: 1200;
   display: none;
-  background: #fff4c9;
+  background: #f1f1f2;
   transition: opacity 0.4s;
   width: 100vw;
   height: 100vh;
@@ -236,19 +250,15 @@ p, a {
   }
 }
 .hamburger-menu-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger-menu-bg {
-  background-image: linear-gradient(to right bottom, rgba(255, 244, 201, 0.85), rgba(255, 244, 201, 0.95)), url("/assets/img/sunset.png");
-  background-size: cover;
-  background-position: center;
-  min-width: 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  display: none;
 }
 
 .hamburger-logo {
@@ -267,19 +277,21 @@ p, a {
   color: #545454;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 4rem 3rem;
   position: relative;
   min-width: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .hamburger-close {
   position: absolute;
-  top: 0;
-  right: 0.5rem;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
-  color: #545454;
+  color: #000000;
   font-size: 3rem;
   cursor: pointer;
   z-index: 2;
@@ -289,21 +301,21 @@ p, a {
   list-style: none;
   padding: 0;
   margin: 0 0 2.5rem 0;
-  margin-left: 1rem;
 }
 
 .hamburger-nav li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .hamburger-nav a {
   color: #545454;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.04em;
   text-decoration: none;
   font-weight: 400;
   transition: color 0.2s;
+  text-transform: uppercase;
 }
 
 .hamburger-nav a:hover {
@@ -348,25 +360,19 @@ p, a {
 }
 
 @media (max-width: 900px) {
-  .hamburger-menu-grid {
-    grid-template-columns: 1fr 1fr;
-  }
   .hamburger-menu-content {
     padding: 2rem 1.5rem;
   }
   .hamburger-nav a {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 37.5em) {
-  .hamburger-menu-grid {
-    grid-template-columns: 1fr 1fr;
-  }
   .hamburger-menu-content {
     padding: 1.5rem 1rem;
   }
   .hamburger-nav a {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 .hamburger-menu-overlay.open {
@@ -380,6 +386,15 @@ p, a {
   background-color: #f1f1f2;
   padding: 4rem 0 2rem;
   position: relative;
+}
+.footer .icon {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  text-decoration: none;
+}
+.footer .icon:hover {
+  text-decoration: underline;
 }
 .footer .icon svg {
   width: 20px;
@@ -443,7 +458,6 @@ p, a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.8rem 0;
   text-decoration: none;
   transition: all 0.3s ease;
   border-radius: 6px;

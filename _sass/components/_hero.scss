@@ -9,11 +9,20 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+
+    @include respond(sm) {
+        overflow: hidden;
+    }
 
     &-fern {
         position: absolute;
         z-index: 1;
+        // Initial state - will be overridden by JavaScript
+        opacity: 0;
+        transition:
+            opacity 3s ease-in-out,
+            transform 3s ease-in-out;
+        will-change: opacity, transform; // Optimize for animations
 
         &--bottom-left {
             bottom: 30px;
@@ -29,16 +38,12 @@
         }
 
         &--top-right {
-            top: -120px;
-            right: -30px;
+            top: -125px;
+            right: 0px;
 
             @include respond(sm) {
                 top: -90px;
                 transform: translate(100px);
-            }
-
-            @include respond(xs) {
-                width: 100%;
             }
         }
     }
@@ -53,7 +58,7 @@
     }
 
     &-logo-desktop {
-        max-width: 400px;
+        max-width: 600px;
         margin: 0 auto;
         @include respond(sm) {
             display: none;
@@ -66,6 +71,15 @@
             display: block;
             place-self: center;
             width: 250px;
+        }
+    }
+
+    &-logo-text {
+        p {
+            font-size: 1.6rem;
+            text-align: center;
+            color: $color-dark-grey;
+            margin-top: 2rem;
         }
     }
 }
