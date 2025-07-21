@@ -114,7 +114,7 @@ a {
 }
 .hero-fern--top-right {
   top: -125px;
-  right: 0px;
+  right: -30px;
 }
 @media (max-width: 56.25em) {
   .hero-fern--top-right {

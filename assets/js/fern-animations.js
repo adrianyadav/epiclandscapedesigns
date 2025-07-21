@@ -12,15 +12,13 @@ document.addEventListener('DOMContentLoaded', function () {
         animationTriggered = true;
 
         ferns.forEach((fern, index) => {
-            // Set initial state - fully transparent and positioned outside screen
-            fern.style.opacity = '0';
-            fern.style.transform = getInitialTransform(fern, index);
+            // Set transition first
             fern.style.transition = 'opacity 3s ease-in-out, transform 3s ease-in-out';
 
-            // Force a reflow to ensure initial state is applied
+            // Force a reflow to ensure transition is applied
             fern.offsetHeight;
 
-            // Animate in
+            // Now animate to final state
             fern.style.opacity = '0.8';
             fern.style.transform = getFinalTransform(fern);
         });
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const isBottomLeft = fern.classList.contains('hero-fern--bottom-left');
 
         if (isTopRight) {
-            return 'translate(40px, 0) scale(1)';
+            return 'translate(0px, 0) scale(1)';
         } else if (isBottomLeft) {
             return 'translate(0, 0) scale(1)';
         }
@@ -92,14 +90,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize
     function init() {
-        // Set initial state
+        // Set initial state for all ferns at once
         ferns.forEach(fern => {
             fern.style.opacity = '0';
             fern.style.transform = getInitialTransform(fern, 0);
+            fern.style.transition = 'none'; // No transition for initial state
         });
 
+        // Force a reflow to ensure initial state is applied
+        ferns[0]?.offsetHeight;
+
         // Start initial animation after a short delay
-        setTimeout(animateFernsIn, 300);
+        setTimeout(animateFernsIn, 100);
 
         // Add scroll listener for nav visibility
         window.addEventListener('scroll', handleFernVisibility);
