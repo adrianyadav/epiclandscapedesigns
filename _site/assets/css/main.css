@@ -99,18 +99,18 @@ a {
   will-change: opacity, transform;
 }
 .hero-fern--bottom-left {
-  bottom: -4px;
-  left: -93px;
+  bottom: -80px;
+  left: -200px;
 }
 @media (max-width: 56.25em) {
   .hero-fern--bottom-left {
-    bottom: -106px;
+    bottom: -100px;
     left: -97px;
   }
 }
 .hero-fern--top-right {
-  top: -125px;
-  right: -60px;
+  top: -160px;
+  right: -120px;
 }
 @media (max-width: 56.25em) {
   .hero-fern--top-right {
@@ -154,9 +154,14 @@ a {
 }
 
 .fern-image {
-  width: 300px;
+  width: 600px;
   height: auto;
   opacity: 0.8;
+}
+@media (max-width: 56.25em) {
+  .fern-image {
+    width: 300px;
+  }
 }
 
 .nav {

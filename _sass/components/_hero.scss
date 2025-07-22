@@ -25,18 +25,18 @@
         will-change: opacity, transform; // Optimize for animations
 
         &--bottom-left {
-            bottom: -4px;
-            left: -93px;
+            bottom: -80px;
+            left: -200px;
 
             @include respond(sm) {
-                bottom: -106px;
+                bottom: -100px;
                 left: -97px;
             }
         }
 
         &--top-right {
-            top: -125px;
-            right: -60px;
+            top: -160px;
+            right: -120px;
 
             @include respond(sm) {
                 top: -90px;
@@ -83,7 +83,11 @@
 }
 
 .fern-image {
-    width: 300px;
+    width: 600px;
     height: auto;
     opacity: 0.8;
+
+    @include respond(sm) {
+        width: 300px;
+    }
 }
