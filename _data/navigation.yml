@@ -2,7 +2,7 @@
   url: "/"
 - title: Services
   url: "/services"
-- title: Projects
-  url: "#"
+- title: Process
+  url: "/process"
 - title: Contact
   url: "/contact"
