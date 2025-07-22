@@ -42,6 +42,118 @@
     }
 }
 
+// Contact Info Section
+.contact-info-section {
+    padding: 6rem 2rem;
+    background-color: white;
+
+    @include respond(sm) {
+        padding: 4rem 1rem;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+.contact-info-wrapper {
+    text-align: center;
+}
+
+.contact-info-title {
+    color: $color-dark-grey;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+
+    @include respond(sm) {
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include respond(sm) {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+.contact-info-item {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background-color: #fafafa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: $color-orange;
+        border-radius: 50%;
+        margin: 0 auto 1.5rem;
+        color: white;
+        transition: all 0.3s ease;
+        background-color: inherit;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: #545454;
+        }
+    }
+
+    &:hover .contact-icon {
+        transform: scale(1.05);
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        color: $color-dark-grey;
+        margin-bottom: 1rem;
+        letter-spacing: 0.01em;
+    }
+
+    p {
+        font-size: 1.6rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+
+        a {
+            color: $color-orange;
+            text-decoration: none;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: color.adjust($color-orange, $lightness: -10%);
+            }
+        }
+    }
+
+    .appointment-note {
+        font-size: 1.4rem;
+        color: #999;
+        font-style: italic;
+        margin-top: 0.5rem;
+    }
+}
+
 // Contact Form Section
 .contact-form-section {
     padding: 2rem;
@@ -70,7 +182,6 @@
 }
 
 .contact-form-title {
-    font-size: 2.8rem;
     color: $color-dark-grey;
     margin-bottom: 3rem;
     text-align: center;
@@ -238,10 +349,6 @@
             width: 20px;
             height: 20px;
             fill: currentColor;
-        }
-
-        .label {
-            font-weight: 600;
         }
     }
 }
