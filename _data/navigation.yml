@@ -1,8 +1,8 @@
-- title: About
-  url: "#"
+- title: Home
+  url: "/"
 - title: Services
   url: "/services"
 - title: Projects
   url: "#"
 - title: Contact
-  url: "#"
+  url: "/contact"
