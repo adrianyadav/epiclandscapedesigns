@@ -13,10 +13,9 @@
         <div class="hamburger-menu-content">
             <nav class="hamburger-nav">
                 <ul>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    {% for item in site.data.navigation %}
+                    <li class="nav-item"><a class="nav-link" href="{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>
@@ -25,9 +24,8 @@
 
 <nav class="nav">
     <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        {% for item in site.data.navigation %}
+        <li class="nav-item"><a class="nav-link" href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
     </ul>
 </nav>

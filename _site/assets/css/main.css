@@ -99,26 +99,23 @@ a {
   will-change: opacity, transform;
 }
 .hero-fern--bottom-left {
-  bottom: 30px;
-  left: -80px;
+  bottom: -4px;
+  left: -93px;
 }
 @media (max-width: 56.25em) {
   .hero-fern--bottom-left {
-    bottom: -45px;
-  }
-}
-@media (max-width: 37.5em) {
-  .hero-fern--bottom-left {
-    bottom: -60px;
+    bottom: -106px;
+    left: -97px;
   }
 }
 .hero-fern--top-right {
   top: -125px;
-  right: -30px;
+  right: -60px;
 }
 @media (max-width: 56.25em) {
   .hero-fern--top-right {
     top: -90px;
+    right: -100px;
     transform: translate(100px);
   }
 }

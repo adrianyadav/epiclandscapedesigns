@@ -25,24 +25,22 @@
         will-change: opacity, transform; // Optimize for animations
 
         &--bottom-left {
-            bottom: 30px;
-            left: -80px;
+            bottom: -4px;
+            left: -93px;
 
             @include respond(sm) {
-                bottom: -45px;
-            }
-
-            @include respond(xs) {
-                bottom: -60px;
+                bottom: -106px;
+                left: -97px;
             }
         }
 
         &--top-right {
             top: -125px;
-            right: -30px;
+            right: -60px;
 
             @include respond(sm) {
                 top: -90px;
+                right: -100px;
                 transform: translate(100px);
             }
         }
