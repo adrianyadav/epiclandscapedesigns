@@ -65,7 +65,7 @@
     &-logo-mobile {
         display: none;
         @include respond(sm) {
-            display: block;
+            display: grid;
             place-self: center;
             width: 250px;
         }
