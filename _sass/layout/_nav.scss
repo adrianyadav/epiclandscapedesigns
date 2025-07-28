@@ -2,6 +2,14 @@
 @use "./abstract/typography" as *;
 @use "./abstract/respond" as *;
 
+.logo-sm {
+    position: absolute;
+    left: 20px;
+    svg {
+        width: 50px;
+    }
+}
+
 .nav {
     background-color: $color-bg-cream;
     height: 100px;

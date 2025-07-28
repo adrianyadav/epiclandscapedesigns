@@ -1,39 +1,46 @@
 <section class="contact-form-section">
     <div class="container">
         <div class="contact-form-wrapper">
-            <h2 class="contact-form-title">Email For A Free Consultation & Quote Today
-            </h2>
-            <form netlify class="contact-form" action="#" method="POST">
+            <form name='epiclandscape contact' netlify class="contact-form" data-netlify="true"
+                onsubmit="return validateForm()">
                 <div class="form-group">
-                    <label for="name" class="form-label">Name *</label>
-                    <input type="text" id="name" name="name" class="form-input" required>
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-input">
+                    <div class="error-message" id="name-error"></div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="form-label">Email Address *</label>
-                    <input type="email" id="email" name="email" class="form-input" required>
+                    <label for="email" class="form-label">E-mail Address</label>
+                    <input type="email" id="email" name="email" class="form-input">
+                    <div class="error-message" id="email-error"></div>
                 </div>
 
                 <div class="form-group">
                     <label for="phone" class="form-label">Phone Number</label>
                     <input type="tel" id="phone" name="phone" class="form-input">
-                </div>
-
-
-                <div class="form-group">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" id="subject" name="subject" class="form-input">
+                    <div class="error-message" id="phone-error"></div>
                 </div>
 
                 <div class="form-group">
-                    <label for="message" class="form-label">Message *</label>
-                    <textarea id="message" name="message" class="form-textarea" rows="6"
-                        placeholder="Tell us about your project, timeline, and any specific requirements..."
-                        required></textarea>
+                    <label for="enquiry-type" class="form-label">Enquiry Type</label>
+                    <select id="enquiry-type" name="enquiry-type" class="form-input form-select">
+                        <option value="">Select an option</option>
+                        <option value="new-construction">New Construction</option>
+                        <option value="existing-property">Existing Property</option>
+                        <option value="business-opportunity">Business Opportunity</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="error-message" id="enquiry-type-error"></div>
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="form-submit">Send</button>
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-textarea" rows="6"></textarea> </textarea>
+                    <div class="error-message" id="message-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">SUBMIT</button>
                 </div>
             </form>
         </div>
