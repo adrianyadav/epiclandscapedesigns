@@ -1,5 +1,7 @@
 @use "../abstract/variables" as *;
 @use "../abstract/respond" as *;
+@use "./abstract/typography" as *;
+
 @use "sass:color";
 
 .btn {
@@ -7,9 +9,8 @@
     color: white;
     border: none;
     padding: 8px 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: $primary-font;
     font-size: 16px;
-    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 4px;

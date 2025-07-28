@@ -1,5 +1,6 @@
 // Real-time validation
 document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.contact-form');
     const emailInput = document.getElementById('email');
     const phoneInput = document.getElementById('phone');
 
@@ -11,6 +12,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Phone validation on input
     phoneInput.addEventListener('input', function () {
         validatePhone(this.value);
+    });
+
+    // Form submission handler
+    form.addEventListener('submit', function (e) {
+        if (!validateForm()) {
+            e.preventDefault();
+            return false;
+        }
+        // If validation passes, let Netlify handle the submission
+        return true;
     });
 });
 
@@ -80,9 +91,6 @@ function validateForm() {
     // Get form values
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const name = document.getElementById('name').value.trim();
-    const enquiryType = document.getElementById('enquiry-type').value;
-    const message = document.getElementById('message').value.trim();
 
     // Validate email if provided
     if (email && !validateEmail(email)) {
@@ -104,12 +112,6 @@ function validateForm() {
         showError(emailError, emailInput, 'Please provide either an email address or phone number');
         showError(phoneError, phoneInput, 'Please provide either an email address or phone number');
         isValid = false;
-    }
-
-    // If validation passes, show success message
-    if (isValid) {
-        // You can add a success message here if needed
-        console.log('Form validation passed');
     }
 
     return isValid;
