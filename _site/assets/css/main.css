@@ -24,7 +24,6 @@ img {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background-color: #fff4c9;
 }
 
 h1,
@@ -187,6 +186,13 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  background-color: #fff4c9;
+  position: relative;
+}
+@media (max-width: 56.25em) {
+  .contact {
+    overflow: hidden;
+  }
 }
 @media (max-width: 56.25em) {
   .contact {
@@ -403,11 +409,7 @@ a {
   display: flex;
   justify-content: center;
   padding: 4rem 2rem;
-}
-@media (max-width: 56.25em) {
-  .success {
-    min-height: 450px;
-  }
+  background-color: #fff4c9;
 }
 @media (max-width: 56.25em) {
   .success {

@@ -6,6 +6,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    background-color: $color-bg-cream;
+    position: relative;
+
+    @include respond(sm) {
+        overflow: hidden;
+    }
 
     @include respond(sm) {
         grid-template-columns: 1fr;

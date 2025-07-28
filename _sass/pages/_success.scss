@@ -8,10 +8,7 @@
     display: flex;
     justify-content: center;
     padding: 4rem 2rem;
-
-    @include respond(sm) {
-        min-height: 450px;
-    }
+    background-color: $color-bg-cream;
 
     @include respond(sm) {
         padding: 2rem 1rem;
