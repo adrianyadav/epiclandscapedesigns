@@ -52,7 +52,9 @@
     }
 
     &-section {
-        place-items: center;
+        display: grid;
+        justify-self: center;
+        text-align: center;
 
         p {
             margin-bottom: 1.5rem;
