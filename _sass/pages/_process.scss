@@ -165,6 +165,10 @@
     .process-step {
         padding: 1.5rem;
         gap: 1.5rem;
+
+        @include respond(sm) {
+            padding: 0;
+        }
     }
 
     .process-step__number {

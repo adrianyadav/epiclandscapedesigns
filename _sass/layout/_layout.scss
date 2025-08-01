@@ -8,7 +8,7 @@
 // Common page layout patterns
 .page {
     position: relative;
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: $color-bg-cream;
     padding: 2rem 0;
     z-index: 1;
@@ -53,6 +53,12 @@
 
     &--2-columns {
         grid-template-columns: 1fr 1fr;
+        padding: 0 !important;
+        .container {
+            @include respond(md) {
+                padding: 0 !important;
+            }
+        }
 
         @include respond(sm) {
             grid-template-columns: 1fr;
@@ -76,6 +82,11 @@
             grid-template-columns: 1fr;
         }
     }
+}
+
+.w1200 {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 // Container
@@ -129,6 +140,7 @@
     @include respond(sm) {
         padding: 4rem 0;
     }
+    
 } 
 
 .spacer {
