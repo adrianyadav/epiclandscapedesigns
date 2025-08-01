@@ -12,6 +12,11 @@
     background-color: $color-bg-cream;
     padding: 2rem 0;
     z-index: 1;
+    overflow: hidden;
+
+    @include respond(sm) {
+        min-height: 100vh;
+    }
 
     &__header {
         margin-top: 4rem;
