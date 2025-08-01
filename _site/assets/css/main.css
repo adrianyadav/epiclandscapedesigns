@@ -507,6 +507,7 @@ a {
   min-height: 100vh;
   background-color: var(--color-bg-whitecream);
   padding: 2rem 0;
+  z-index: 1;
 }
 
 .projects-header {
@@ -525,6 +526,8 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  z-index: 1;
+  position: relative;
 }
 
 .project-item {
@@ -625,9 +628,8 @@ a {
 .project-modal__content {
   position: relative;
   background: #f1f1f2;
-  max-width: 95vw;
-  max-height: 95vh;
-  overflow: hidden;
+  max-width: 55vw;
+  overflow: visible;
   z-index: 1001;
   border-radius: 12px;
 }
@@ -636,10 +638,9 @@ a {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   color: white;
   border: none;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
   font-size: 2rem;
@@ -656,6 +657,7 @@ a {
   flex-direction: column;
   height: 100%;
   padding: 0;
+  min-height: 0;
 }
 
 .project-modal__images {
@@ -664,7 +666,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  min-height: 0;
+  max-height: 70vh;
 }
 
 .project-modal__image-container {
@@ -683,35 +686,51 @@ a {
 }
 
 .project-modal__side-nav {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.9);
   color: white;
   border: none;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   transition: all 0.3s;
-  z-index: 10;
-  width: 60px;
-  height: 80%;
+  z-index: 1002;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  font-weight: bold;
 }
 .project-modal__side-nav:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.project-modal__side-nav:active {
+  transform: translateY(-50%) scale(0.95);
 }
 .project-modal__side-nav:disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: not-allowed;
+  transform: translateY(-50%);
+}
+.project-modal__side-nav:disabled:hover {
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.project-modal__side-nav.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 .project-modal__side-nav--prev {
-  left: 1rem;
+  left: calc(50% - 40vw - 100px);
 }
 .project-modal__side-nav--next {
-  right: 1rem;
+  right: calc(50% - 40vw - 100px);
 }
 
 .project-modal__image-counter {
@@ -728,23 +747,19 @@ a {
 }
 
 .project-modal__thumbnails {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  max-height: 80%;
-  overflow-y: auto;
+  background: rgba(251, 249, 249, 0.9);
+  justify-content: center;
+  overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.775) transparent;
+  flex-shrink: 0;
 }
 .project-modal__thumbnails::-webkit-scrollbar {
-  width: 4px;
+  height: 4px;
 }
 .project-modal__thumbnails::-webkit-scrollbar-track {
   background: transparent;
@@ -755,8 +770,8 @@ a {
 }
 
 .project-modal__thumbnail {
-  width: 60px;
-  height: 45px;
+  width: 80px;
+  height: 60px;
   border-radius: 4px;
   cursor: pointer;
   border: 2px solid transparent;

@@ -93,15 +93,15 @@
             <div class="projects-grid__items">
                 
                 
-                <div class="project-item" data-project="ryde"
-                    data-project-info='{"title": "ryde", "location": "Ryde", "description": "Outdoor kitchen and bar area with pergola and seating", "images": ["/assets/img/stairs.png","/assets/img/sunset.png"]}'>
+                <div class="project-item" data-project="ryde-outdoor-kitchen"
+                    data-project-info='{"title": "ryde-outdoor-kitchen", "location": "Ryde", "description": "Outdoor kitchen and bar area with pergola and seating", "images": ["/assets/uploads/1.jpeg","/assets/uploads/2.jpeg","/assets/uploads/3.jpeg"]}'>
                     <div class="project-item__image-container">
                         
-                        <img src="/assets/img/stairs.png" alt="ryde" class="project-item__image">
+                        <img src="/assets/uploads/1.jpeg" alt="ryde-outdoor-kitchen" class="project-item__image">
                         
                         <div class="project-item__overlay"></div>
                     </div>
-                    <h3 class="project-item__title">ryde</h3>
+                    <h3 class="project-item__title">ryde-outdoor-kitchen</h3>
                 </div>
                 
                 <div class="project-item" data-project="castle-hill"
@@ -137,15 +137,15 @@
                     <h3 class="project-item__title">lane cove</h3>
                 </div>
                 
-                <div class="project-item" data-project="ryde"
-                    data-project-info='{"title": "ryde", "location": "Ryde", "description": "Swimming pool with wooden decking surrounded by lush tropical plants", "images": ["/assets/img/stairs.png","/assets/img/sunset.png"]}'>
+                <div class="project-item" data-project="ryde-swimming-pool"
+                    data-project-info='{"title": "ryde-swimming-pool", "location": "Ryde", "description": "Swimming pool with wooden decking surrounded by lush tropical plants", "images": ["/assets/img/stairs.png","/assets/img/sunset.png"]}'>
                     <div class="project-item__image-container">
                         
-                        <img src="/assets/img/stairs.png" alt="ryde" class="project-item__image">
+                        <img src="/assets/img/stairs.png" alt="ryde-swimming-pool" class="project-item__image">
                         
                         <div class="project-item__overlay"></div>
                     </div>
-                    <h3 class="project-item__title">ryde</h3>
+                    <h3 class="project-item__title">ryde-swimming-pool</h3>
                 </div>
                 
                 <div class="project-item" data-project="oatlands"
@@ -169,21 +169,21 @@
     <div class="project-modal__overlay"></div>
     <div class="project-modal__content">
         <button class="project-modal__close" id="modalClose">&times;</button>
+        <button class="project-modal__side-nav project-modal__side-nav--prev"
+            id="prevImageSide">&lt;</button>
+        <button class="project-modal__side-nav project-modal__side-nav--next"
+            id="nextImageSide">&gt;</button>
         <div class="project-modal__body">
             <div class="project-modal__images">
                 <div class="project-modal__image-container">
                     <img src="" alt="" class="project-modal__image" id="modalImage">
-                    <button class="project-modal__side-nav project-modal__side-nav--prev"
-                        id="prevImageSide">&lt;</button>
-                    <button class="project-modal__side-nav project-modal__side-nav--next"
-                        id="nextImageSide">&gt;</button>
                     <div class="project-modal__image-counter">
                         <span id="currentImageIndex">1</span> / <span id="totalImages">1</span>
                     </div>
                 </div>
-                <div class="project-modal__thumbnails" id="modalThumbnails">
-                    <!-- Thumbnails will be populated by JavaScript -->
-                </div>
+            </div>
+            <div class="project-modal__thumbnails" id="modalThumbnails">
+                <!-- Thumbnails will be populated by JavaScript -->
             </div>
             <div class="project-modal__info">
                 <h2 class="project-modal__title" id="modalTitle"></h2>

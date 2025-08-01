@@ -1,10 +1,12 @@
 projects:
-  - title: ryde
+  - id: ryde-kitchen
+    title: ryde-outdoor-kitchen
     location: Ryde
     description: Outdoor kitchen and bar area with pergola and seating
     images:
-      - image: /assets/img/stairs.png
-      - image: /assets/img/sunset.png
+      - image: /assets/uploads/1.jpeg
+      - image: /assets/uploads/2.jpeg
+      - image: /assets/uploads/3.jpeg
     order: 1
   - title: castle hill
     location: Castle Hill
@@ -27,7 +29,8 @@ projects:
       - image: /assets/img/stairs.png
       - image: /assets/img/sunset.png
     order: 4
-  - title: ryde
+  - id: ryde-pool
+    title: ryde-swimming-pool
     location: Ryde
     description: Swimming pool with wooden decking surrounded by lush tropical plants
     images:
@@ -36,8 +39,7 @@ projects:
     order: 5
   - title: oatlands
     location: Oatlands
-    description:
-      Desert-style garden featuring various cacti and succulents around a
+    description: Desert-style garden featuring various cacti and succulents around a
       circular fire pit
     images:
       - image: /assets/img/stairs.png

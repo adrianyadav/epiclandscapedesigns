@@ -137,6 +137,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const prevBtn = document.getElementById('prevImageSide');
         const nextBtn = document.getElementById('nextImageSide');
 
+        // Hide/show buttons based on position
+        if (currentImageIndex === 0) {
+            prevBtn.classList.add('hidden');
+        } else {
+            prevBtn.classList.remove('hidden');
+        }
+
+        if (currentImageIndex === project.images.length - 1) {
+            nextBtn.classList.add('hidden');
+        } else {
+            nextBtn.classList.remove('hidden');
+        }
+
+        // Also keep the disabled state for accessibility
         prevBtn.disabled = currentImageIndex === 0;
         nextBtn.disabled = currentImageIndex === project.images.length - 1;
     }
