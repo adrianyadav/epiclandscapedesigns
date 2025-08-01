@@ -1336,8 +1336,8 @@ a {
 }
 
 .process-step__image {
-  width: 300px;
-  height: 200px;
+  height: auto;
+  max-width: 500px;
   overflow: hidden;
   border-radius: 8px;
   flex-shrink: 0;
