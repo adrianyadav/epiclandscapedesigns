@@ -1003,7 +1003,7 @@ a {
   flex-direction: row;
   gap: 0.5rem;
   padding: 1rem;
-  background: var(--color-bg-whitecream);
+  background: var(--color-bg-cream);
   justify-content: center;
   overflow-x: auto;
   scrollbar-width: thin;
