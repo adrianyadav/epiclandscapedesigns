@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./respond" as *;
 
 $primary-font: "Montserrat", sans-serif;
 
@@ -40,4 +41,14 @@ h5 {
 p,
 a {
     font-size: $font-size;
+}
+
+.heading-1 {
+    font-size: $font-size-lg;
+    color: $color-orange;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    @include respond(sm) {
+        font-size: $font-size-lg;
+    }
 }

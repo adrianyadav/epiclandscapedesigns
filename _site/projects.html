@@ -4,14 +4,19 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Services | Epic Landscape Designs - </title>
+    <title>Projects | Epic Landscape Designs - </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
+
+
+
+<script src="/assets/js/projects.js"></script>
 
 
 
@@ -36,7 +41,7 @@
                     
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     
-                    <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
                     
                     <li class="nav-item"><a class="nav-link" href="/process">Process</a></li>
                     
@@ -60,7 +65,7 @@
         
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         
-        <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
         
         <li class="nav-item"><a class="nav-link" href="/process">Process</a></li>
         
@@ -68,7 +73,117 @@
         
     </ul>
 </nav>
-  <h1>Services</h1>
+  <div class="projects hero-spacer">
+    <!-- Decorative fern -->
+    <div class="hero-fern hero-fern--top-right">
+        <img src="/assets/img/fern1.svg" alt="Fern decoration" class="fern-image">
+    </div>
+
+    <!-- Projects Header -->
+    <section class="projects-header">
+        <div class="container">
+            <h1 class="projects-title heading-1">PROJECTS</h1>
+            <p class="projects-description">Take a stroll through our completed Epic Landscapes.</p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid">
+        <div class="container">
+            <div class="projects-grid__items">
+                
+                
+                <div class="project-item" data-project="ryde">
+                    <div class="project-item__image-container">
+                        
+                        <img src="/assets/uploads/stairs.png" alt="ryde" class="project-item__image">
+                        
+                        <div class="project-item__overlay"></div>
+                    </div>
+                    <h3 class="project-item__title">ryde</h3>
+                </div>
+                
+                <div class="project-item" data-project="castle-hill">
+                    <div class="project-item__image-container">
+                        
+                        <img src="/assets/uploads/castle-hill-1.jpg" alt="castle hill" class="project-item__image">
+                        
+                        <div class="project-item__overlay"></div>
+                    </div>
+                    <h3 class="project-item__title">castle hill</h3>
+                </div>
+                
+                <div class="project-item" data-project="parramatta">
+                    <div class="project-item__image-container">
+                        
+                        <img src="/assets/uploads/parramatta-1.jpg" alt="parramatta" class="project-item__image">
+                        
+                        <div class="project-item__overlay"></div>
+                    </div>
+                    <h3 class="project-item__title">parramatta</h3>
+                </div>
+                
+                <div class="project-item" data-project="lane-cove">
+                    <div class="project-item__image-container">
+                        
+                        <img src="/assets/uploads/lane-cove-1.jpg" alt="lane cove" class="project-item__image">
+                        
+                        <div class="project-item__overlay"></div>
+                    </div>
+                    <h3 class="project-item__title">lane cove</h3>
+                </div>
+                
+                <div class="project-item" data-project="ryde">
+                    <div class="project-item__image-container">
+                        
+                        <img src="/assets/uploads/ryde-pool-1.jpg" alt="ryde" class="project-item__image">
+                        
+                        <div class="project-item__overlay"></div>
+                    </div>
+                    <h3 class="project-item__title">ryde</h3>
+                </div>
+                
+                <div class="project-item" data-project="oatlands">
+                    <div class="project-item__image-container">
+                        
+                        <img src="/assets/uploads/oatlands-1.jpg" alt="oatlands" class="project-item__image">
+                        
+                        <div class="project-item__overlay"></div>
+                    </div>
+                    <h3 class="project-item__title">oatlands</h3>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Project Modal -->
+<div class="project-modal" id="projectModal">
+    <div class="project-modal__overlay"></div>
+    <div class="project-modal__content">
+        <button class="project-modal__close" id="modalClose">&times;</button>
+        <div class="project-modal__body">
+            <div class="project-modal__images">
+                <div class="project-modal__image-container">
+                    <img src="" alt="" class="project-modal__image" id="modalImage">
+                </div>
+                <div class="project-modal__image-nav">
+                    <button class="project-modal__nav-btn project-modal__nav-btn--prev" id="prevImage">&lt;</button>
+                    <div class="project-modal__image-counter">
+                        <span id="currentImageIndex">1</span> / <span id="totalImages">1</span>
+                    </div>
+                    <button class="project-modal__nav-btn project-modal__nav-btn--next" id="nextImage">&gt;</button>
+                </div>
+            </div>
+            <div class="project-modal__info">
+                <h2 class="project-modal__title" id="modalTitle"></h2>
+                <p class="project-modal__location" id="modalLocation"></p>
+                <p class="project-modal__description" id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+</div>
   <footer class="footer">
     <div class="footer-content">
         <div class="footer-section">
@@ -121,6 +236,17 @@
 
   <script src="/assets/js/hamburger-menu.js"></script>
   <script src="/assets/js/fern-animations.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

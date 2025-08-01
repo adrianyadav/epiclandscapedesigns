@@ -1,7 +1,7 @@
 - title: Home
   url: "/"
-- title: Services
-  url: "/services"
+- title: Projects
+  url: "/projects"
 - title: Process
   url: "/process"
 - title: Contact

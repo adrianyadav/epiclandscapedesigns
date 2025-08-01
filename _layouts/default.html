@@ -18,6 +18,17 @@
 
   <script src="/assets/js/hamburger-menu.js"></script>
   <script src="/assets/js/fern-animations.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

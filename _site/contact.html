@@ -11,6 +11,7 @@
     rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 
 
@@ -40,7 +41,7 @@
                     
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     
-                    <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
                     
                     <li class="nav-item"><a class="nav-link" href="/process">Process</a></li>
                     
@@ -64,7 +65,7 @@
         
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         
-        <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
         
         <li class="nav-item"><a class="nav-link" href="/process">Process</a></li>
         
@@ -76,9 +77,9 @@
     <div class="hero-fern hero-fern--top-right">
         <img src="/assets/img/fern1.svg" alt="Fern decoration" class="fern-image">
     </div>
-    <section class="contact-hero">
+    <section class="contact-hero hero-spacer">
     <div class="contact-hero-content">
-        <h1 class="contact-hero-title">Contact us
+        <h1 class="contact-hero-title heading-1">Contact us
         </h1>
         <p class="contact-hero-subtitle">We'd love to hear about your next landscaping project! Just fill out the form
             and we'll get back to you right away.</p>
@@ -186,6 +187,17 @@
 
   <script src="/assets/js/hamburger-menu.js"></script>
   <script src="/assets/js/fern-animations.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

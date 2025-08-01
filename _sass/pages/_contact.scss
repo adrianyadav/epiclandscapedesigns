@@ -20,14 +20,9 @@
 
 // Contact Hero Section
 .contact-hero {
-    padding: 8rem 2rem 6rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-
-    @include respond(sm) {
-        padding: 2rem 0;
-    }
 
     &-content {
         max-width: 960px;
@@ -36,16 +31,6 @@
         z-index: 2;
         @include respond(sm) {
             padding: 0 2rem;
-        }
-    }
-
-    &-title {
-        font-size: $font-size-lg;
-        color: $color-orange;
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-        @include respond(sm) {
-            font-size: $font-size-lg;
         }
     }
 

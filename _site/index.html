@@ -11,6 +11,7 @@
     rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 
 
@@ -36,7 +37,7 @@
                     
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     
-                    <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
                     
                     <li class="nav-item"><a class="nav-link" href="/process">Process</a></li>
                     
@@ -60,7 +61,7 @@
         
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         
-        <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/projects">Projects</a></li>
         
         <li class="nav-item"><a class="nav-link" href="/process">Process</a></li>
         
@@ -419,6 +420,17 @@
 
   <script src="/assets/js/hamburger-menu.js"></script>
   <script src="/assets/js/fern-animations.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>

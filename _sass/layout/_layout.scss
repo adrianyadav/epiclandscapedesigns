@@ -1,0 +1,16 @@
+@use "./abstract/variables" as *;
+@use "./abstract/typography" as *;
+@use "./abstract/respond" as *;
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero-spacer {
+    padding: 8rem 2rem 6rem;
+    @include respond(sm) {
+        padding: 2rem 0;
+    }
+}
