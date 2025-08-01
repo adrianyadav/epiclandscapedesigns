@@ -135,7 +135,7 @@ a {
 }
 @media (max-width: 56.25em) {
   .hero-logo-mobile {
-    display: block;
+    display: grid;
     place-self: center;
     width: 250px;
   }
@@ -222,8 +222,9 @@ a {
 }
 .contact-hero-title {
   font-size: 3.2rem;
-  color: #545454;
+  color: #ffae4e;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 @media (max-width: 56.25em) {
   .contact-hero-title {
@@ -303,6 +304,8 @@ a {
 
 .contact-form-wrapper {
   padding: 4rem;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 56.25em) {
   .contact-form-wrapper {
@@ -366,6 +369,7 @@ a {
   color: #333;
   border: 0;
   border-bottom: 1px solid #333;
+  cursor: pointer;
 }
 .form-input:focus,
 .form-textarea:focus,
@@ -392,14 +396,18 @@ a {
   display: none;
 }
 
+.character-count {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-align: right;
+  font-weight: 300;
+  display: none;
+}
+
 .form-input.error,
 .form-textarea.error {
   border-color: #dc3545;
-}
-
-.form-input.valid,
-.form-textarea.valid {
-  border-color: #28a745;
 }
 
 .success {

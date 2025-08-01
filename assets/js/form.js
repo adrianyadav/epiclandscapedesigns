@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.contact-form');
     const emailInput = document.getElementById('email');
     const phoneInput = document.getElementById('phone');
+    const messageInput = document.getElementById('message');
 
     // Email validation on input
     emailInput.addEventListener('input', function () {
@@ -12,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Phone validation on input
     phoneInput.addEventListener('input', function () {
         validatePhone(this.value);
+    });
+
+    // Message character count and validation
+    messageInput.addEventListener('input', function () {
+        updateCharacterCount(this.value);
+        validateMessage(this.value);
     });
 
     // Form submission handler
@@ -91,6 +98,7 @@ function validateForm() {
     // Get form values
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
 
     // Validate email if provided
     if (email && !validateEmail(email)) {
@@ -100,6 +108,23 @@ function validateForm() {
     // Validate phone if provided
     if (phone && !validatePhone(phone)) {
         isValid = false;
+    }
+
+    // Validate message
+    if (!message) {
+        const messageError = document.getElementById('message-error');
+        const messageInput = document.getElementById('message');
+        showError(messageError, messageInput, 'Please enter a message');
+        isValid = false;
+    } else if (message.length >= 2000) {
+        const messageError = document.getElementById('message-error');
+        const messageInput = document.getElementById('message');
+        showError(messageError, messageInput, 'Message cannot exceed 2000 characters');
+        isValid = false;
+    } else {
+        const messageError = document.getElementById('message-error');
+        const messageInput = document.getElementById('message');
+        clearError(messageError, messageInput);
     }
 
     // Check if at least one contact method is provided
@@ -115,4 +140,39 @@ function validateForm() {
     }
 
     return isValid;
+}
+
+function validateMessage(message) {
+    const messageError = document.getElementById('message-error');
+    const messageInput = document.getElementById('message');
+
+    if (!message.trim()) {
+        showError(messageError, messageInput, 'Please enter a message');
+        return false;
+    }
+
+    if (message.length >= 2000) {
+        showError(messageError, messageInput, 'Message cannot exceed 2000 characters');
+        return false;
+    }
+
+    clearError(messageError, messageInput);
+    return true;
+}
+
+function updateCharacterCount(text) {
+    const characterCount = document.getElementById('message-character-count');
+    const currentLength = text.length;
+    const maxLength = 2000;
+
+    characterCount.textContent = `${currentLength} / ${maxLength} characters`;
+
+    // Change color when approaching or reaching limit
+    if (currentLength >= maxLength) {
+        characterCount.style.color = '#dc3545'; // Red when at limit
+    } else if (currentLength >= maxLength * 0.9) {
+        characterCount.style.color = '#ffc107'; // Yellow when at 90%
+    } else {
+        characterCount.style.color = '#666'; // Default gray
+    }
 }

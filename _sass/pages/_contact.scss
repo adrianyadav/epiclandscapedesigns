@@ -41,8 +41,9 @@
 
     &-title {
         font-size: $font-size-lg;
-        color: $color-dark-grey;
+        color: $color-orange;
         margin-bottom: 2rem;
+        text-transform: uppercase;
         @include respond(sm) {
             font-size: $font-size-lg;
         }
@@ -121,7 +122,8 @@
 
 .contact-form-wrapper {
     padding: 4rem;
-
+    position: relative;
+    z-index: 1;
     @include respond(sm) {
         padding: 0 2rem;
     }
@@ -183,7 +185,7 @@
     color: #333;
     border: 0;
     border-bottom: 1px solid #333;
-
+    cursor: pointer;
     &:focus {
         outline: none;
     }
@@ -207,6 +209,15 @@
     display: none;
 }
 
+.character-count {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: right;
+    font-weight: 300;
+    display: none;
+}
+
 .form-input.error,
 .form-textarea.error {
     border-color: #dc3545;
@@ -214,5 +225,5 @@
 
 .form-input.valid,
 .form-textarea.valid {
-    border-color: #28a745;
+    // border-color: #28a745;
 }
