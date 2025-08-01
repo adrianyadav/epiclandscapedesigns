@@ -36,7 +36,8 @@
         display: none;
         @include respond(sm) {
             display: grid;
-            place-self: center;
+            place-self: center !important;
+            margin: 0 auto !important;
             width: 250px;
         }
     }
