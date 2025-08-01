@@ -25,7 +25,12 @@
 
 
 <!-- Navigation -->
-<nav class="nav">
+{% if page.url == "/" %}
+{% assign nav_class = "bg bg-cream" %}
+{% else %}
+{% assign nav_class = "" %}
+{% endif %}
+<nav class="nav {{ nav_class }}">
     <ul class="nav-list">
         <!-- Logo -->
         <div class="logo-sm">

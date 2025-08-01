@@ -8,6 +8,7 @@
     gap: 2rem;
     background-color: $color-bg-cream;
     position: relative;
+    
 
     @include respond(sm) {
         overflow: hidden;
@@ -34,7 +35,7 @@
     }
 
     &-subtitle {
-        font-size: $font-size-xs;
+        font-size: $font-size;
         color: $color-dark-grey;
         line-height: 1.6;
         max-width: 600px;

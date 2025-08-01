@@ -5,6 +5,15 @@
     --color-bg-whitecream: #f1f1f2;
 }
 
+.bg
+.bg-cream {
+    background-color: var(--color-bg-cream);
+}
+
+.bg.bg-whitecream {
+    background-color: var(--color-bg-whitecream);
+}
+
 //  COLOURS
 $color-dark-grey: #545454;
 $color-primary: #ffae4e;
