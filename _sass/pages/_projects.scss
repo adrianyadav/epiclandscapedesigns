@@ -132,7 +132,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(241, 241, 242, 0.8);
 }
 
 .project-modal__content {
@@ -141,7 +141,6 @@
     max-width: 55vw;
     overflow: visible;
     z-index: 1001;
-    border-radius: 12px;
 }
 
 .project-modal__close {
@@ -492,7 +491,6 @@
         padding: 1rem;
         gap: 0.8rem;
         max-height: 80px;
-        background: rgba(251, 249, 249, 0.95);
     }
 
     .project-modal__thumbnail {
