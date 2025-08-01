@@ -11,11 +11,15 @@
 // Components
 @use "components/hero";
 @use "components/button";
+@use "components/card";
+@use "components/form";
+@use "components/decoration";
 
 // Pages
 @use "pages/contact";
 @use "pages/success";
 @use "pages/projects";
+@use "pages/process";
 
 // Layout
 @use "layout/nav";

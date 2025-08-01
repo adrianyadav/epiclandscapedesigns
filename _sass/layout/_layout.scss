@@ -2,15 +2,126 @@
 @use "./abstract/typography" as *;
 @use "./abstract/respond" as *;
 
+
+
+
+// Common page layout patterns
+.page {
+    position: relative;
+    min-height: 100vh;
+    background-color: $color-bg-cream;
+    padding: 2rem 0;
+    z-index: 1;
+
+    &__header {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: $font-size-lg;
+        color: $font-color;
+        margin-bottom: 1.5rem;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        text-align: left;
+        color: $color-primary;
+
+        @include respond(sm) {
+            font-size: $font-size-md;
+        }
+    }
+
+    &__description {
+        font-size: $font-size;
+        color: $font-color;
+        text-align: left;
+        max-width: 600px;
+        line-height: 1.6;
+
+        @include respond(sm) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+// Grid layouts
+.grid {
+    display: grid;
+    gap: 2rem;
+
+    &--2-columns {
+        grid-template-columns: 1fr 1fr;
+
+        @include respond(sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--3-columns {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+
+        @include respond(sm) {
+            gap: 2rem;
+        }
+    }
+
+    &--auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+
+        @include respond(sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// Container
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
-}
 
-.hero-spacer {
-    padding: 8rem 2rem 6rem;
     @include respond(sm) {
-        padding: 2rem 0;
+        padding: 0 1rem;
+    }
+
+    &--narrow {
+        max-width: 800px;
+    }
+
+    &--wide {
+        max-width: 1400px;
     }
 }
+
+// Section spacing
+.section {
+
+    &--small {
+        padding: 4rem 0;
+
+        @include respond(sm) {
+            padding: 3rem 0;
+        }
+    }
+
+    &--large {
+        padding: 8rem 0;
+
+        @include respond(sm) {
+            padding: 6rem 0;
+        }
+    }
+}
+
+// Background sections
+.bg-section {
+    padding: 6rem 2rem;
+
+    @include respond(sm) {
+        padding: 4rem 1rem;
+    }
+} 

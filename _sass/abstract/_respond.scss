@@ -45,4 +45,16 @@ $lg: 112.5em; // 1800px
             @content;
         }
     }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: $sm) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == phone {
+        @media (max-width: $xs) {
+            @content;
+        }
+    }
 }

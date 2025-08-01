@@ -5,7 +5,7 @@
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 5rem;
     background-color: $color-bg-cream;
     position: relative;
     
@@ -91,14 +91,75 @@
     }
 }
 
-// Contact Form Section
-.contact-form-section {
+// Contact Info Styles
+.contact-info {
+    padding: 2rem;
+
+    &__title {
+        font-size: $font-size-lg;
+        color: $font-color;
+        margin-bottom: 2rem;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+
+        @include respond(sm) {
+            font-size: $font-size-md;
+        }
+    }
+
+    &__description {
+        font-size: $font-size;
+        color: $font-color;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+
+        @include respond(sm) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__item {
+        h3 {
+            font-size: 1.8rem;
+            color: $color-primary;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-family: "Montserrat", sans-serif;
+
+            @include respond(sm) {
+                font-size: 1.6rem;
+            }
+        }
+
+        p {
+            font-size: $font-size;
+            color: $font-color;
+            margin: 0;
+
+            @include respond(sm) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+// Contact Form Styles
+.contact-form {
     padding: 2rem;
 
     @include respond(sm) {
-        padding: 2rem 0;
+        padding: 1rem;
     }
+}
 
+// Contact Form Section
+.contact-form-section {
     .container {
         max-width: 800px;
         margin: 0 auto;
@@ -106,12 +167,8 @@
 }
 
 .contact-form-wrapper {
-    padding: 4rem;
     position: relative;
     z-index: 1;
-    @include respond(sm) {
-        padding: 0 2rem;
-    }
 }
 
 .contact-form-title {

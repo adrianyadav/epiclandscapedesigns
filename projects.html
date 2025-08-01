@@ -5,39 +5,38 @@ scripts:
 - /assets/js/projects.js
 ---
 
-<div class="projects hero-spacer">
-    <!-- Decorative fern -->
-    <div class="hero-fern hero-fern--top-right">
-        <img src="/assets/img/fern1.svg" alt="Fern decoration" class="fern-image">
-    </div>
+<div class="page bg-pattern--fern">
+    {% include fern-decoration.html %}
 
     <!-- Projects Header -->
-    <section class="projects-header">
+    <section class="page__header">
         <div class="container">
-            <h1 class="projects-title heading-1">{{ site.data.projects-page.title }}</h1>
-            <p class="projects-description">{{ site.data.projects-page.description }}</p>
+            <h1 class="page__title">{{ site.data.projects-page.title }}</h1>
+            <p class="page__description">{{ site.data.projects-page.description }}</p>
         </div>
     </section>
 
     <!-- Projects Grid -->
-    <section class="projects-grid">
+    <section class="section">
         <div class="container">
-            <div class="projects-grid__items">
+            <div class="grid grid--auto-fit">
                 {% assign sorted_projects = site.data.projects.projects | sort: 'order' %}
                 {% for project in sorted_projects %}
-                <div class="project-item" data-project="{{ project.title | slugify }}"
+                <div class="card" data-project="{{ project.title | slugify }}"
                     data-project-info='{"title": "{{ project.title | escape }}", "location": "{{ project.location | escape }}", "description": "{{ project.description | escape }}", "images": [{% for image in project.images %}"{{ image.image }}"{% unless forloop.last %},{% endunless %}{% endfor %}]}'>
-                    <div class="project-item__image-container">
+                    <div class="card__image-container">
                         {% if project.images and project.images.size > 0 %}
-                        <img src="{{ project.images[0].image }}" alt="{{ project.title }}" class="project-item__image">
+                        <img src="{{ project.images[0].image }}" alt="{{ project.title }}" class="card__image">
                         {% else %}
-                        <div class="project-item__placeholder">
+                        <div class="card__placeholder">
                             <span>No image available</span>
                         </div>
                         {% endif %}
-                        <div class="project-item__overlay"></div>
+                        <div class="card__overlay"></div>
                     </div>
-                    <h3 class="project-item__title">{{ project.title }}</h3>
+                    <div class="card__content">
+                        <h3 class="card__title">{{ project.title }}</h3>
+                    </div>
                 </div>
                 {% endfor %}
             </div>

@@ -1,8 +1,19 @@
-<section class="contact-hero hero-spacer">
-    <div class="contact-hero-content">
-        <h1 class="contact-hero-title heading-1">Contact us
-        </h1>
-        <p class="contact-hero-subtitle">We'd love to hear about your next landscaping project! Just fill out the form
-            and we'll get back to you right away.</p>
+---
+layout: default
+title: Contact | Epic Landscape Designs
+scripts:
+- /assets/js/form.js
+---
+
+
+<div class="bg bg-whitecream bg-pattern--fern">
+    {% include fern-decoration.html %}
+    <div class="contact container">
+        <!-- Contact Header -->
+        <section class="page__header">
+            <h1 class="page__title">{{ site.data.contact-page.title }}</h1>
+            <p class="page__description">{{ site.data.contact-page.description }}</p>
+        </section>
+        {% include contact-form.html %}
     </div>
-</section>
+</div>
