@@ -20,12 +20,11 @@
 
 // Contact Hero Section
 .contact-hero {
-    text-align: center;
+    text-align: left;
     position: relative;
     overflow: hidden;
-
     &-content {
-        max-width: 960px;
+        max-width: 600px;
         margin: 0 auto;
         position: relative;
         z-index: 2;
@@ -206,9 +205,4 @@
 .form-input.error,
 .form-textarea.error {
     border-color: #dc3545;
-}
-
-.form-input.valid,
-.form-textarea.valid {
-    // border-color: #28a745;
 }

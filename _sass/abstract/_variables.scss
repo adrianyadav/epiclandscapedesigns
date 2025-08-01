@@ -1,11 +1,16 @@
 // BACKGROUNDS
 
+:root {
+    --color-bg-cream: #fff4c9;
+    --color-bg-whitecream: #f1f1f2;
+}
+
 //  COLOURS
 $color-dark-grey: #545454;
 $color-primary: #ffae4e;
 $color-orange: #ffae4e;
 $color-bg-predominant: #f1f1f2;
-$color-bg-cream: #fff4c9;
+$color-bg-cream: var(--color-bg-whitecream);
 $color-black: #000000;
 
 // TRANSITIONS

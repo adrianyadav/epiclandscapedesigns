@@ -3,33 +3,36 @@ projects:
     location: Ryde
     description: Outdoor kitchen and bar area with pergola and seating
     images:
-      - image: /assets/uploads/stairs.png
-      - image: /assets/uploads/sunset.png
+      - image: /assets/img/stairs.png
+      - image: /assets/img/sunset.png
     order: 1
   - title: castle hill
     location: Castle Hill
     description: Outdoor kitchen and bar setup with stepping stones in a garden
     images:
-      - image: /assets/uploads/castle-hill-1.jpg
+      - image: /assets/img/stairs.png
+      - image: /assets/img/sunset.png
     order: 2
   - title: parramatta
     location: Parramatta
     description: Modern exterior with large windows and minimalist front garden
     images:
-      - image: /assets/uploads/parramatta-1.jpg
+      - image: /assets/img/stairs.png
+      - image: /assets/img/sunset.png
     order: 3
   - title: lane cove
     location: Lane Cove
     description: Sunken outdoor lounge area with fire pit and white built-in seating
     images:
-      - image: /assets/uploads/lane-cove-1.jpg
+      - image: /assets/img/stairs.png
+      - image: /assets/img/sunset.png
     order: 4
   - title: ryde
     location: Ryde
     description: Swimming pool with wooden decking surrounded by lush tropical plants
     images:
-      - image: /assets/uploads/ryde-pool-1.jpg
-    featured: true
+      - image: /assets/img/stairs.png
+      - image: /assets/img/sunset.png
     order: 5
   - title: oatlands
     location: Oatlands
@@ -37,6 +40,6 @@ projects:
       Desert-style garden featuring various cacti and succulents around a
       circular fire pit
     images:
-      - image: /assets/uploads/oatlands-1.jpg
-    featured: true
+      - image: /assets/img/stairs.png
+      - image: /assets/img/sunset.png
     order: 6

@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Image navigation
-    const prevBtn = document.getElementById('prevImage');
-    const nextBtn = document.getElementById('nextImage');
+    const prevBtn = document.getElementById('prevImageSide');
+    const nextBtn = document.getElementById('nextImageSide');
 
     prevBtn.addEventListener('click', () => navigateImage('prev'));
     nextBtn.addEventListener('click', () => navigateImage('next'));
@@ -49,41 +49,22 @@ document.addEventListener('DOMContentLoaded', function () {
     function loadProjectData() {
         projectItems.forEach(item => {
             const projectSlug = item.dataset.project;
-            const title = item.querySelector('.project-item__title').textContent;
-            const image = item.querySelector('.project-item__image');
+            const projectInfo = JSON.parse(item.dataset.projectInfo);
+
+            console.log('Loading project data for:', projectSlug, projectInfo);
 
             projectData[projectSlug] = {
-                title: title,
-                location: getLocationFromTitle(title),
-                description: getDescriptionFromTitle(title),
-                images: image ? [image.src] : []
+                title: projectInfo.title,
+                location: projectInfo.location,
+                description: projectInfo.description,
+                images: projectInfo.images || []
             };
         });
+
+        console.log('All loaded project data:', projectData);
     }
 
-    // Helper function to get location from title
-    function getLocationFromTitle(title) {
-        const locations = {
-            'ryde': 'Ryde',
-            'castle hill': 'Castle Hill',
-            'parramatta': 'Parramatta',
-            'lane cove': 'Lane Cove',
-            'oatlands': 'Oatlands'
-        };
-        return locations[title.toLowerCase()] || title;
-    }
 
-    // Helper function to get description from title
-    function getDescriptionFromTitle(title) {
-        const descriptions = {
-            'ryde': 'Outdoor kitchen and bar area with pergola and seating',
-            'castle hill': 'Outdoor kitchen and bar setup with stepping stones in a garden',
-            'parramatta': 'Modern exterior with large windows and minimalist front garden',
-            'lane cove': 'Sunken outdoor lounge area with fire pit and white built-in seating',
-            'oatlands': 'Desert-style garden featuring various cacti and succulents around a circular fire pit'
-        };
-        return descriptions[title.toLowerCase()] || 'A beautiful landscape design project.';
-    }
 
     // Open project modal
     function openProjectModal(projectSlug) {
@@ -101,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateModalImage();
         updateImageCounter();
         updateNavigationButtons();
+        updateThumbnails();
 
         // Show modal
         modal.classList.add('active');
@@ -118,11 +100,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update modal image
     function updateModalImage() {
         const project = projectData[currentProject];
-        if (!project || !project.images.length) return;
+        if (!project || !project.images.length) {
+            console.log('No project or images found:', project);
+            return;
+        }
 
         const modalImage = document.getElementById('modalImage');
-        modalImage.src = project.images[currentImageIndex];
+        const imageSrc = project.images[currentImageIndex];
+        console.log('Setting image src:', imageSrc, 'for project:', project.title);
+        modalImage.src = imageSrc;
         modalImage.alt = `${project.title} - Image ${currentImageIndex + 1}`;
+
+        // Add error handling for image loading
+        modalImage.onerror = function () {
+            console.error('Failed to load image:', imageSrc);
+        };
+        modalImage.onload = function () {
+            console.log('Successfully loaded image:', imageSrc);
+        };
     }
 
     // Update image counter
@@ -139,8 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const project = projectData[currentProject];
         if (!project) return;
 
-        const prevBtn = document.getElementById('prevImage');
-        const nextBtn = document.getElementById('nextImage');
+        const prevBtn = document.getElementById('prevImageSide');
+        const nextBtn = document.getElementById('nextImageSide');
 
         prevBtn.disabled = currentImageIndex === 0;
         nextBtn.disabled = currentImageIndex === project.images.length - 1;
@@ -160,6 +155,32 @@ document.addEventListener('DOMContentLoaded', function () {
         updateModalImage();
         updateImageCounter();
         updateNavigationButtons();
+        updateThumbnails();
+    }
+
+    // Update thumbnails
+    function updateThumbnails() {
+        const project = projectData[currentProject];
+        if (!project || !project.images.length) return;
+
+        const thumbnailsContainer = document.getElementById('modalThumbnails');
+        thumbnailsContainer.innerHTML = '';
+
+        project.images.forEach((imageSrc, index) => {
+            const thumbnail = document.createElement('div');
+            thumbnail.className = `project-modal__thumbnail ${index === currentImageIndex ? 'active' : ''}`;
+            thumbnail.innerHTML = `<img src="${imageSrc}" alt="Thumbnail ${index + 1}">`;
+
+            thumbnail.addEventListener('click', () => {
+                currentImageIndex = index;
+                updateModalImage();
+                updateImageCounter();
+                updateNavigationButtons();
+                updateThumbnails();
+            });
+
+            thumbnailsContainer.appendChild(thumbnail);
+        });
     }
 
     // Touch/swipe support for mobile
