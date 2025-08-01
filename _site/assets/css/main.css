@@ -261,7 +261,6 @@ a {
 }
 .card__number {
   font-size: 6rem;
-  font-weight: bold;
   color: #ffae4e;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
@@ -1307,12 +1306,11 @@ a {
 }
 
 .process-step__number {
-  font-size: 6rem;
-  font-weight: bold;
+  font-size: 8rem;
   color: #ffae4e;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
-  min-width: 80px;
+  min-width: 50px;
   text-align: left;
 }
 
@@ -2113,7 +2111,7 @@ a {
 .page__title {
   font-size: 3.2rem;
   color: #3b3d41;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   font-weight: 300;
   letter-spacing: -0.02em;
   text-align: left;
@@ -2227,7 +2225,7 @@ a {
 }
 
 .spacer {
-  margin-top: 4rem;
+  margin-top: 8rem;
   margin-bottom: 4rem;
 }
 @media (max-width: 56.25em) {

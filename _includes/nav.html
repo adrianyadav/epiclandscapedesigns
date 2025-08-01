@@ -33,9 +33,9 @@
 <nav class="nav {{ nav_class }}">
     <ul class="nav-list">
         <!-- Logo -->
-        <div class="logo-sm">
+        <a href="/" class="logo-sm">
             {% include svg/logo-sm.html %}
-        </div>
+        </a>
         {% for item in site.data.navigation %}
         <li class="nav-item"><a class="nav-link" href="{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
