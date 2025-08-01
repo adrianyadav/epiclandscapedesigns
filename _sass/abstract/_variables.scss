@@ -5,14 +5,12 @@
     --color-bg-whitecream: #f1f1f2;
 }
 
-.bg.bg-cream {
-    background-color: var(--color-bg-cream);
-    margin-bottom: 0;
+.cream {
+    background-color: var(--color-bg-cream) !important;
 }
 
-.bg.bg-whitecream {
-    background-color: var(--color-bg-whitecream);
-    margin-bottom: 0;
+.whitecream {
+    background-color: var(--color-bg-whitecream) !important;
 }
 
 //  COLOURS

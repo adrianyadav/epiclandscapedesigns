@@ -4,14 +4,12 @@
   --color-bg-whitecream: #f1f1f2;
 }
 
-.bg.bg-cream {
-  background-color: var(--color-bg-cream);
-  margin-bottom: 0;
+.cream {
+  background-color: var(--color-bg-cream) !important;
 }
 
-.bg.bg-whitecream {
-  background-color: var(--color-bg-whitecream);
-  margin-bottom: 0;
+.whitecream {
+  background-color: var(--color-bg-whitecream) !important;
 }
 
 *,
@@ -135,7 +133,8 @@ a {
 @media (max-width: 56.25em) {
   .hero-logo-mobile {
     display: grid;
-    place-self: center;
+    place-self: center !important;
+    margin: 0 auto !important;
     width: 250px;
   }
 }
@@ -2099,11 +2098,11 @@ a {
   background-color: var(--color-bg-whitecream);
   padding: 2rem 0;
   z-index: 1;
-  overflow: hidden;
 }
 @media (max-width: 56.25em) {
   .page {
     min-height: 100vh;
+    overflow: hidden;
   }
 }
 .page__header {
