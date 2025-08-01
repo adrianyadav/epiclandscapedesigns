@@ -1003,7 +1003,7 @@ a {
   flex-direction: row;
   gap: 0.5rem;
   padding: 1rem;
-  background: rgba(251, 249, 249, 0.9);
+  background: var(--color-bg-whitecream);
   justify-content: center;
   overflow-x: auto;
   scrollbar-width: thin;
@@ -1163,9 +1163,6 @@ a {
   .project-modal__images {
     max-height: 50vh;
     min-height: 200px;
-  }
-  .project-modal__image {
-    border-radius: 8px;
   }
   .project-modal__side-nav {
     width: 50px;
