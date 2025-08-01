@@ -3,6 +3,7 @@
 @use "../abstract/respond" as *;
 
 .footer {
+    border-top: 0.5px solid rgba($color-dark-grey, 0.1);
     background-color: $color-bg-predominant;
     padding: 4rem 0 2rem;
     position: relative;

@@ -1,0 +1,37 @@
+---
+layout: default
+title: Process | Epic Landscape Designs
+---
+
+<div class="page bg-pattern--fern">
+    {% include fern-decoration.html %}
+
+    <!-- Process Header -->
+    <section class="page__header">
+        <div class="container">
+            <h1 class="page__title">{{ site.data.process-page.title }}</h1>
+            <p class="page__description">{{ site.data.process-page.description }}</p>
+        </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="section">
+        <div class="container">
+            <div class="process-steps__items">
+                {% assign sorted_steps = site.data.process.steps | sort: 'order' %}
+                {% for step in sorted_steps %}
+                <div class="process-step" data-step="{{ step.order }}">
+                    <div class="process-step__number">{{ step.order }}</div>
+                    <div class="process-step__content">
+                        <h3 class="process-step__title">{{ step.title }}</h3>
+                        <p class="process-step__description">{{ step.description }}</p>
+                    </div>
+                    <div class="process-step__image">
+                        <img src="{{ step.image }}" alt="{{ step.image_alt }}" class="process-step__img">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div> 

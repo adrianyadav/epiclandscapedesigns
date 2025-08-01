@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const ferns = document.querySelectorAll('.hero-fern');
+    const ferns = document.querySelectorAll('.decoration--fern-bottom-left, .decoration--fern-top-right');
     const nav = document.querySelector('.nav');
     const hamburgerBtn = document.querySelector('.hamburger-btn');
 
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Get initial transform based on fern position
     function getInitialTransform(fern, index) {
-        const isTopRight = fern.classList.contains('hero-fern--top-right');
-        const isBottomLeft = fern.classList.contains('hero-fern--bottom-left');
+        const isTopRight = fern.classList.contains('decoration--fern-top-right');
+        const isBottomLeft = fern.classList.contains('decoration--fern-bottom-left');
 
         if (isTopRight) {
             return 'translate(150px, -150px) scale(0.7)';
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Get final transform (current position)
     function getFinalTransform(fern) {
-        const isTopRight = fern.classList.contains('hero-fern--top-right');
-        const isBottomLeft = fern.classList.contains('hero-fern--bottom-left');
+        const isTopRight = fern.classList.contains('decoration--fern-top-right');
+        const isBottomLeft = fern.classList.contains('decoration--fern-bottom-left');
 
         if (isTopRight) {
             return 'translate(0px, 0) scale(1)';

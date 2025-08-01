@@ -1,25 +1,53 @@
 // Real-time validation
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.contact-form');
+    const form = document.querySelector('.form'); // Changed from '.contact-form' to '.form'
+    const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const phoneInput = document.getElementById('phone');
+    const enquiryTypeInput = document.getElementById('enquiry-type');
     const messageInput = document.getElementById('message');
 
+    // Check if form exists before adding event listeners
+    if (!form) {
+        console.warn('Contact form not found');
+        return;
+    }
+
+    // Name validation on input
+    if (nameInput) {
+        nameInput.addEventListener('input', function () {
+            validateName(this.value);
+        });
+    }
+
     // Email validation on input
-    emailInput.addEventListener('input', function () {
-        validateEmail(this.value);
-    });
+    if (emailInput) {
+        emailInput.addEventListener('input', function () {
+            validateEmail(this.value);
+        });
+    }
 
     // Phone validation on input
-    phoneInput.addEventListener('input', function () {
-        validatePhone(this.value);
-    });
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function () {
+            validatePhone(this.value);
+        });
+    }
+
+    // Enquiry type validation on change
+    if (enquiryTypeInput) {
+        enquiryTypeInput.addEventListener('change', function () {
+            validateEnquiryType(this.value);
+        });
+    }
 
     // Message character count and validation
-    messageInput.addEventListener('input', function () {
-        updateCharacterCount(this.value);
-        validateMessage(this.value);
-    });
+    if (messageInput) {
+        messageInput.addEventListener('input', function () {
+            updateCharacterCount(this.value);
+            validateMessage(this.value);
+        });
+    }
 
     // Form submission handler
     form.addEventListener('submit', function (e) {
@@ -32,9 +60,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+function validateName(name) {
+    const nameError = document.getElementById('name-error');
+    const nameInput = document.getElementById('name');
+
+    if (!nameError || !nameInput) return true;
+
+    if (!name.trim()) {
+        showError(nameError, nameInput, 'Please enter your name');
+        return false;
+    }
+
+    clearError(nameError, nameInput);
+    return true;
+}
+
 function validateEmail(email) {
     const emailError = document.getElementById('email-error');
     const emailInput = document.getElementById('email');
+
+    if (!emailError || !emailInput) return true;
 
     if (!email) {
         clearError(emailError, emailInput);
@@ -55,6 +100,8 @@ function validateEmail(email) {
 function validatePhone(phone) {
     const phoneError = document.getElementById('phone-error');
     const phoneInput = document.getElementById('phone');
+
+    if (!phoneError || !phoneInput) return true;
 
     if (!phone) {
         clearError(phoneError, phoneInput);
@@ -79,7 +126,24 @@ function validatePhone(phone) {
     return true;
 }
 
+function validateEnquiryType(enquiryType) {
+    const enquiryTypeError = document.getElementById('enquiry-type-error');
+    const enquiryTypeInput = document.getElementById('enquiry-type');
+
+    if (!enquiryTypeError || !enquiryTypeInput) return true;
+
+    if (!enquiryType) {
+        showError(enquiryTypeError, enquiryTypeInput, 'Please select an enquiry type');
+        return false;
+    }
+
+    clearError(enquiryTypeError, enquiryTypeInput);
+    return true;
+}
+
 function showError(errorElement, inputElement, message) {
+    if (!errorElement || !inputElement) return;
+    
     errorElement.textContent = message;
     errorElement.style.display = 'block';
     inputElement.classList.add('error');
@@ -87,6 +151,8 @@ function showError(errorElement, inputElement, message) {
 }
 
 function clearError(errorElement, inputElement) {
+    if (!errorElement || !inputElement) return;
+    
     errorElement.style.display = 'none';
     inputElement.classList.remove('error');
     inputElement.classList.add('valid');
@@ -96,9 +162,16 @@ function validateForm() {
     let isValid = true;
 
     // Get form values
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const name = document.getElementById('name')?.value.trim() || '';
+    const email = document.getElementById('email')?.value.trim() || '';
+    const phone = document.getElementById('phone')?.value.trim() || '';
+    const enquiryType = document.getElementById('enquiry-type')?.value || '';
+    const message = document.getElementById('message')?.value.trim() || '';
+
+    // Validate name
+    if (!validateName(name)) {
+        isValid = false;
+    }
 
     // Validate email if provided
     if (email && !validateEmail(email)) {
@@ -107,6 +180,11 @@ function validateForm() {
 
     // Validate phone if provided
     if (phone && !validatePhone(phone)) {
+        isValid = false;
+    }
+
+    // Validate enquiry type
+    if (!validateEnquiryType(enquiryType)) {
         isValid = false;
     }
 
@@ -146,6 +224,8 @@ function validateMessage(message) {
     const messageError = document.getElementById('message-error');
     const messageInput = document.getElementById('message');
 
+    if (!messageError || !messageInput) return true;
+
     if (!message.trim()) {
         showError(messageError, messageInput, 'Please enter a message');
         return false;
@@ -162,6 +242,8 @@ function validateMessage(message) {
 
 function updateCharacterCount(text) {
     const characterCount = document.getElementById('message-character-count');
+    if (!characterCount) return;
+
     const currentLength = text.length;
     const maxLength = 2000;
 

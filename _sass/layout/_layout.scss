@@ -85,7 +85,7 @@
     padding: 0 2rem;
 
     @include respond(sm) {
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
 
     &--narrow {
@@ -95,6 +95,11 @@
     &--wide {
         max-width: 1400px;
     }
+}
+
+
+.page__header + .section {
+    padding-top: 0;
 }
 
 // Section spacing
@@ -122,6 +127,16 @@
     padding: 6rem 2rem;
 
     @include respond(sm) {
-        padding: 4rem 1rem;
+        padding: 4rem 0;
     }
 } 
+
+.spacer {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    @include respond(sm) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}

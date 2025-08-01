@@ -1,85 +1,96 @@
-# config.yml
 local_backend: true
 backend:
   name: git-gateway
   branch: main
-  repo: adrianyadav/epic-landscapes # Add your actual repo
-media_folder: "assets/uploads"
+  repo: adrianyadav/epic-landscapes
+media_folder: assets/uploads
 collections:
-  - name: "projects"
-    label: "Projects"
-    files:
-      - file: "_data/projects.yml"
-        label: "All Projects"
-        name: "projects"
-        fields:
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Location", name: "location", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Images"
-                name: "images"
-                widget: "list"
-                fields:
-                  - { label: "Image", name: "image", widget: "image" }
-              - { label: "Order", name: "order", widget: "number", default: 0 }
-
-  - name: "pages"
-    label: "Pages"
-    files:
-      - file: "_data/projects-page.yml"
-        label: "Projects Page Content"
-        name: "projects-page"
-        fields:
-          - label: "Page Title"
-            name: "title"
-            widget: "string"
-            default: "PROJECTS"
-          - label: "Page Description"
-            name: "description"
-            widget: "text"
-            default: "Take a stroll through our completed Epic Landscapes."
-      - file: "_data/contact-page.yml"
-        label: "Contact Page Content"
-        name: "contact-page"
-        fields:
-          - label: "Page Title"
-            name: "title"
-            widget: "string"
-            default: "CONTACT"
-          - label: "Page Description"
-            name: "description"
-            widget: "text"
-            default: "Get in touch with us to discuss your next project"
-      - file: "_data/process-page.yml"
-        label: "Process Page Content"
-        name: "process-page"
-        fields:
-          - label: "Page Title"
-            name: "title"
-            widget: "string"
-            default: "PROCESS"
-          - label: "Page Description"
-            name: "description"
-            widget: "text"
-            default: "Our design process from design to construction"
-
   - name: "process"
     label: "Process"
     files:
-      - file: "_data/process.yml"
+      - file: _data/process.yml
         label: "Process Steps"
         name: "process"
         fields:
-          - label: "Process Steps"
-            name: "steps"
-            widget: "list"
+          - label: Process Steps
+            name: steps
+            widget: list
             fields:
-              - { label: "Order", name: "order", widget: "number", default: 1 }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+              - label: Order
+                name: order
+                widget: number
+                default: 1
+              - label: Title
+                name: title
+                widget: string
+  - name: projects
+    label: Projects
+    files:
+      - file: _data/projects.yml
+        label: All Projects
+        name: projects
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Location
+                name: location
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Images
+                name: images
+                widget: list
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+              - label: Order
+                name: order
+                widget: number
+                default: 0
+  - name: pages
+    label: Pages
+    files:
+      - file: _data/projects-page.yml
+        label: Projects Page Content
+        name: projects-page
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+            default: PROJECTS
+          - label: Page Description
+            name: description
+            widget: text
+            default: Take a stroll through our completed Epic Landscapes.
+      - file: _data/contact-page.yml
+        label: Contact Page Content
+        name: contact-page
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+            default: CONTACT
+          - label: Page Description
+            name: description
+            widget: text
+            default: Get in touch with us to discuss your next project
+      - file: _data/process-page.yml
+        label: Process Page Content
+        name: process-page
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+            default: PROCESS
+          - label: Page Description
+            name: description
+            widget: text
+            default: Our design process from design to construction
+      
