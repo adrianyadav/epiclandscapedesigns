@@ -7,21 +7,22 @@ scripts:
 
 <div class="page bg-pattern--fern">
     {% include fern-decoration.html %}
+    <div class="page__header">
+        <div class="grid grid--2-columns container">
+            <!-- Contact Header -->
+            <section class="page__header container">
+                <div class="w1200">
+                    <h1 class="page__title">{{ site.data.contact-page.title }}</h1>
+                    <p class="page__description">{{ site.data.contact-page.description }}</p>
+                </div>
+            </section>
 
-    <div class="grid grid--2-columns spacer container">
-        <!-- Contact Header -->
-        <section class="page__header container">
-            <div class="w1200">
-                <h1 class="page__title">{{ site.data.contact-page.title }}</h1>
-                <p class="page__description">{{ site.data.contact-page.description }}</p>
-            </div>
-        </section>
-
-        <!-- Contact Form -->
-        <section class="section bg-section">
+            <!-- Contact Form -->
+            <section class="section bg-section">
                 <div class="form-wrapper">
                     {% include contact/form.html %}
                 </div>
-        </section>
+            </section>
+        </div>
     </div>
 </div>

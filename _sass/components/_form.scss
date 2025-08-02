@@ -9,7 +9,7 @@
     &-label {
         display: block;
         font-size: 1.6rem;
-        color: $font-color;
+        color: $color-font;
         margin-bottom: 0.8rem;
         font-weight: 500;
     }
@@ -20,12 +20,11 @@
         width: 100%;
         padding: 1.2rem;
         border: 2px solid #e0e0e0;
-        border-radius: 8px;
         font-size: 1.6rem;
         font-family: inherit;
         background-color: white;
         transition: $default-transition;
-        color: $font-color;
+        color: $color-font;
 
         &:focus {
             outline: none;
@@ -80,4 +79,4 @@
     @include respond(sm) {
         padding: 0 2rem;
     }
-} 
+}

@@ -17,7 +17,7 @@
 
 .process-description {
     font-size: $font-size;
-    color: $font-color;
+    color: $color-font;
     text-align: left;
     max-width: 600px;
 }
@@ -39,7 +39,6 @@
     gap: 3rem;
     align-items: center;
     padding: 0;
-    border-radius: 12px;
 
     &:nth-child(even) {
         .process-step__image {
@@ -64,7 +63,7 @@
 .process-step__title {
     font-size: 2.4rem;
     font-weight: 500;
-    color: $font-color;
+    color: $color-font;
     margin-bottom: 1.5rem;
     text-transform: lowercase;
     font-family: "Montserrat", sans-serif;
@@ -72,7 +71,7 @@
 
 .process-step__description {
     font-size: 1.6rem;
-    color: $font-color;
+    color: $color-font;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -82,7 +81,6 @@
     height: auto;
     max-width: 500px;
     overflow: hidden;
-    border-radius: 8px;
     flex-shrink: 0;
 }
 
@@ -98,7 +96,7 @@
 }
 
 // Responsive Design
-@include respond(tab-port) {
+@include respond(sm) {
     .process-steps__items {
         gap: 3rem;
     }
@@ -186,4 +184,4 @@
     .process-step__image {
         height: 150px;
     }
-} 
+}

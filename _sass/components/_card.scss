@@ -18,7 +18,7 @@
 
     &--no-hover {
         cursor: default;
-        
+
         &:hover {
             transform: none;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -80,7 +80,7 @@
     &__title {
         font-size: 2rem;
         font-weight: 500;
-        color: $font-color;
+        color: $color-font;
         margin-bottom: 1rem;
         text-transform: lowercase;
         font-family: "Montserrat", sans-serif;
@@ -92,7 +92,7 @@
 
     &__description {
         font-size: 1.6rem;
-        color: $font-color;
+        color: $color-font;
         line-height: 1.6;
         margin: 0;
 
@@ -114,4 +114,4 @@
             min-width: 60px;
         }
     }
-} 
+}

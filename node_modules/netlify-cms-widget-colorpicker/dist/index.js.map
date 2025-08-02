@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;AAAA;;AACA","sourcesContent":["export { default as ColorControl } from \"./ColorControl\";\nexport { default as ColorPreview } from \"./ColorPreview\";\n"],"file":"index.js"}

@@ -53,10 +53,6 @@
     </div>
 </div>
 
-
-
-<!-- Navigation -->
-<!--  -->
 <nav class="nav ">
     <ul class="nav-list">
         <!-- Logo -->
@@ -78,18 +74,18 @@
     <div class="decoration decoration--fern-top-right">
     <img src="/assets/img/fern1.svg" alt="Fern decoration" class="decoration__image">
 </div> 
+    <div class="page__header">
+        <div class="grid grid--2-columns container">
+            <!-- Contact Header -->
+            <section class="page__header container">
+                <div class="w1200">
+                    <h1 class="page__title">CONTACT US</h1>
+                    <p class="page__description">We'd love to hear about your next landscaping project! Just fill out the form and we'll get back to you right away</p>
+                </div>
+            </section>
 
-    <div class="grid grid--2-columns spacer container">
-        <!-- Contact Header -->
-        <section class="page__header container">
-            <div class="w1200">
-                <h1 class="page__title">CONTACT US</h1>
-                <p class="page__description">We'd love to hear about your next landscaping project! Just fill out the form and we'll get back to you right away</p>
-            </div>
-        </section>
-
-        <!-- Contact Form -->
-        <section class="section bg-section">
+            <!-- Contact Form -->
+            <section class="section bg-section">
                 <div class="form-wrapper">
                     <form name='epiclandscape contact' action="/success" method="POST" netlify class="form"
 data-netlify="true">
@@ -136,7 +132,8 @@ data-netlify="true">
 </div>
 </form>
                 </div>
-        </section>
+            </section>
+        </div>
     </div>
 </div>
   <footer class="footer">
@@ -187,6 +184,11 @@ data-netlify="true">
     </div>
 </footer>
 
+  <script>
+    // Inject theme data from Jekyll's data system
+    window.themeData = {"navigation":{"nav_bg":"#f1f1f2"},"body":{"body_bg":"#f1f1f2"},"home":{"home_bg":"#fff4c9"},"preview":"Theme settings updated"};
+</script>
+  <script src="/assets/js/theme-loader.js"></script>
   <script src="/assets/js/hamburger-menu.js"></script>
   <script src="/assets/js/fern-animations.js"></script>
   <script>

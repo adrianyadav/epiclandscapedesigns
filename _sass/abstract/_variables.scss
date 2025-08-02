@@ -2,24 +2,21 @@
 
 :root {
     --color-bg-cream: #f1f1f2;
-    --color-bg-whitecream: #f1f1f2;
-}
-
-.cream {
-    background-color: var(--color-bg-cream) !important;
-}
-
-.whitecream {
-    background-color: var(--color-bg-whitecream) !important;
+    --color-bg-warm-cream: #fff4c9;
+    --color-nav: var(--color-bg-cream);
+    --color-body: var(--color-bg-cream);
+    --color-primary: #ffae4e;
+    --color-dark-grey: #545454;
+    --color-font: #3b3d41;
 }
 
 //  COLOURS
-$color-dark-grey: #545454;
-$color-primary: #ffae4e;
-$color-orange: #ffae4e;
-$color-bg-predominant: #f1f1f2;
-$color-bg-cream: var(--color-bg-whitecream);
+$color-dark-grey: var(--color-dark-grey);
+$color-primary: var(--color-primary);
+$color-bg-cream: var(--color-bg-cream);
 $color-black: #000000;
+$black-transparent: rgba(0, 0, 0, 0.8);
+$color-font: var(--color-font);
 
 // TRANSITIONS
 $default-transition: all 0.3s;
@@ -31,5 +28,3 @@ $font-size-md: 3rem;
 $font-size-sm: 2.4rem;
 $font-size-xs: 1.8rem;
 $font-size: 1.6rem;
-
-$font-color: #3b3d41;

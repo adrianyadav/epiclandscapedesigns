@@ -8,7 +8,6 @@
     gap: 5rem;
     background-color: $color-bg-cream;
     position: relative;
-    
 
     @include respond(sm) {
         overflow: hidden;
@@ -97,7 +96,7 @@
 
     &__title {
         font-size: $font-size-lg;
-        color: $font-color;
+        color: $color-font;
         margin-bottom: 2rem;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
@@ -109,7 +108,7 @@
 
     &__description {
         font-size: $font-size;
-        color: $font-color;
+        color: $color-font;
         line-height: 1.6;
         margin-bottom: 3rem;
 
@@ -139,7 +138,7 @@
 
         p {
             font-size: $font-size;
-            color: $font-color;
+            color: $color-font;
             margin: 0;
 
             @include respond(sm) {

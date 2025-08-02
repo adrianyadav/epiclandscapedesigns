@@ -11,7 +11,7 @@
 }
 
 .nav {
-    background-color: $color-bg-cream;
+    background-color: var(--color-nav);
     height: 100px;
 
     &-list {
@@ -80,7 +80,7 @@
     inset: 0;
     z-index: 1200;
     display: none;
-    background: $color-bg-predominant;
+    background: $color-bg-cream;
     transition: opacity 0.4s;
     width: 100vw;
     height: 100vh;
@@ -171,7 +171,7 @@
 }
 
 .hamburger-nav a:hover {
-    color: $color-orange;
+    color: $color-primary;
 }
 
 .hamburger-contact {
@@ -181,7 +181,7 @@
 }
 
 .hamburger-contact a {
-    color: $color-orange;
+    color: $color-primary;
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -208,7 +208,7 @@
 }
 
 .hamburger-social a:hover {
-    color: $color-orange;
+    color: $color-primary;
 }
 
 // Responsive adjustments

@@ -2,7 +2,6 @@
 @use "./abstract/respond" as *;
 
 .hero {
-    background-color: var(--color-bg-cream);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -14,7 +13,37 @@
         overflow: hidden;
     }
 
+    &-fern {
+        position: absolute;
+        z-index: 1;
+        // Initial state - will be overridden by JavaScript
+        opacity: 0;
+        transition:
+            opacity 3s ease-in-out,
+            transform 3s ease-in-out;
+        will-change: opacity, transform; // Optimize for animations
 
+        &--bottom-left {
+            bottom: -80px;
+            left: -200px;
+
+            @include respond(sm) {
+                bottom: -100px;
+                left: -97px;
+            }
+        }
+
+        &--top-right {
+            top: -160px;
+            right: -120px;
+
+            @include respond(sm) {
+                top: -90px;
+                right: -100px;
+                transform: translate(100px);
+            }
+        }
+    }
 
     &-logo {
         position: absolute;
@@ -36,8 +65,7 @@
         display: none;
         @include respond(sm) {
             display: grid;
-            place-self: center !important;
-            margin: 0 auto !important;
+            place-self: center;
             width: 250px;
         }
     }
@@ -52,4 +80,12 @@
     }
 }
 
+.fern-image {
+    width: 600px;
+    height: auto;
+    opacity: 0.8;
 
+    @include respond(sm) {
+        width: 300px;
+    }
+}

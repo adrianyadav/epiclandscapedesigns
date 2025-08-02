@@ -45,7 +45,7 @@ a {
 
 .heading-1 {
     font-size: $font-size-lg;
-    color: $color-orange;
+    color: $color-primary;
     margin-bottom: 2rem;
     text-transform: uppercase;
     @include respond(sm) {

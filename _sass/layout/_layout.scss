@@ -2,14 +2,14 @@
 @use "./abstract/typography" as *;
 @use "./abstract/respond" as *;
 
-
-
+body {
+    background-color: var(--color-body);
+}
 
 // Common page layout patterns
 .page {
     position: relative;
     min-height: 90vh;
-    background-color: $color-bg-cream;
     padding: 2rem 0;
     z-index: 1;
 
@@ -21,12 +21,12 @@
     &__header {
         margin-top: 8rem;
         margin-bottom: 4rem;
-        text-align: center;
+        text-align: left;
     }
 
     &__title {
         font-size: $font-size-lg;
-        color: $font-color;
+        color: $color-font;
         margin-bottom: 3rem;
         font-weight: 300;
         letter-spacing: -0.02em;
@@ -40,7 +40,7 @@
 
     &__description {
         font-size: $font-size;
-        color: $font-color;
+        color: $color-font;
         text-align: left;
         max-width: 600px;
         line-height: 1.6;
@@ -113,14 +113,12 @@
     }
 }
 
-
 .page__header + .section {
     padding-top: 0;
 }
 
 // Section spacing
 .section {
-
     &--small {
         padding: 4rem 0;
 
@@ -144,16 +142,5 @@
 
     @include respond(sm) {
         padding: 4rem 0;
-    }
-    
-} 
-
-.spacer {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
-
-    @include respond(sm) {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
     }
 }

@@ -1,9 +1,61 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: main
   repo: adrianyadav/epic-landscapes
 media_folder: assets/uploads
 collections:
+  - name: "theme"
+    label: "Theme Settings"
+    files:
+      - file: _data/theme.yml
+        label: "Site Theme"
+        name: "theme"
+
+        fields:
+          - label: "Navigation Background"
+            name: navigation
+            widget: object
+            fields:
+              - label: "Navigation Background"
+                name: nav_bg
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  ["#f1f1f2", "#ff6b35", "#ff8c42", "#ffa726", "#ff9800"]
+                default: "#ff6b35"
+          - label: "Body Background"
+            name: body
+            widget: object
+            fields:
+              - label: "Body Background"
+                name: body_bg
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  ["#f1f1f2", "#ff6b35", "#ff8c42", "#ffa726", "#ff9800"]
+                default: "#f1f1f2"
+          - label: "Home Background"
+            name: home
+            widget: object
+            fields:
+              - label: "Home Background"
+                name: home_bg
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  ["#f1f1f2", "#fff4c9", "#ff6b35", "#ff8c42", "#ffa726"]
+                default: "#fff4c9"
+          - label: "Preview"
+            name: preview
+            widget: hidden
+            default: "Theme settings updated"
   - name: "process"
     label: "Process"
     files:
@@ -21,6 +73,15 @@ collections:
                 default: 1
               - label: Title
                 name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Image
+                name: image
+                widget: image
+              - label: Image Alt
+                name: image_alt
                 widget: string
   - name: projects
     label: Projects
@@ -92,4 +153,3 @@ collections:
             name: description
             widget: text
             default: Our design process from design to construction
-      

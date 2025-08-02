@@ -18,7 +18,7 @@
 
 .projects-description {
     font-size: $font-size;
-    color: $font-color;
+    color: $color-font;
     text-align: left;
     max-width: 600px;
 }
@@ -117,7 +117,7 @@
         align-items: center;
         justify-content: center;
         opacity: 1;
-        
+
         @include respond(xs) {
             display: flex; // Keep it as flex, not block
             align-items: center;
@@ -137,7 +137,7 @@
 
 .project-modal__content {
     position: relative;
-    background: $color-bg-predominant;
+    background: $color-bg-cream;
     max-width: 55vw;
     overflow: visible;
     z-index: 1001;
@@ -147,7 +147,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: rgba(0, 0, 0, 0.9);
+    background: $black-transparent;
     color: white;
     border: none;
     width: 40px;
@@ -168,6 +168,7 @@
     height: 100%;
     padding: 0;
     min-height: 0;
+    overflow: hidden;
 }
 
 .project-modal__images {
@@ -199,7 +200,7 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.9);
+    background: $black-transparent;
     color: white;
     border: none;
     font-size: 3rem;
@@ -227,7 +228,7 @@
         opacity: 0.3;
         cursor: not-allowed;
         transform: translateY(-50%);
-        
+
         &:hover {
             transform: translateY(-50%);
             background: rgba(0, 0, 0, 0.9);
@@ -252,29 +253,28 @@
 
 .project-modal__image-counter {
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     font-size: 1.4rem;
     font-weight: 500;
-    background: rgba(0, 0, 0, 0.7);
+    background: $black-transparent;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
 }
 
 .project-modal__thumbnails {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-    padding: 1rem;
     background: var(--color-bg-cream);
     justify-content: center;
     overflow-x: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.775) transparent;
     flex-shrink: 0;
-
+    z-index: 2;
+    padding: 1rem 0;
     &::-webkit-scrollbar {
         height: 4px;
     }
@@ -285,14 +285,12 @@
 
     &::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.3);
-        border-radius: 2px;
     }
 }
 
 .project-modal__thumbnail {
     width: 80px;
     height: 60px;
-    border-radius: 4px;
     cursor: pointer;
     border: 2px solid transparent;
     transition: $default-transition;
@@ -312,7 +310,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 2px;
     }
 }
 
@@ -334,19 +331,19 @@
 
 .project-modal__location {
     font-size: 1.8rem;
-    color: $font-color;
+    color: $color-font;
     margin-bottom: 2rem;
     font-weight: 500;
 }
 
 .project-modal__description {
     font-size: 1.6rem;
-    color: $font-color;
+    color: $color-font;
     line-height: 1.6;
 }
 
 // Responsive Design
-@include respond(tab-port) {
+@include respond(sm) {
     .projects-grid__items {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 1.5rem;
@@ -365,7 +362,7 @@
         width: 70px;
         height: 70px;
         font-size: 2.5rem;
-        
+
         &--prev {
             left: calc(50% - 40vw - 85px);
         }
@@ -387,7 +384,7 @@
 }
 
 // Enhanced Mobile Responsive Design
-@include respond(phone) {
+@include respond(xs) {
     .projects {
         padding: 1rem 0;
     }
@@ -420,7 +417,6 @@
     }
 
     .project-item {
-        border-radius: 12px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
         &:hover {
@@ -431,7 +427,6 @@
 
     .project-item__image-container {
         height: 220px;
-        border-radius: 12px 12px 0 0;
     }
 
     .project-item__title {
@@ -446,7 +441,6 @@
         max-width: 95vw;
         max-height: 95vh;
         margin: 0; // Remove auto margin
-        border-radius: 16px;
         position: relative;
     }
 
@@ -464,9 +458,8 @@
         width: 50px;
         height: 50px;
         font-size: 1.8rem;
-        border-radius: 50%;
         position: fixed; // Ensure it's fixed positioned
-        
+
         &--prev {
             left: 1rem; // Use fixed positioning instead of calculated
         }
@@ -481,10 +474,9 @@
     }
 
     .project-modal__image-counter {
-        bottom: 1rem;
+        bottom: 2rem;
         font-size: 1.2rem;
         padding: 0.4rem 0.8rem;
-        border-radius: 15px;
     }
 
     .project-modal__thumbnails {
@@ -496,7 +488,6 @@
     .project-modal__thumbnail {
         width: 60px;
         height: 45px;
-        border-radius: 6px;
 
         &:hover {
             transform: scale(1.08);
@@ -513,8 +504,7 @@
         width: 35px;
         height: 35px;
         font-size: 1.6rem;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.8);
+        background: $black-transparent;
     }
 }
 
@@ -557,7 +547,7 @@
         width: 45px;
         height: 45px;
         font-size: 1.6rem;
-        
+
         &--prev {
             left: 0.5rem;
         }
@@ -569,7 +559,7 @@
 }
 
 // Touch-friendly improvements for tablets
-@include respond(tab-port) {
+@include respond(sm) {
     .project-item {
         &:hover {
             transform: none; // Disable hover effects on touch devices
@@ -578,7 +568,7 @@
 
     .project-modal__side-nav {
         &:hover {
-            transform: translateY(-50%) scale(1.02);
+            transform: scale(1.02);
         }
     }
 

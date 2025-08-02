@@ -4,20 +4,20 @@
 
 .style-guide {
     padding: 4rem 0;
-    background-color: $color-bg-predominant;
+    background-color: $color-bg-cream;
 
     &__header {
         text-align: center;
         margin-bottom: 4rem;
-        
+
         h2 {
             color: $color-dark-grey;
             margin-bottom: 1rem;
         }
-        
+
         p {
             font-size: 1.8rem;
-            color: $font-color;
+            color: $color-font;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -70,7 +70,7 @@
     .color-info {
         h4 {
             margin: 0 0 0.5rem 0;
-            color: $font-color;
+            color: $color-font;
         }
 
         p {
@@ -94,9 +94,13 @@
     border-radius: 8px;
     background: #fafafa;
 
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         margin: 0 0 1rem 0;
-        color: $font-color;
+        color: $color-font;
     }
 
     p {
@@ -121,7 +125,7 @@
 
     h4 {
         margin: 0 0 1rem 0;
-        color: $font-color;
+        color: $color-font;
     }
 
     p {
@@ -139,7 +143,7 @@
 
     code {
         color: #e2e8f0;
-        font-family: 'Courier New', monospace;
+        font-family: "Courier New", monospace;
         font-size: 1.4rem;
     }
 }
@@ -174,10 +178,11 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
-            color: $font-color;
+            color: $color-font;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             padding: 1rem;
             border: 1px solid #ddd;
@@ -210,7 +215,7 @@
 .spacing-item {
     h4 {
         margin: 0 0 1rem 0;
-        color: $font-color;
+        color: $color-font;
     }
 }
 
@@ -223,7 +228,7 @@
 
     p {
         margin: 0;
-        color: $font-color;
+        color: $color-font;
     }
 }
 
@@ -242,7 +247,7 @@
 
     p {
         margin: 0;
-        color: $font-color;
+        color: $color-font;
     }
 }
 
@@ -256,7 +261,7 @@
 
         h4 {
             margin: 0 0 1rem 0;
-            color: $font-color;
+            color: $color-font;
         }
 
         p {
@@ -282,6 +287,5 @@
 
     &:hover {
         transform: scale(1.05);
-        background: darken($color-primary, 10%);
     }
-} 
+}
