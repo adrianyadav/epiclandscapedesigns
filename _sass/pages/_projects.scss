@@ -226,10 +226,8 @@
     &:disabled {
         opacity: 0.3;
         cursor: not-allowed;
-        transform:;
 
         &:hover {
-            transform:;
             background: rgba(0, 0, 0, 0.9);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
