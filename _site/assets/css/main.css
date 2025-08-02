@@ -989,7 +989,7 @@ a {
 }
 .project-modal__side-nav:hover {
   background: rgb(0, 0, 0);
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 .project-modal__side-nav:active {
