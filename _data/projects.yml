@@ -30,7 +30,7 @@ projects:
       - image: /assets/img/sunset.png
     order: 4
   - id: ryde-pool
-    title: ryde-swimming-pool
+    title: annandale
     location: Ryde
     description: Swimming pool with wooden decking surrounded by lush tropical plants
     images:
