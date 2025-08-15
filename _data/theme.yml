@@ -1,10 +1,10 @@
 navigation:
   nav_bg: "#f1f1f2"
-  nav_text_color: "#545454"
+  nav_text_color: "#000"
 body:
   body_bg: "#f1f1f2"
 home:
-  home_bg: "#fff4c9"
+  home_bg: "#f1f1f2"
 heading:
   heading_color: "#ffae4e"
 body_text:
