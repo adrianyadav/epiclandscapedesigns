@@ -2,15 +2,15 @@ navigation:
   nav_bg: "#000"
   nav_text_color: "#f1f1f2"
 body:
-  body_bg: "#f1f1f2"
+  body_bg: "#000"
 home:
-  home_bg: "#f1f1f2"
+  home_bg: "#000"
 heading:
   heading_color: "#ffae4e"
 body_text:
-  body_text_color: "#3b3d41"
+  body_text_color: "#f1f1f2"
 footer:
-  footer_bg: "#f1f1f2"
+  footer_bg: "#000"
 homepage:
   hero_tagline: Crafting Nature's Masterpieces, One Epic Landscape at a Times
   logo_desktop: /assets/uploads/logo.svg
