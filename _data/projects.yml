@@ -57,3 +57,9 @@ projects:
     description: pool in winston hills
     images:
       - image: /assets/uploads/site-inspection.jpg
+  - order: 9
+    title: dover heights
+    location: boutique garden in dover heights
+    description: boutique garden in dover heights
+    images:
+      - image: /assets/uploads/s6xshdnwuztnqsedijxjqp.jpg
