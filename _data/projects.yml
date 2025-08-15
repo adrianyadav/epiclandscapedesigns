@@ -51,3 +51,9 @@ projects:
     description: small secluded garden
     images:
       - image: /assets/uploads/catcus-post.png
+  - order: 8
+    title: winston hills
+    location: winston hills
+    description: pool in winston hills
+    images:
+      - image: /assets/uploads/site-inspection.jpg
