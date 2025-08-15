@@ -48,3 +48,13 @@ steps:
       completely satisfied.
     image: /assets/uploads/site-inspection.jpg
     image_alt: man trimmming bush
+  - order: 7
+    title: testing it again for 8
+    description: After a full site assessment, we develop a functional diagram to
+      confirm the layout of key features like entertaining areas, garden beds,
+      and pathways. We also create a style guide and mood board to establish a
+      consistent theme for your space. This step is crucial to ensure your
+      outdoor area flows well, and we work closely with you until you're
+      completely satisfied.
+    image: /assets/uploads/s6xshdnwuztnqsedijxjqp.jpg
+    image_alt: beautiful greenery
