@@ -1683,6 +1683,15 @@ a {
 .nav {
   background-color: var(--color-nav);
   height: 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+@media (max-width: 56.25em) {
+  .nav {
+    position: fixed;
+  }
 }
 .nav-list {
   list-style: none;
@@ -1725,9 +1734,6 @@ a {
   gap: 6px;
   cursor: pointer;
   color: var(--color-dark-grey);
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 .hamburger-btn span {
   display: block;
@@ -1740,8 +1746,10 @@ a {
 @media (max-width: 56.25em) {
   .hamburger-btn {
     display: flex;
-    position: sticky;
-    justify-self: right;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
   }
 }
 

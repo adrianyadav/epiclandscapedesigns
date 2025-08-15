@@ -1,6 +1,6 @@
 navigation:
-  nav_bg: "#000"
-  nav_text_color: "#b20000"
+  nav_bg: "#f1f1f2"
+  nav_text_color: "#545454"
 body:
   body_bg: "#f1f1f2"
 home:

@@ -21,6 +21,14 @@
     background-color: var(--color-nav);
     height: 100px;
 
+    @include respond(sm) {
+        position: fixed; // Fixed positioning that stays in place
+    }
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
     &-list {
         list-style: none;
         display: flex;
@@ -47,10 +55,10 @@
     }
 }
 
-// Hamburger Menu Overlay Styles
+// Hamburger Button
 .hamburger-btn {
     display: none;
-    position: fixed;
+    position: fixed; // Fixed positioning
     top: 2rem;
     right: 2rem;
     z-index: 1100;
@@ -64,9 +72,7 @@
     gap: 6px;
     cursor: pointer;
     color: $color-dark-grey;
-    position: absolute;
-    top: 0;
-    right: 0;
+
     span {
         display: block;
         width: 32px;
@@ -78,8 +84,10 @@
 
     @include respond(sm) {
         display: flex;
-        position: sticky;
-        justify-self: right;
+        position: fixed; // Fixed positioning on mobile
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
     }
 }
 
