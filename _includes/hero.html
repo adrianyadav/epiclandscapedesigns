@@ -1,13 +1,24 @@
 <section class="hero bg-pattern--fern">
     <div class="hero-logo">
         <div class="hero-logo-desktop">
+            {% if site.data.theme.homepage.logo_desktop %}
+            <img src="{{ site.data.theme.homepage.logo_desktop }}" alt="{{ site.data.theme.homepage.logo_alt_text }}"
+                class="hero-logo-img">
+            {% else %}
             {% include svg/logo.html %}
+            {% endif %}
         </div>
         <div class="hero-logo-mobile">
+            {% if site.data.theme.homepage.logo_mobile %}
+            <img src="{{ site.data.theme.homepage.logo_mobile }}" alt="{{ site.data.theme.homepage.logo_alt_text }}"
+                class="hero-logo-img">
+            {% else %}
             {% include svg/logo-mobile.html %}
+            {% endif %}
         </div>
         <div class="hero-logo-text">
-            <p>Crafting Nature’s Masterpieces, One Epic Landscape at a Time
+            <p>{{ site.data.theme.homepage.hero_tagline | default: "Crafting Nature's Masterpieces, One Epic Landscape
+                at a Time" }}</p>
         </div>
     </div>
     {% include fern-decoration-home.html %}

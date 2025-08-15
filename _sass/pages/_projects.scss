@@ -23,6 +23,11 @@
     max-width: 600px;
 }
 
+// Add heading color for page titles
+.page__title {
+    color: var(--color-heading);
+}
+
 .projects-grid__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

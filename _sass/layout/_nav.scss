@@ -5,6 +5,13 @@
 .logo-sm {
     position: absolute;
     left: 20px;
+
+    .nav-logo-img {
+        width: 50px;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+
     svg {
         width: 50px;
     }
@@ -26,13 +33,12 @@
     &-link {
         font-family: $primary-font;
         text-decoration: none;
-        color: $color-dark-grey;
+        color: var(--color-nav-text);
         text-transform: uppercase;
         font-size: $font-size;
-        color: $color-dark-grey;
         transition: all 0.3s ease;
         &:hover {
-            border-bottom: 1px solid $color-dark-grey;
+            border-bottom: 1px solid var(--color-nav-text);
         }
     }
 
@@ -82,7 +88,7 @@
     inset: 0;
     z-index: 1200;
     display: none;
-    background: $color-bg-cream;
+    background: var(--color-nav);
     transition: opacity 0.4s;
     width: 100vw;
     height: 100vh;
@@ -162,7 +168,7 @@
 }
 
 .hamburger-nav a {
-    color: $color-dark-grey;
+    color: var(--color-nav-text);
     font-size: 2.4rem;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.04em;

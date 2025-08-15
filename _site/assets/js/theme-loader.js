@@ -17,9 +17,35 @@ function loadThemeSettings() {
         console.log('No theme data found, using defaults');
         // Apply default theme
         applyTheme({
-            navigation: { nav_bg: "#f1f1f2" },
+            navigation: {
+                nav_bg: "#f1f1f2",
+                nav_text_color: "#545454"
+            },
             body: { body_bg: "#f1f1f2" },
-            home: { home_bg: "#fff4c9" }
+            home: { home_bg: "#fff4c9" },
+            heading: { heading_color: "#ffae4e" },
+            body_text: { body_text_color: "#3b3d41" },
+            footer: { footer_bg: "#f1f1f2" },
+            homepage: {
+                hero_tagline: "Crafting Nature's Masterpieces, One Epic Landscape at a Time",
+                logo_desktop: "/assets/img/logo.svg",
+                logo_mobile: "/assets/img/logo-mobile.svg",
+                logo_alt_text: "Epic Landscape Designs Logo",
+                nav_logo: "/assets/img/logo-sm.svg",
+                nav_logo_alt_text: "Epic Landscape Designs Logo"
+            },
+            navigation_menu: {
+                link_1: "Home",
+                link_2: "Projects",
+                link_3: "Process",
+                link_4: "Contact"
+            },
+            contact_info: {
+                phone: "0402 263 190",
+                email: "info@epiclandscapedesigns.com.au",
+                phone_link: "tel:0402263190",
+                email_link: "mailto:info@epiclandscapedesigns.com.au"
+            }
         });
     }
 }
@@ -32,6 +58,12 @@ function applyTheme(themeData) {
     if (themeData.navigation && themeData.navigation.nav_bg) {
         root.style.setProperty('--color-nav', themeData.navigation.nav_bg);
         console.log('Navigation color set to:', themeData.navigation.nav_bg);
+    }
+
+    // Apply navigation text color
+    if (themeData.navigation && themeData.navigation.nav_text_color) {
+        root.style.setProperty('--color-nav-text', themeData.navigation.nav_text_color);
+        console.log('Navigation text color set to:', themeData.navigation.nav_text_color);
     }
 
     // Apply body background
@@ -52,6 +84,24 @@ function applyTheme(themeData) {
         } else {
             console.log('Not on homepage, using regular body background');
         }
+    }
+
+    // Apply heading color
+    if (themeData.heading && themeData.heading.heading_color) {
+        root.style.setProperty('--color-heading', themeData.heading.heading_color);
+        console.log('Heading color set to:', themeData.heading.heading_color);
+    }
+
+    // Apply body text color
+    if (themeData.body_text && themeData.body_text.body_text_color) {
+        root.style.setProperty('--color-body-text', themeData.body_text.body_text_color);
+        console.log('Body text color set to:', themeData.body_text.body_text_color);
+    }
+
+    // Apply footer background color
+    if (themeData.footer && themeData.footer.footer_bg) {
+        root.style.setProperty('--color-footer', themeData.footer.footer_bg);
+        console.log('Footer background set to:', themeData.footer.footer_bg);
     }
 
     console.log('Theme applied successfully!');

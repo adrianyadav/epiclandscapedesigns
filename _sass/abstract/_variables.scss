@@ -8,6 +8,10 @@
     --color-primary: #ffae4e;
     --color-dark-grey: #545454;
     --color-font: #3b3d41;
+    --color-heading: #ffae4e;
+    --color-body-text: #3b3d41;
+    --color-footer: #f1f1f2;
+    --color-nav-text: #545454;
 }
 
 //  COLOURS
@@ -17,6 +21,10 @@ $color-bg-cream: var(--color-bg-cream);
 $color-black: #000000;
 $black-transparent: rgba(0, 0, 0, 0.8);
 $color-font: var(--color-font);
+$color-heading: var(--color-heading);
+$color-body-text: var(--color-body-text);
+$color-footer: var(--color-footer);
+$color-nav-text: var(--color-nav-text);
 
 // TRANSITIONS
 $default-transition: all 0.3s;

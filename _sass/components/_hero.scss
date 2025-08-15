@@ -59,6 +59,12 @@
         @include respond(sm) {
             display: none;
         }
+
+        .hero-logo-img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+        }
     }
 
     &-logo-mobile {
@@ -67,6 +73,11 @@
             display: grid;
             place-self: center;
             width: 250px;
+        }
+
+        .hero-logo-img {
+            width: 100%;
+            height: auto;
         }
     }
 

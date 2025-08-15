@@ -1,8 +1,12 @@
 - title: Home
   url: "/"
+  nav_key: "link_1"
 - title: Projects
   url: "/projects"
+  nav_key: "link_2"
 - title: Process
   url: "/process"
+  nav_key: "link_3"
 - title: Contact
   url: "/contact"
+  nav_key: "link_4"

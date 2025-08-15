@@ -26,12 +26,11 @@ body {
 
     &__title {
         font-size: $font-size-lg;
-        color: $color-font;
+        color: var(--color-heading);
         margin-bottom: 3rem;
         font-weight: 300;
         letter-spacing: -0.02em;
         text-align: left;
-        color: $color-primary;
 
         @include respond(sm) {
             font-size: $font-size-md;
@@ -40,7 +39,7 @@ body {
 
     &__description {
         font-size: $font-size;
-        color: $color-font;
+        color: var(--color-body-text);
         text-align: left;
         max-width: 600px;
         line-height: 1.6;

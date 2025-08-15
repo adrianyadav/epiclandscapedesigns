@@ -26,6 +26,24 @@ collections:
                 presetColors:
                   ["#f1f1f2", "#ff6b35", "#ff8c42", "#ffa726", "#ff9800"]
                 default: "#ff6b35"
+                hint: "Default: #f1f1f2 (Cream)"
+              - label: "Navigation Text Colour"
+                name: nav_text_color
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  [
+                    "#545454",
+                    "#3b3d41",
+                    "#ffffff",
+                    "#000000",
+                    "#333333",
+                    "#666666",
+                  ]
+                default: "#545454"
+                hint: "Default: #545454 (Dark Grey)"
           - label: "Body Background"
             name: body
             widget: object
@@ -39,6 +57,7 @@ collections:
                 presetColors:
                   ["#f1f1f2", "#ff6b35", "#ff8c42", "#ffa726", "#ff9800"]
                 default: "#f1f1f2"
+                hint: "Default: #f1f1f2 (Cream)"
           - label: "Home Background"
             name: home
             widget: object
@@ -52,6 +71,180 @@ collections:
                 presetColors:
                   ["#f1f1f2", "#fff4c9", "#ff6b35", "#ff8c42", "#ffa726"]
                 default: "#fff4c9"
+                hint: "Default: #fff4c9 (Warm Cream)"
+          - label: "Heading Colour"
+            name: heading
+            widget: object
+            fields:
+              - label: "Heading Colour"
+                name: heading_color
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                default: "#ffae4e"
+                hint: "Default: #ffae4e (Primary Orange)"
+          - label: "Body Text Colour"
+            name: body_text
+            widget: object
+            fields:
+              - label: "Body Text Colour"
+                name: body_text_color
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  [
+                    "#3b3d41",
+                    "#545454",
+                    "#666666",
+                    "#333333",
+                    "#2c2c2c",
+                    "#1a1a1a",
+                  ]
+                default: "#3b3d41"
+                hint: "Default: #3b3d41 (Dark Grey)"
+          - label: "Footer Background"
+            name: footer
+            widget: object
+            fields:
+              - label: "Footer Background"
+                name: footer_bg
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  [
+                    "#f1f1f2",
+                    "#fff4c9",
+                    "#ff6b35",
+                    "#ff8c42",
+                    "#ffa726",
+                    "#545454",
+                    "#3b3d41",
+                  ]
+                default: "#f1f1f2"
+                hint: "Default: #f1f1f2 (Cream)"
+          - label: "Homepage Content"
+            name: homepage
+            widget: object
+            fields:
+              - label: "Logo Desktop"
+                name: logo_desktop
+                widget: image
+                default: "/assets/img/logo.svg"
+                hint: "Desktop version of the logo (recommended: 600px wide)"
+              - label: "Logo Mobile"
+                name: logo_mobile
+                widget: image
+                default: "/assets/img/logo-mobile.svg"
+                hint: "Mobile version of the logo (recommended: 250px wide)"
+              - label: "Logo Alt Text"
+                name: logo_alt_text
+                widget: string
+                default: "Epic Landscape Designs Logo"
+                hint: "Alternative text for accessibility"
+              - label: "Navigation Logo (Top Left)"
+                name: nav_logo
+                widget: image
+                default: "/assets/img/logo-sm.svg"
+                hint: "Small logo displayed in top left navigation (recommended: 50px wide)"
+              - label: "Navigation Logo Alt Text"
+                name: nav_logo_alt_text
+                widget: string
+                default: "Epic Landscape Designs Logo"
+                hint: "Alternative text for navigation logo accessibility"
+              - label: "Hero Tagline"
+                name: hero_tagline
+                widget: text
+                default: "Crafting Nature's Masterpieces, One Epic Landscape at a Time"
+                hint: "The main tagline displayed below the logo on the homepage, default: Crafting Nature's Masterpieces, One Epic Landscape at a Time"
+          - label: "Navigation Menu"
+            name: navigation_menu
+            widget: object
+            fields:
+              - label: "Link 1"
+                name: link_1
+                widget: object
+                fields:
+                  - label: "Label"
+                    name: label
+                    widget: string
+                    default: "Home"
+                    hint: "Navigation label for Link 1"
+                  - label: "URL"
+                    name: href
+                    widget: string
+                    default: "/"
+                    hint: "URL for Link 1 (e.g., /, /projects, /process, /contact)"
+              - label: "Link 2"
+                name: link_2
+                widget: object
+                fields:
+                  - label: "Label"
+                    name: label
+                    widget: string
+                    default: "Projects"
+                    hint: "Navigation label for Link 2"
+                  - label: "URL"
+                    name: href
+                    widget: string
+                    default: "/projects"
+                    hint: "URL for Link 2"
+              - label: "Link 3"
+                name: link_3
+                widget: object
+                fields:
+                  - label: "Label"
+                    name: label
+                    widget: string
+                    default: "Process"
+                    hint: "Navigation label for Link 3"
+                  - label: "URL"
+                    name: href
+                    widget: string
+                    default: "/process"
+                    hint: "URL for Link 3"
+              - label: "Link 4"
+                name: link_4
+                widget: object
+                fields:
+                  - label: "Label"
+                    name: label
+                    widget: string
+                    default: "Contact"
+                    hint: "Navigation label for Link 4"
+                  - label: "URL"
+                    name: href
+                    widget: string
+                    default: "/contact"
+                    hint: "URL for Link 4"
+          - label: "Contact Information"
+            name: contact_info
+            widget: object
+            fields:
+              - label: "Phone Number"
+                name: phone
+                widget: string
+                default: "0402 263 190"
+                hint: "Phone number displayed in footer (format: 0402 263 190)"
+              - label: "Email Address"
+                name: email
+                widget: string
+                default: "info@epiclandscapedesigns.com.au"
+                hint: "Email address displayed in footer"
+              - label: "Phone Number Link"
+                name: phone_link
+                widget: string
+                default: "tel:0402263190"
+                hint: "Phone number link format (tel:0402263190)"
+              - label: "Email Link"
+                name: email_link
+                widget: string
+                default: "mailto:info@epiclandscapedesigns.com.au"
+                hint: "Email link format (mailto:email@domain.com)"
           - label: "Preview"
             name: preview
             widget: hidden

@@ -13,9 +13,30 @@
         <div class="hamburger-menu-content">
             <nav class="hamburger-nav">
                 <ul>
-                    {% for item in site.data.navigation %}
-                    <li class="nav-item"><a class="nav-link" href="{{ item.url }}">{{ item.title }}</a></li>
-                    {% endfor %}
+                    <!-- Navigation Links -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.data.theme.navigation_menu.link_1.href | default: '/' }}">
+                            {{ site.data.theme.navigation_menu.link_1.label | default: "Home" }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="{{ site.data.theme.navigation_menu.link_2.href | default: '/projects' }}">
+                            {{ site.data.theme.navigation_menu.link_2.label | default: "Projects" }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="{{ site.data.theme.navigation_menu.link_3.href | default: '/process' }}">
+                            {{ site.data.theme.navigation_menu.link_3.label | default: "Process" }}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="{{ site.data.theme.navigation_menu.link_4.href | default: '/contact' }}">
+                            {{ site.data.theme.navigation_menu.link_4.label | default: "Contact" }}
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -26,10 +47,34 @@
     <ul class="nav-list">
         <!-- Logo -->
         <a href="/" class="logo-sm">
+            {% if site.data.theme.homepage.nav_logo %}
+            <img src="{{ site.data.theme.homepage.nav_logo }}" alt="{{ site.data.theme.homepage.nav_logo_alt_text }}"
+                class="nav-logo-img">
+            {% else %}
             {% include svg/logo-sm.html %}
+            {% endif %}
         </a>
-        {% for item in site.data.navigation %}
-        <li class="nav-item"><a class="nav-link" href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
+
+        <!-- Navigation Links -->
+        <li class="nav-item">
+            <a class="nav-link" href="{{ site.data.theme.navigation_menu.link_1.href | default: '/' }}">
+                {{ site.data.theme.navigation_menu.link_1.label | default: "Home" }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ site.data.theme.navigation_menu.link_2.href | default: '/projects' }}">
+                {{ site.data.theme.navigation_menu.link_2.label | default: "Projects" }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ site.data.theme.navigation_menu.link_3.href | default: '/process' }}">
+                {{ site.data.theme.navigation_menu.link_3.label | default: "Process" }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ site.data.theme.navigation_menu.link_4.href | default: '/contact' }}">
+                {{ site.data.theme.navigation_menu.link_4.label | default: "Contact" }}
+            </a>
+        </li>
     </ul>
 </nav>
