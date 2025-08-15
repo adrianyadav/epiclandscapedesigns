@@ -38,3 +38,8 @@ steps:
       construction and a final result that stays true to the design.
     image: /assets/uploads/1.jpeg
     image_alt: Close-up of paved surface with various stone pavers and construction tools
+  - order: 6
+    title: extras
+    description: here a are extra
+    image: /assets/uploads/site-inspection.jpg
+    image_alt: man trimmming bush
