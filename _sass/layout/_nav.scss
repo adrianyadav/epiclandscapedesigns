@@ -72,6 +72,8 @@
 
     @include respond(sm) {
         display: flex;
+        position: sticky;
+        justify-self: right;
     }
 }
 

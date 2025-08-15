@@ -307,6 +307,10 @@ a {
   }
 }
 
+.form {
+  z-index: 1000;
+  position: relative;
+}
 .form-group {
   margin-bottom: 2rem;
 }
@@ -906,7 +910,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(241, 241, 242, 0.8);
+  background: var(--color-bg-cream);
 }
 
 .project-modal__content {
@@ -1711,6 +1715,8 @@ a {
 @media (max-width: 56.25em) {
   .hamburger-btn {
     display: flex;
+    position: sticky;
+    justify-self: right;
   }
 }
 
