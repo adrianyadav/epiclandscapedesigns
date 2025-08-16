@@ -6,9 +6,6 @@
     position: absolute;
     z-index: 1;
     opacity: 0;
-    transition:
-        opacity 3s ease-in-out,
-        transform 3s ease-in-out;
     will-change: opacity, transform;
 
     &--fern {
@@ -29,7 +26,6 @@
             @include respond(sm) {
                 top: -90px;
                 right: -100px;
-                transform: translate(100px);
             }
         }
     }
@@ -49,11 +45,4 @@
 .bg-pattern {
     position: relative;
     overflow: hidden;
-
-    &--fern {
-        .decoration--fern-bottom-left,
-        .decoration--fern-top-right {
-            opacity: 1;
-        }
-    }
-} 
+}

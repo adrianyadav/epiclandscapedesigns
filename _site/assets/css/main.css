@@ -13,6 +13,7 @@
   --color-nav-text: #545454;
   --color-hamburger-icon: #000000;
   --color-close-icon: #000000;
+  --color-footer-text: #545454;
 }
 
 *,
@@ -140,7 +141,6 @@ a {
   .hero-fern--top-right {
     top: -90px;
     right: -100px;
-    transform: translate(100px);
   }
 }
 .hero-logo {
@@ -400,7 +400,6 @@ a {
   position: absolute;
   z-index: 1;
   opacity: 0;
-  transition: opacity 3s ease-in-out, transform 3s ease-in-out;
   will-change: opacity, transform;
 }
 .decoration--fern-bottom-left {
@@ -421,7 +420,6 @@ a {
   .decoration--fern-top-right {
     top: -90px;
     right: -100px;
-    transform: translate(100px);
   }
 }
 .decoration__image {
@@ -438,10 +436,6 @@ a {
 .bg-pattern {
   position: relative;
   overflow: hidden;
-}
-.bg-pattern--fern .decoration--fern-bottom-left,
-.bg-pattern--fern .decoration--fern-top-right {
-  opacity: 1;
 }
 
 .contact {
@@ -1941,7 +1935,7 @@ a {
   height: 1px;
 }
 .footer * {
-  color: var(--color-dark-grey);
+  color: var(--color-footer-text);
   font-family: "Montserrat", sans-serif;
 }
 .footer-content {

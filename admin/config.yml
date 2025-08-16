@@ -161,6 +161,23 @@ collections:
                   ]
                 default: "#f1f1f2"
                 hint: "Default: #f1f1f2 (Cream)"
+              - label: "Footer Text Colour"
+                name: footer_text_color
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  [
+                    "#545454",
+                    "#3b3d41",
+                    "#ffffff",
+                    "#000000",
+                    "#333333",
+                    "#666666",
+                  ]
+                default: "#545454"
+                hint: "Default: #545454 (Dark Grey)"
           - label: "Homepage Content"
             name: homepage
             widget: object

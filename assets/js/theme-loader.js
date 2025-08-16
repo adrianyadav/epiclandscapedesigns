@@ -27,7 +27,7 @@ function loadThemeSettings() {
             home: { home_bg: "#fff4c9" },
             heading: { heading_color: "#ffae4e" },
             body_text: { body_text_color: "#3b3d41" },
-            footer: { footer_bg: "#f1f1f2" },
+            footer: { footer_bg: "#f1f1f2", footer_text_color: "#545454" },
             homepage: {
                 hero_tagline: "Crafting Nature's Masterpieces, One Epic Landscape at a Time",
                 logo_desktop: "/assets/img/logo.svg",
@@ -116,6 +116,12 @@ function applyTheme(themeData) {
     if (themeData.footer && themeData.footer.footer_bg) {
         root.style.setProperty('--color-footer', themeData.footer.footer_bg);
         console.log('Footer background set to:', themeData.footer.footer_bg);
+    }
+
+    // Apply footer text color
+    if (themeData.footer && themeData.footer.footer_text_color) {
+        root.style.setProperty('--color-footer-text', themeData.footer.footer_text_color);
+        console.log('Footer text color set to:', themeData.footer.footer_text_color);
     }
 
     console.log('Theme applied successfully!');
