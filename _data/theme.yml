@@ -13,7 +13,7 @@ body_text:
   body_text_color: "#000"
 footer:
   footer_bg: "#f1f1f2"
-  footer_text_color: "#803131"
+  footer_text_color: "#111"
 homepage:
   hero_tagline: Crafting Nature's Masterpieces, One Epic Landscape at a Times
   logo_desktop: /assets/uploads/logo.svg
