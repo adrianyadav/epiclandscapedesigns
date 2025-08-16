@@ -4,6 +4,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Theme loader starting...');
     loadThemeSettings();
+    if (window.location.hash === '#contact') {
+        window.location.href = '/contact';
+    }
 });
 
 function loadThemeSettings() {
