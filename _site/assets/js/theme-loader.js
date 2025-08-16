@@ -19,7 +19,9 @@ function loadThemeSettings() {
         applyTheme({
             navigation: {
                 nav_bg: "#f1f1f2",
-                nav_text_color: "#545454"
+                nav_text_color: "#545454",
+                hamburger_icon_color: "#000000",
+                close_icon_color: "#000000"
             },
             body: { body_bg: "#f1f1f2" },
             home: { home_bg: "#fff4c9" },
@@ -64,6 +66,18 @@ function applyTheme(themeData) {
     if (themeData.navigation && themeData.navigation.nav_text_color) {
         root.style.setProperty('--color-nav-text', themeData.navigation.nav_text_color);
         console.log('Navigation text color set to:', themeData.navigation.nav_text_color);
+    }
+
+    // Apply hamburger icon color
+    if (themeData.navigation && themeData.navigation.hamburger_icon_color) {
+        root.style.setProperty('--color-hamburger-icon', themeData.navigation.hamburger_icon_color);
+        console.log('Hamburger icon color set to:', themeData.navigation.hamburger_icon_color);
+    }
+
+    // Apply close icon color
+    if (themeData.navigation && themeData.navigation.close_icon_color) {
+        root.style.setProperty('--color-close-icon', themeData.navigation.close_icon_color);
+        console.log('Close icon color set to:', themeData.navigation.close_icon_color);
     }
 
     // Apply body background

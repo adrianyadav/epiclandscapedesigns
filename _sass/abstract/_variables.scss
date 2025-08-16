@@ -12,6 +12,8 @@
     --color-body-text: #3b3d41;
     --color-footer: #f1f1f2;
     --color-nav-text: #545454;
+    --color-hamburger-icon: #000000;
+    --color-close-icon: #000000;
 }
 
 //  COLOURS
@@ -25,6 +27,8 @@ $color-heading: var(--color-heading);
 $color-body-text: var(--color-body-text);
 $color-footer: var(--color-footer);
 $color-nav-text: var(--color-nav-text);
+$color-hamburger-icon: var(--color-hamburger-icon);
+$color-close-icon: var(--color-close-icon);
 
 // TRANSITIONS
 $default-transition: all 0.3s;

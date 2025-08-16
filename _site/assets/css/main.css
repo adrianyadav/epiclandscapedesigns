@@ -11,6 +11,8 @@
   --color-body-text: #3b3d41;
   --color-footer: #f1f1f2;
   --color-nav-text: #545454;
+  --color-hamburger-icon: #000000;
+  --color-close-icon: #000000;
 }
 
 *,
@@ -1739,7 +1741,7 @@ a {
   display: block;
   width: 32px;
   height: 3px;
-  background: #000000;
+  background: var(--color-hamburger-icon);
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -1818,7 +1820,7 @@ a {
   right: 1rem;
   background: none;
   border: none;
-  color: #000000;
+  color: var(--color-close-icon);
   font-size: 3rem;
   cursor: pointer;
   z-index: 2;

@@ -44,6 +44,40 @@ collections:
                   ]
                 default: "#545454"
                 hint: "Default: #545454 (Dark Grey)"
+              - label: "Hamburger Icon Colour"
+                name: hamburger_icon_color
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  [
+                    "#000000",
+                    "#ffffff",
+                    "#545454",
+                    "#3b3d41",
+                    "#ffae4e",
+                    "#666666",
+                  ]
+                default: "#000000"
+                hint: "Default: #000000 (Black)"
+              - label: "Close Icon Colour"
+                name: close_icon_color
+                widget: color
+                picker: chrome
+                allowInput: true
+                enableAlpha: false
+                presetColors:
+                  [
+                    "#000000",
+                    "#ffffff",
+                    "#545454",
+                    "#3b3d41",
+                    "#ffae4e",
+                    "#666666",
+                  ]
+                default: "#000000"
+                hint: "Default: #000000 (Black)"
           - label: "Body Background"
             name: body
             widget: object
