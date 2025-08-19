@@ -1,9 +1,9 @@
 steps:
   - order: 1
     title: consultation
-    description: First, we meet on-site to discuss your vision, lifestyle, and
-      budget. After this consultation with your Principal Landscape Designer,
-      we'll provide a tailored proposal for your approval.
+    description: First, we meet physically or digitally to discuss your vision,
+      lifestyle, and budget. After this consultation with your Principal
+      Landscape Designer, we'll provide a tailored proposal for your approval.
     image: /assets/uploads/1.jpeg
     image_alt: Designer hands holding color palette swatch book with laptop on desk
   - order: 2
