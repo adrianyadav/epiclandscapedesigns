@@ -15,10 +15,7 @@ footer:
   footer_bg: "#f1f1f2"
   footer_text_color: "#111"
 homepage:
-  hero_tagline: |-
-    
-
-    Designing beautiful, buildable outdoor spaces that elevate everyday living
+  hero_tagline: Designing beautiful, buildable outdoor spaces that elevate everyday living
   logo_desktop: /assets/uploads/epic-landscape-designs-12-x-2-cm-24-x-4-cm-.svg
   logo_mobile: /assets/uploads/epic-landscape-designs-12-x-2-cm-24-x-4-cm-.svg
   logo_alt_text: Epic Landscape Designs Logo
