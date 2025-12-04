@@ -15,7 +15,7 @@ projects:
       - image: /assets/img/stairs.png
       - image: /assets/uploads/steps.png
     order: 2
-  - order: 4
+  - order: 8
     title: Coming Soon
     location: Coming Soon
     description: Coming Soon
@@ -24,4 +24,23 @@ projects:
     location: sans souci
     description: Custom builder home with large feature trees and native plantings.
     images:
-      - image: /assets/uploads/font-2.png
+      - image: /assets/uploads/“.jpg
+  - order: 5
+    title: baulkham hills
+    location: baulkham hills
+    description: Poolside night
+    images:
+      - image: /assets/uploads/“-2-.jpg
+  - order: 6
+    title: chatswood
+    location: chatswood
+    description: outdoor firepit area
+    images:
+      - image: /assets/uploads/catcus-post.png
+  - order: 7
+    title: bondi
+    location: bondi
+    description: Rear garden bed retaining wall and steppers
+    images:
+      - image: /assets/uploads/backyard.png
+      - image: /assets/uploads/backyard2.png
