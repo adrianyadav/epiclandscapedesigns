@@ -4,8 +4,8 @@ steps:
     description: First, we have a meeting to discuss your vision, lifestyle, and
       budget. After this consultation with your Principal Landscape Designer,
       we'll provide a tailored proposal for your approval.
-    image: /assets/uploads/1.jpeg
-    image_alt: Designer hands holding color palette swatch book with laptop on desk
+    image: /assets/uploads/whitebackground-image.png
+    image_alt: White Background
   - order: 2
     title: functional design
     description: After a full site assessment, we develop a functional diagram to
@@ -14,47 +14,27 @@ steps:
       consistent theme for your space. This step is crucial to ensure your
       outdoor area flows well, and we work closely with you until you're
       completely satisfied.
-    image: /assets/uploads/2.jpeg
-    image_alt: Black and white architectural top-down plan view of house and landscape
+    image: /assets/uploads/whitebackground-image.png
+    image_alt: White Background
   - order: 3
     title: concept plan
     description: Next, we refine your design, positioning all elements precisely
       using accurate scaled drawings. We work with you to select materials,
       plants, and finishes that bring your concept to life and suit your space.
-    image: /assets/uploads/3.jpeg
-    image_alt: 3D render of modern outdoor living space with kitchen and seating
+    image: /assets/uploads/whitebackground-image.png
+    image_alt: White Background
   - order: 4
     title: hand over package
     description: You'll receive a completed design package, ready to build your
       dream landscape, which includes your concept plan, planting schedule,
       material selection and any 3D renders/perspectives.
-    image: /assets/uploads/1.jpeg
-    image_alt: Black and white architectural top-down plan view
+    image: /assets/uploads/whitebackground-image.png
+    image_alt: White Background
   - order: 5
     title: construction
     description: Lastly we assign the right builder from our trusted network. Chosen
       specifically for your project's needs. Each builder we recommend shares
       our values and commitment to quality, ensuring a smooth transition into
       construction and a final result that stays true to the design.
-    image: /assets/uploads/1.jpeg
-    image_alt: Close-up of paved surface with various stone pavers and construction tools
-  - order: 6
-    title: Extras read about it
-    description: After a full site assessment, we develop a functional diagram to
-      confirm the layout of key features like entertaining areas, garden beds,
-      and pathways. We also create a style guide and mood board to establish a
-      consistent theme for your space. This step is crucial to ensure your
-      outdoor area flows well, and we work closely with you until you're
-      completely satisfied.
-    image: /assets/uploads/site-inspection.jpg
-    image_alt: man trimmming bush
-  - order: 7
-    title: testing it again for 8
-    description: After a full site assessment, we develop a functional diagram to
-      confirm the layout of key features like entertaining areas, garden beds,
-      and pathways. We also create a style guide and mood board to establish a
-      consistent theme for your space. This step is crucial to ensure your
-      outdoor area flows well, and we work closely with you until you're
-      completely satisfied.
-    image: /assets/uploads/s6xshdnwuztnqsedijxjqp.jpg
-    image_alt: beautiful greenery
+    image: /assets/uploads/whitebackground-image.png
+    image_alt: White Background
