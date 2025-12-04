@@ -17,10 +17,6 @@ projects:
       - image: /assets/img/stairs.png
       - image: /assets/uploads/steps.png
     order: 2
-  - order: 8
-    title: Coming Soon
-    location: Coming Soon
-    description: Coming Soon
   - order: 3
     title: sans souci
     location: sans souci
