@@ -21,7 +21,7 @@ steps:
     description: Next, we refine your design, positioning all elements precisely
       using accurate scaled drawings. We work with you to select materials,
       plants, and finishes that bring your concept to life and suit your space.
-    image: /assets/uploads/whitebackground-image.png
+    image: /assets/uploads/garden-bed-example.png
     image_alt: White Background
   - order: 4
     title: hand over package
