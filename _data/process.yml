@@ -28,7 +28,7 @@ steps:
     description: You'll receive a completed design package, ready to build your
       dream landscape, which includes your concept plan, planting schedule,
       material selection and any 3D renders/perspectives.
-    image: /assets/uploads/whitebackground-image.png
+    image: /assets/uploads/desert-mood-board.png
     image_alt: White Background
   - order: 5
     title: construction
