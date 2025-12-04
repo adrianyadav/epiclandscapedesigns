@@ -4,7 +4,7 @@ steps:
     description: First, we have a meeting to discuss your vision, lifestyle, and
       budget. After this consultation with your Principal Landscape Designer,
       we'll provide a tailored proposal for your approval.
-    image: /assets/uploads/1.jpeg
+    image: /assets/uploads/landscape-drawing.jpg
     image_alt: White Background
   - order: 2
     title: functional design
