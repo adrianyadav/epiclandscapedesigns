@@ -13,7 +13,7 @@ projects:
     description: Tropical themed front to back plus courtyard.
     images:
       - image: /assets/img/stairs.png
-      - image: /assets/img/sunset.png
+      - image: /assets/uploads/steps.png
     order: 2
   - order: 3
     title: Coming Soon
