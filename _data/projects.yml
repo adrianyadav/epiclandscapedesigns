@@ -1,21 +1,27 @@
 projects:
   - id: ryde-kitchen
-    title: "Boutique Pergola "
-    location: Ryde
+    title: ryde
+    location: ryde
     description: Outdoor kitchen and bar area with pergola and seating
     images:
       - image: /assets/uploads/1.jpeg
       - image: /assets/uploads/2.jpeg
       - image: /assets/uploads/3.jpeg
     order: 1
-  - title: Tropical Oasis
-    location: Sans Souci
+  - title: oatlands
+    location: oatlands
     description: Tropical themed front to back plus courtyard.
     images:
       - image: /assets/img/stairs.png
       - image: /assets/uploads/steps.png
     order: 2
-  - order: 3
+  - order: 4
     title: Coming Soon
     location: Coming Soon
     description: Coming Soon
+  - order: 3
+    title: sans souci
+    location: sans souci
+    description: Custom builder home with large feature trees and native plantings.
+    images:
+      - image: /assets/uploads/font-2.png
