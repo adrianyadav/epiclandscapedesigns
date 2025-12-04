@@ -12,6 +12,8 @@ projects:
     location: oatlands
     description: Tropical themed front to back plus courtyard.
     images:
+      - image: /assets/uploads/entire-front.png
+      - image: /assets/uploads/drivway.png
       - image: /assets/img/stairs.png
       - image: /assets/uploads/steps.png
     order: 2
