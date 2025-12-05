@@ -212,6 +212,15 @@ collections:
                 widget: text
                 default: "Crafting Nature's Masterpieces, One Epic Landscape at a Time"
                 hint: "The main tagline displayed below the logo on the homepage, default: Crafting Nature's Masterpieces, One Epic Landscape at a Time"
+              - label: "Hero CTA Link"
+                name: hero_cta_link
+                widget: string
+                default: "/contact"
+                hint: "URL for the Hero CTA button (default: /contact)"
+              - label: "Hero CTA Text"
+                name: hero_cta_text
+                widget: string
+                default: "Get Started"
           - label: "Navigation Menu"
             name: navigation_menu
             widget: object
@@ -296,6 +305,16 @@ collections:
                 widget: string
                 default: "mailto:info@epiclandscapedesigns.com.au"
                 hint: "Email link format (mailto:email@domain.com)"
+              - label: "Facebook Link"
+                name: facebook_link
+                widget: string
+                default: "https://www.facebook.com/profile.php?id=61577839104629"
+                hint: "Facebook link format (https://www.facebook.com/profile.php?id=61577839104629)"
+              - label: "Footer Copyright"
+                name: footer_copyright
+                widget: string
+                default: "© 2025 Epic Landscape Designs. All rights reserved"
+                hint: "Footer copyright text (© 2025 Epic Landscape Designs. All rights reserved)"
           - label: "Preview"
             name: preview
             widget: hidden
@@ -324,6 +343,7 @@ collections:
               - label: Image
                 name: image
                 widget: image
+                required: false
               - label: Image Alt
                 name: image_alt
                 widget: string

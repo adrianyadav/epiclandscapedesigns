@@ -20,6 +20,10 @@
             <p>{{ site.data.theme.homepage.hero_tagline | default: "Crafting Nature's Masterpieces, One Epic Landscape
                 at a Time" }}</p>
         </div>
+            <a href="{{ site.data.theme.homepage.hero_cta_link | default: '#' }}" class="hero-cta-button">
+                {{ site.data.theme.homepage.hero_cta_text | default: "Get Started" }}
+            </a>
+        </div>
     </div>
     {% include fern-decoration-home.html %}
 </section>

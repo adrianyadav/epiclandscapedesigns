@@ -21,6 +21,8 @@ homepage:
   logo_alt_text: Epic Landscape Designs Logo
   nav_logo: /assets/uploads/logo-sm.svg
   nav_logo_alt_text: Epic Landscape Designs Logo
+  hero_cta_link: /contact
+  hero_cta_text: Get Started
 navigation_menu:
   link_1:
     label: Home
@@ -39,4 +41,6 @@ contact_info:
   email: info@epiclandscapedesigns.com.au
   phone_link: tel:0402263190
   email_link: mailto:info@epiclandscapedesigns.com.au
+  facebook_link: https://www.facebook.com/profile.php?id=61577839104629
+  footer_copyright: © 2025 Epic Landscape Designs. All rights reserved
 preview: Theme settings updated

@@ -13,7 +13,7 @@
 
         <div class="footer-section">
             <div class="social-links">
-                <a class='icon' target="_blank" href="https://www.facebook.com/epiclandscapedesigns"
+                <a class='icon' target="_blank" href="{{ site.data.theme.contact_info.facebook_link | default: 'https://www.facebook.com/profile.php?id=61577839104629' }}"
                     aria-label="Facebook">
                     {% include svg/facebook.svg %}
                 </a>
@@ -39,6 +39,6 @@
     </div>
 
     <div class="footer-bottom">
-        <p>© 2025 Epic Landscape Designs. All rights reserved
+        <p>{{ site.data.theme.contact_info.footer_copyright | default: "© 2025 Epic Landscape Designs. All rights reserved" }}</p>
     </div>
 </footer>
