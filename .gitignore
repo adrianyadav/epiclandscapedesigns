@@ -4,6 +4,9 @@ _site/
 # Dependencies
 node_modules/
 
+# Uploaded assets (too large for Git - use Git LFS or external storage)
+assets/uploads/
+
 # OS files
 .DS_Store
 *.swp
