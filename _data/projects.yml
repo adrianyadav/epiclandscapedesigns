@@ -1,15 +1,15 @@
 projects:
   - id: ryde-kitchen
-    title: ryde
-    location: ryde
+    title: Ryde
+    location: Ryde
     description: Outdoor kitchen and bar area with pergola and seating
     images:
       - image: /assets/uploads/1.jpeg
       - image: /assets/uploads/2.jpeg
       - image: /assets/uploads/3.jpeg
     order: 1
-  - title: oatlands
-    location: oatlands
+  - title: Oatlands
+    location: Oatlands
     description: Tropical themed front to back plus courtyard.
     images:
       - image: /assets/uploads/entire-front.png
@@ -18,26 +18,26 @@ projects:
       - image: /assets/uploads/steps.png
     order: 2
   - order: 3
-    title: sans souci
-    location: sans souci
+    title: Sans Souci
+    location: Sans Souci
     description: Custom builder home with large feature trees and native plantings.
     images:
       - image: /assets/uploads/“.jpg
   - order: 5
-    title: baulkham hills
-    location: baulkham hills
+    title: Baulkham hills
+    location: Baulkham hills
     description: Poolside night
     images:
       - image: /assets/uploads/“-2-.jpg
   - order: 6
-    title: chatswood
-    location: chatswood
+    title: Chatswood
+    location: Chatswood
     description: outdoor firepit area
     images:
       - image: /assets/uploads/catcus-post.png
   - order: 7
-    title: bondi
-    location: bondi
+    title: Manly
+    location: Manly
     description: Rear garden bed retaining wall and steppers
     images:
       - image: /assets/uploads/backyard.png
