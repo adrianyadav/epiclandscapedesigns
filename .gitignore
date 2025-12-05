@@ -1,1 +1,10 @@
-/_site/assets/uploads
+# Jekyll build output
+_site/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+*.swp
+*~
