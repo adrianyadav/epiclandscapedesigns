@@ -1,8 +1,8 @@
 navigation:
   nav_bg: "#f1f1f3"
-  nav_text_color: " #545454"
+  nav_text_color: "#3b3d41"
   hamburger_icon_color: "#111"
-  close_icon_color: "#f1f1f3"
+  close_icon_color: "#3b3d41"
 body:
   body_bg: "#f1f1f2"
 home:
