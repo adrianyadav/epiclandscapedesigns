@@ -2,7 +2,7 @@ navigation:
   nav_bg: "#111"
   nav_text_color: "#f1f1f3"
   hamburger_icon_color: "#111"
-  close_icon_color: "#111"
+  close_icon_color: "#f1f1f3"
 body:
   body_bg: "#f1f1f2"
 home:
