@@ -2,7 +2,7 @@
 @use "../abstract/respond" as *;
 
 .bg-pattern--fern {
-    z-index: 10;
+    z-index: 10 !important;
 }
 
 // Decorative elements
