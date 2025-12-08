@@ -21,6 +21,7 @@ body {
     &__header {
         margin-top: 8rem;
         margin-bottom: 4rem;
+        padding-top: 5rem;
         text-align: left;
     }
 
@@ -31,7 +32,6 @@ body {
         font-weight: 300;
         letter-spacing: -0.02em;
         text-align: left;
-        padding-top: 5rem;
 
         @include respond(sm) {
             font-size: $font-size-md;
