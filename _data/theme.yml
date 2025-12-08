@@ -1,6 +1,6 @@
 navigation:
-  nav_bg: "#f1f1f2"
-  nav_text_color: "#545454"
+  nav_bg: "#545454"
+  nav_text_color: "#f1f1f2"
   hamburger_icon_color: "#111"
   close_icon_color: "#545454"
 body:
