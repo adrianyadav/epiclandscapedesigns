@@ -251,6 +251,107 @@
     }
 }
 
+// Accordion
+.accordion-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.accordion-demo {
+    h4 {
+        margin: 0 0 1rem 0;
+        color: $color-font;
+    }
+}
+
+.accordion {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fafafa;
+
+    &__item {
+        border-bottom: 1px solid #e0e0e0;
+        transition: $default-transition;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &[open] {
+            .accordion__trigger {
+                background: rgba(255, 174, 78, 0.12);
+                color: $color-primary;
+
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &__trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $color-font;
+        text-align: left;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        list-style: none;
+        transition: $default-transition;
+        gap: 1rem;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "";
+            flex-shrink: 0;
+            width: 12px;
+            height: 12px;
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+            transform: rotate(45deg);
+            margin-left: auto;
+            transition: transform $default-transition;
+        }
+
+        &:hover {
+            background: rgba(255, 174, 78, 0.08);
+        }
+    }
+
+    &__content {
+        padding: 2rem;
+        overflow: hidden;
+        animation: accordion-open 0.25s ease-out;
+    }
+
+    &__content p {
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        color: #555;
+    }
+}
+
+@keyframes accordion-open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 // Transition Examples
 .transition-examples {
     .transition-item {

@@ -215,6 +215,49 @@ title: Style Guide - Epic Landscape Designs
       </div>
     </section>
 
+    <!-- Accordion Section -->
+    <section class="style-guide__section">
+      <h3>Accordion</h3>
+
+      <div class="accordion-examples">
+        <div class="accordion-demo">
+          <h4>FAQ-style accordion</h4>
+          <div class="accordion">
+            <details class="accordion__item">
+              <summary class="accordion__trigger">What services do you offer?</summary>
+              <div class="accordion__content">
+                <p>We offer landscape design, installation, hardscaping, planting, irrigation, and ongoing maintenance for residential and commercial properties.</p>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__trigger">How long does a typical project take?</summary>
+              <div class="accordion__content">
+                <p>Timeline varies by scope. A consultation and design can take 1–2 weeks; installation ranges from a few days for smaller projects to several weeks for larger ones.</p>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__trigger">Do you provide free estimates?</summary>
+              <div class="accordion__content">
+                <p>Yes. We offer free initial consultations and estimates. Contact us to schedule a visit and discuss your project.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="accordion-demo">
+          <h4>Usage</h4>
+          <div class="code-example">
+            <code>&lt;div class="accordion"&gt;<br>
+              &nbsp;&nbsp;&lt;details class="accordion__item"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;summary class="accordion__trigger"&gt;Title&lt;/summary&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="accordion__content"&gt;Content…&lt;/div&gt;<br>
+              &nbsp;&nbsp;&lt;/details&gt;<br>
+            &lt;/div&gt;</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Transitions Section -->
     <section class="style-guide__section">
       <h3>Transitions</h3>
