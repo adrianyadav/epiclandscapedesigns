@@ -5,6 +5,7 @@
 .logo-sm {
     position: absolute;
     left: 20px;
+    top: 43px;
 
     .nav-logo-img {
         width: 50px;
@@ -33,6 +34,10 @@
         align-items: center;
         padding-top: 5rem;
         grid-gap: 1.5rem;
+    }
+
+    &-item {
+        position: relative;
     }
 
     &-link {

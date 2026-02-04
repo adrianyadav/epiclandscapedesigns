@@ -15,14 +15,16 @@ footer:
   footer_bg: "#f1f1f2"
   footer_text_color: "#111"
 homepage:
-  hero_tagline: Designing beautiful, buildable outdoor spaces that elevate everyday living
+  hero_cta_text: Contact Us
+  nav_logo: /assets/uploads/logo-sm.svg
   logo_desktop: /assets/uploads/epic-landscape-designs-13.229-x-11-cm-13.229-x-9-cm-1-.svg
+  hero_tagline: Designing beautiful, buildable outdoor spaces that elevate everyday living
+  hero_cta_link: /contact
+  hero_cta_2_text: Book Design Consultation
   logo_mobile: /assets/uploads/epic-landscape-designs-13.229-x-11-cm-13.229-x-9-cm-2-.svg
   logo_alt_text: Epic Landscape Designs Logo
-  nav_logo: /assets/uploads/logo-sm.svg
+  hero_cta_2_link: https://calendly.com/epiclandscapedesignss/30min
   nav_logo_alt_text: Epic Landscape Designs Logo
-  hero_cta_link: /contact
-  hero_cta_text: Get Started
 navigation_menu:
   link_1:
     label: Home

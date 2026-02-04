@@ -221,6 +221,15 @@ collections:
                 name: hero_cta_text
                 widget: string
                 default: "Get Started"
+              - label: "Hero CTA 2 Link"
+                name: hero_cta_2_link
+                widget: string
+                default: "/contact"
+                hint: "URL for the Hero CTA 2 button (default: /contact)"
+              - label: "Hero CTA 2 Text"
+                name: hero_cta_2_text
+                widget: string
+                default: "Contact Us"
           - label: "Navigation Menu"
             name: navigation_menu
             widget: object

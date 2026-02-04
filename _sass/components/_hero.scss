@@ -93,6 +93,17 @@
         }
     }
 
+    &-cta-button-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-self: center;
+
+        @include respond(sm) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+    }
+
     &-cta-button {
         display: inline-block;
         background-color: var(--color-primary);
@@ -104,7 +115,13 @@
         left: 50%;
         transform: translateX(-50%);
         transition: all 0.3s ease;
-
+        width: max-content;
+        border: 1px solid transparent;
+     
+    }
+    &-cta-button--grey {
+        background-color: #545454;
+        color: white;
     }
 }
 

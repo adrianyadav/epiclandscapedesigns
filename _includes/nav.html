@@ -44,16 +44,17 @@
 </div>
 
 <nav class="nav {{ nav_class }}">
+    <!-- Logo -->
+    <a href="/" class="logo-sm">
+        {% if site.data.theme.homepage.nav_logo %}
+        <img src="{{ site.data.theme.homepage.nav_logo }}" alt="{{ site.data.theme.homepage.nav_logo_alt_text }}"
+            class="nav-logo-img">
+        {% else %}
+        {% include svg/logo-sm.html %}
+        {% endif %}
+    </a>
+
     <ul class="nav-list">
-        <!-- Logo -->
-        <a href="/" class="logo-sm">
-            {% if site.data.theme.homepage.nav_logo %}
-            <img src="{{ site.data.theme.homepage.nav_logo }}" alt="{{ site.data.theme.homepage.nav_logo_alt_text }}"
-                class="nav-logo-img">
-            {% else %}
-            {% include svg/logo-sm.html %}
-            {% endif %}
-        </a>
 
         <!-- Navigation Links -->
         <li class="nav-item">
