@@ -73,12 +73,11 @@
         display: none;
         @include respond(sm) {
             display: grid;
-            place-self: center;
-            width: 250px;
+            place-items: center;
         }
 
         .hero-logo-img {
-            width: 100%;
+            width: 250px;
             height: auto;
         }
     }
