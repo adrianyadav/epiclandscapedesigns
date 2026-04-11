@@ -42,3 +42,10 @@ projects:
     images:
       - image: /assets/uploads/backyard.png
       - image: /assets/uploads/backyard2.png
+  - order: 8
+    title: Newcastle
+    location: Newcastle
+    description: Beautiful federation home renovation in Newcastle including a
+      plunge pool and custom bbq
+    images:
+      - image: /assets/uploads/render-ebst.jfif
