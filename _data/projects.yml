@@ -49,3 +49,15 @@ projects:
       plunge pool and custom bbq
     images:
       - image: /assets/uploads/render-ebst.jfif
+  - order: 9
+    title: Lambton
+    location: Lambton
+    description: Complex Site With Levels
+    images:
+      - image: /assets/uploads/draft-functional-diagram-high-quality-image.jpg
+  - order: 10
+    title: Balmain
+    location: Balmain
+    description: Balmain Project
+    images:
+      - image: /assets/uploads/balmain-.jpg
