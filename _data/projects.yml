@@ -23,6 +23,7 @@ projects:
     description: Custom builder home with large feature trees and native plantings.
     images:
       - image: /assets/uploads/“.jpg
+      - image: /assets/uploads/post-bbq.jpg
   - order: 5
     title: Baulkham hills
     location: Baulkham hills
@@ -61,3 +62,9 @@ projects:
     description: Balmain Project
     images:
       - image: /assets/uploads/balmain-.jpg
+  - order: 11
+    title: Hornsby
+    location: Hornsby
+    description: Hornsby new property build
+    images:
+      - image: /assets/uploads/instagram-render-klings-langley-22.jpg
