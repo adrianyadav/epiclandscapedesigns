@@ -12,14 +12,16 @@ steps:
       prepared with buildability, compliance, and practical construction in
       mind. The goal is to have your project documented properly so it can be
       assessed clearly and built correctly the first time.
-    image_alt: prepare
+    image: ""
+    image_alt: Preparing plans
   - order: 3
     title: Approval Pathway
     description: Depending on the project, your application may go through a CDC or
       a DA. In NSW, complying development applications are lodged through the
       Planning Portal and involve a certifier, while development applications
       are lodged to the local council for assessment.
-    image_alt: pathway
+    image: ""
+    image_alt: Approval pathway
   - order: 4
     title: Supporting Documentation
     description: Some projects require additional documentation before approval can
@@ -27,27 +29,30 @@ steps:
       point you in the right direction for items such as surveys, bushfire
       reports, soil testing, stormwater design, flood information, or other
       consultant reports.
-    image_alt: guide
+    image: ""
+    image_alt: Supporting documentation
   - order: 5
     title: Coordination
     description: Epic Landscape Designs helps coordinate the submission process and
       keeps you informed along the way. If the certifier or council requests
       more information, we will explain what is needed and assist in resolving
       it as smoothly as possible.
-    image_alt: manage
+    image: ""
+    image_alt: Coordination
   - order: 6
     title: Approval Granted
     description: Once the relevant authority is satisfied that the proposal meets
       the necessary planning and documentation requirements, approval can be
       granted. From there, your project can move forward with greater confidence
       and clarity.
-    image_alt: issued
+    image: ""
+    image_alt: Approval granted
   - order: 7
-    title: "Timeframes "
+    title: Timeframes
     description: As a general rule, CDC approvals are usually faster, while DA
       approvals often take longer because they are assessed by council and may
       involve a more detailed review. Timeframes can vary depending on the site,
       the quality of documentation, and whether any additional reports are
-      needed. NSW guidance confirms CDC and DA follow different approval
-      processes through certifiers and councils respectively.
-    image_alt: time
+      needed.
+    image: ""
+    image_alt: Timeframes

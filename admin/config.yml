@@ -426,50 +426,31 @@ collections:
             name: description
             widget: text
             default: Our design process from design to construction
-      - file: _data/approval-page.yml
-        label: Approval Page Content
-        name: approval-page
+      - file: _data/approvals-page.yml
+        label: Approvals Page Content
+        name: approvals-page
         fields:
           - label: Page Title
             name: title
             widget: string
-            default: APPROVAL
+            default: APPROVALS PROCESS
           - label: Page Description
             name: description
             widget: text
             default: Review and approve your landscape design before we move forward.
-  - name: "approval-page-settings"
-    label: "Approval Page Settings"
-    files:
-      - file: approval.html
-        label: "Approval Page"
-        name: "approval-page-settings"
-        fields:
           - label: Published
             name: published
             widget: boolean
             default: false
-            hint: "Toggle to publish or unpublish the Approval page"
-          - label: Layout
-            name: layout
-            widget: hidden
-            default: default
-          - label: Title
-            name: title
-            widget: hidden
-            default: "Approval | Epic Landscape Designs"
-          - label: Permalink
-            name: permalink
-            widget: hidden
-            default: /approval
-  - name: "approval"
-    label: "Approval"
+            hint: "Toggle to publish or unpublish the Approvals page"
+  - name: "approvals"
+    label: "Approvals"
     files:
-      - file: _data/approval.yml
-        label: "Approval Steps"
-        name: "approval"
+      - file: _data/approvals.yml
+        label: "Approvals Steps"
+        name: "approvals"
         fields:
-          - label: Approval Steps
+          - label: Approvals Steps
             name: steps
             widget: list
             fields:
