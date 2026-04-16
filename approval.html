@@ -1,0 +1,39 @@
+---
+layout: default
+title: Approval | Epic Landscape Designs
+permalink: /approval
+published: false
+---
+
+<div class="page bg-pattern--fern">
+    {% include fern-decoration.html %}
+
+    <!-- Approval Header -->
+    <section class="page__header">
+        <div class="container">
+            <h1 class="page__title">{{ site.data.approval-page.title }}</h1>
+            <p class="page__description">{{ site.data.approval-page.description }}</p>
+        </div>
+    </section>
+
+    <!-- Approval Steps -->
+    <section class="section">
+        <div class="container">
+            <div class="process-steps__items">
+                {% assign sorted_steps = site.data.approval.steps | sort: 'order' %}
+                {% for step in sorted_steps %}
+                <div class="process-step" data-step="{{ step.order }}">
+                    <div class="process-step__number">{{ step.order }}</div>
+                    <div class="process-step__content">
+                        <h3 class="process-step__title">{{ step.title }}</h3>
+                        <p class="process-step__description">{{ step.description }}</p>
+                    </div>
+                    <div class="process-step__image">
+                        <img src="{{ step.image }}" alt="{{ step.image_alt }}" class="process-step__img">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
