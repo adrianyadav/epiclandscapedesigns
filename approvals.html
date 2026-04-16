@@ -1,8 +1,8 @@
 ---
-published: true
 layout: default
 title: Approval | Epic Landscape Designs
 permalink: /approval
+published: false
 ---
 
 <div class="page bg-pattern--fern">
@@ -28,9 +28,11 @@ permalink: /approval
                         <h3 class="process-step__title">{{ step.title }}</h3>
                         <p class="process-step__description">{{ step.description }}</p>
                     </div>
+                    {% if step.image %}
                     <div class="process-step__image">
                         <img src="{{ step.image }}" alt="{{ step.image_alt }}" class="process-step__img">
                     </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
