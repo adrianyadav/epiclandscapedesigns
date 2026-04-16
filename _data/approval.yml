@@ -1,16 +1,9 @@
 steps:
   - order: 1
-    title: Approvals
-    description: >-
-      If your project requires approval, we will let you know early in the
-      design process. At Epic Landscape Designs, we prepare professional pool
-      and landscape documentation and guide you through the approval pathway
-      from start to finish. Whether your project is suitable for a Complying
-      Development Certificate (CDC) or requires a Development Application (DA),
-      we help make the process clear, compliant, and far less stressful.
-
-
-      Not every project needs formal approval. If your pool or landscape works require council or certifier approval, we will flag this early and explain the most suitable pathway for your site and scope of works.
+    title: Approvals Determination
+    description: Not every project needs formal approval. If your pool or landscape
+      works require council or certifier approval, we will flag this early and
+      explain the most suitable pathway for your site and scope of works.
     image: ""
     image_alt: Design review
   - order: 2
