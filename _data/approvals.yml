@@ -1,58 +1,56 @@
 steps:
   - order: 1
-    title: Approvals Determination
-    description: Not every project needs formal approval. If your pool or landscape
-      works require council or certifier approval, we will flag this early and
-      explain the most suitable pathway for your site and scope of works.
+    title: Determine the approval pathway
+    description: The first step is working out which pathway applies to the proposed
+      works. Depending on the scope, site constraints, and planning controls,
+      the project may fall under Exempt Development, CDC, or DA.
     image: ""
     image_alt: Design review
   - order: 2
-    title: Preparing Plans
-    description: We provide professional drafting and submission-ready plans
-      prepared with buildability, compliance, and practical construction in
-      mind. The goal is to have your project documented properly so it can be
-      assessed clearly and built correctly the first time.
+    title: Prepare the drawings and documentation
+    description: Once the pathway is identified, we prepare the required plans and
+      supporting documentation in the correct format for assessment. This may
+      include site plans, layout plans, levels, sections, and any other
+      information needed for the application.
     image: ""
     image_alt: Preparing plans
   - order: 3
-    title: Approval Pathway
-    description: Depending on the project, your application may go through a CDC or
-      a DA. In NSW, complying development applications are lodged through the
-      Planning Portal and involve a certifier, while development applications
-      are lodged to the local council for assessment.
+    title: Gather supporting information
+    description: Some projects require additional documentation before they can be
+      lodged or assessed properly. This may include survey plans, engineering,
+      stormwater design, bushfire reports, flood information, soil reports, or
+      other specialist input depending on the site.
     image: ""
     image_alt: Approval pathway
   - order: 4
-    title: Supporting Documentation
-    description: Some projects require additional documentation before approval can
-      be issued. If needed, we will let you know exactly what is required and
-      point you in the right direction for items such as surveys, bushfire
-      reports, soil testing, stormwater design, flood information, or other
-      consultant reports.
+    title: Lodge the application
+    description: If the project is being assessed as a CDC, it is lodged through a
+      certifier. If it requires a DA, it is lodged to council. If the works
+      qualify as Exempt Development, no formal application is required, but the
+      works still need to satisfy the relevant planning rules.
     image: ""
     image_alt: Supporting documentation
   - order: 5
-    title: Coordination
-    description: Epic Landscape Designs helps coordinate the submission process and
-      keeps you informed along the way. If the certifier or council requests
-      more information, we will explain what is needed and assist in resolving
-      it as smoothly as possible.
+    title: Assessment and further information
+    description: During assessment, the certifier or council may request further
+      information or clarification. If that happens, we help coordinate the
+      required updates and guide you through what is needed.
     image: ""
     image_alt: Coordination
   - order: 6
     title: Approval Granted
-    description: Once the relevant authority is satisfied that the proposal meets
-      the necessary planning and documentation requirements, approval can be
-      granted. From there, your project can move forward with greater confidence
-      and clarity.
+    description: Once the application has been assessed and the relevant authority
+      is satisfied, approval can be issued. From there, the project can move
+      forward with greater clarity around what can be built and how it needs to
+      be documented.
     image: ""
     image_alt: Approval granted
   - order: 7
     title: Timeframes
-    description: As a general rule, CDC approvals are usually faster, while DA
-      approvals often take longer because they are assessed by council and may
-      involve a more detailed review. Timeframes can vary depending on the site,
-      the quality of documentation, and whether any additional reports are
-      needed.
+    description: As a general guide, CDC approvals are typically the faster pathway
+      and can often be determined in around 2 to 4 weeks, while DA approvals are
+      usually significantly longer, often taking several months depending on the
+      council, site complexity, and whether any further information is
+      requested.
     image: ""
     image_alt: Timeframes
